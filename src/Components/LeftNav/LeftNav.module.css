@@ -1,0 +1,9 @@
+#container {
+    color: var(--var-cor-texto);
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100%;
+    position: sticky;
+    background-color: var(--var-cor-cinza);
+}
