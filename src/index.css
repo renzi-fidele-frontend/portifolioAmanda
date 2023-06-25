@@ -1,5 +1,13 @@
 :root {
-    --var-cor-texto: grey;
+    --var-cor-texto: #393a3a;
     --var-cor-decoracao: #c2e7ff;
     --var-cor-cinza: #f3f6fc;
+    --bs-heading-color: black;
+    --cor-fundo0: white;
+    --cor-fundo1: #f8fafd;
 }
+
+a {
+    text-decoration: none;
+}
+

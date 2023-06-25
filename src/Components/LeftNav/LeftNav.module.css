@@ -3,7 +3,46 @@
     position: sticky;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 100vh;
     position: sticky;
     background-color: var(--var-cor-cinza);
+    border-right: #e1e3e1 1px solid;
+    text-align: center;
+}
+
+#logo > img {
+    width: 100%;
+}
+
+#nav ul {
+    padding: .7em;
+    border-top: 1px #e1e3e1 solid;
+}
+
+#nav ul a {
+    margin-bottom: 1em;
+    color: var(--var-cor-texto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 32px;
+    padding: 10px;
+}
+
+#nav ul a p {
+    margin-top: .8em;
+    font-size: 15px;
+    font-weight: 400;
+    
+}
+
+#logo {
+    text-align: center;
+}
+
+#logo > img {
+    margin-block: 1em;
+    width: 70%;
+    text-align: center;
 }

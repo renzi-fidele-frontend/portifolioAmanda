@@ -1,0 +1,119 @@
+#inicio > div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-inline: 17%;
+    padding-block: 10em;
+    color: var(--var-cor-texto);
+}
+
+#inicio {
+    min-height: 100vh;
+    background-color: var(--cor-fundo0);
+}
+
+#me {
+    max-width: 100%;
+    border-radius: 40px;
+}
+
+#iconTop {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 90px;
+    display: inline-block;
+}
+
+#iconLow {
+    bottom: -40px;
+    left: -50px;
+    width: 90px;
+    display: inline-block;
+    position: absolute;
+}
+
+#inicio #left {
+    max-width: 100%;
+    position: relative;
+}
+
+#inicio #right {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding-left: 13%;
+    justify-content: center;
+}
+
+#inicio #right > h3 {
+    font-size: 62px;
+    font-weight: 700;
+    color: black;
+    margin-block: 10px;
+    text-shadow: 1px 1px 2px black;
+}
+
+#inicio #right > h6 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#inicio #right > p {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+#inicio #right > h4 {
+    font-weight: 400;
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
+#inicio #right > button {
+    padding: 15px 35px;
+    background-color: var(--var-cor-decoracao);
+    font-size: 17px;
+    border-radius: 10px;
+    transition: all 0.35s ease;
+    font-weight: 500;
+    border: 2px solid var(--var-cor-decoracao);
+    margin-top: 2em;
+    color: #001d35;
+}
+
+#inicio #right > button > svg {
+    margin-right: 15px;
+}
+
+#inicio #right > button:hover {
+    cursor: pointer;
+}
+
+#sobre {
+    background-color: var(--cor-fundo1);
+}
+
+.titulo1 {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-left: 20px;
+    color: var(--bs-heading-color);
+    margin-bottom: 30px;
+}
+
+.titulo1::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: var(--var-cor-decoracao);
+}
+
+#sobre {
+    padding: 5% 17%;
+}
