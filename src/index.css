@@ -5,9 +5,12 @@
     --bs-heading-color: black;
     --cor-fundo0: white;
     --cor-fundo1: #f8fafd;
+    --font-normal: 17px;
+    --weight-normal: 300;
+    --fundo-box: white;
+    --borda-box: #e1e3e1;
 }
 
 a {
     text-decoration: none;
 }
-

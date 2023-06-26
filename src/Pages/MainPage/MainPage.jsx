@@ -3,6 +3,10 @@ import styles from "./MainPage.module.css";
 import icone from "../../Images/icone.svg";
 import me from "../../Images/me.jpg";
 import { BsDownload } from "react-icons/bs";
+import me1 from "../../Images/me2.jpg";
+import { AiFillSkype, AiOutlineWhatsApp, AiFillMail } from "react-icons/ai";
+import { SiGooglemeet } from "react-icons/si";
+import crazy from "../../Images/crazy.jpg";
 
 const MainPage = () => {
     return (
@@ -35,7 +39,7 @@ const MainPage = () => {
                         <h4>Sou um desenvolvedor de front-end</h4>
                         <p>
                             Posso criar um site do nada, totalmente formado. Eu não uso truques, nem isso é mágica. Eu me especializei em
-                            manipular a própria estrutura da web, suas matérias-primas de HTML, CSS, JavaScript e ReactJs{" "}
+                            manipular a própria estrutura da web, suas matérias-primas de HTML, CSS, JavaScript e ReactJs.{" "}
                         </p>
                         <button>
                             <BsDownload /> Baixar CV
@@ -50,7 +54,7 @@ const MainPage = () => {
                             <span>Sobre Mim</span>
                         </h2>
                         <h6>Meu nome é Renzi Fidele</h6>
-                        <h5>Eu estou disponivel para colaborar em projetos Web</h5>
+                        <h5>Eu estou disponível para colaborar em projetos Web</h5>
                         <p>
                             Nascido em 2000, tipo AB morando nos EUA. Fornecemos design na tela para sites e aplicativos, bem como implementação
                             de front-end. Continuaremos a buscar uma ampla gama de expressões e melhores códigos buscando nossos “likes”.
@@ -58,19 +62,95 @@ const MainPage = () => {
                         <div id={styles.linha}>
                             <div>
                                 <span>5k</span>
-                                <p>Projetos <br/> Completados</p>
+                                <p>
+                                    Projetos <br /> Completados.
+                                </p>
                             </div>
                             <div>
-                                <span>5k</span>
-                                <p>Projetos <br/> Completados</p>
+                                <span>3k</span>
+                                <p>
+                                    Clientes <br /> Satisfeitos.
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div id={styles.secaoXP}>
-                        
+                        <h2 className={styles.titulo1}>Experiência</h2>
+                        <div>
+                            <div className={styles.cardXP}>
+                                <div id={styles.leftCard}>
+                                    <img src="" alt="" />
+                                </div>
+                                <div id="rightCard">
+                                    <span>2019 - Present</span>
+                                    <h5>Art Director - Facebook Inc</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eius corrupti animi quis at quia corporis
+                                        vitae! Voluptatibus consequuntur quo dolores obcaecati minus itaque assumenda, explicabo, recusandae ipsa
+                                        ratione nobis!
+                                    </p>
+                                </div>
+                            </div>
+                            <div className={styles.cardXP}>
+                                <div id={styles.leftCard}>
+                                    <img src="" alt="" />
+                                </div>
+                                <div id="rightCard">
+                                    <span>2019 - Present</span>
+                                    <h5>Art Director - Facebook Inc</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eius corrupti animi quis at quia corporis
+                                        vitae! Voluptatibus consequuntur quo dolores obcaecati minus itaque assumenda, explicabo, recusandae ipsa
+                                        ratione nobis!
+                                    </p>
+                                </div>
+                            </div>
+                            <div className={styles.cardXP}>
+                                <div id={styles.leftCard}>
+                                    <img src="" alt="" />
+                                </div>
+                                <div id="rightCard">
+                                    <span>2019 - Present</span>
+                                    <h5>Art Director - Facebook Inc</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eius corrupti animi quis at quia corporis
+                                        vitae! Voluptatibus consequuntur quo dolores obcaecati minus itaque assumenda, explicabo, recusandae ipsa
+                                        ratione nobis!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div id={styles.right}></div>
+                <div id={styles.right}>
+                    <div className={styles.duasCol}>
+                        <img src={crazy} alt="" />
+                        <div>
+                            <a href="">
+                                <AiFillSkype />
+                                <span>Skype me</span>
+                            </a>
+                            <a href="">
+                                <AiFillMail />
+                                <span>Mail Me</span>
+                            </a>
+                            <a href="">
+                                <AiOutlineWhatsApp />
+                                <span>Whatsapp Me</span>
+                            </a>
+                            <a href="">
+                                <SiGooglemeet />
+                                <span>Meet Me</span>
+                            </a>
+                            <a href="">
+                                <span>Resume</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div id={styles.skills}>
+                        <h2 className={styles.titulo1}>Habilidades</h2>
+                    </div>
+                </div>
             </div>
         </div>
     );

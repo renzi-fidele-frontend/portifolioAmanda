@@ -1,7 +1,7 @@
 #inicio > div {
     display: grid;
     grid-template-columns: 50% 50%;
-    padding-inline: 17%;
+    padding-inline: 15%;
     padding-block: 10em;
     color: var(--var-cor-texto);
 }
@@ -59,7 +59,7 @@
 }
 
 #inicio #right > p {
-    font-size: 17px;
+    font-size: var(--font-normal);
     font-weight: 300;
 }
 
@@ -115,5 +115,121 @@
 }
 
 #sobre {
-    padding: 5% 17%;
+    padding: 5% 15%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#sobre > #left {
+    padding-right: 20%;
+}
+
+#sobre #secaoSobre {
+    padding-bottom: 8%;
+    border-bottom: #c0c0c0 1px solid;
+}
+
+#sobre #secaoSobre > h6 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#sobre #secaoSobre > h5 {
+    font-size: 30px;
+    margin-bottom: 26px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+#sobre #secaoSobre > p {
+    font-size: var(--font-normal);
+    font-weight: var(--weight-normal);
+    margin-bottom: 16px;
+}
+
+#sobre #secaoSobre > #linha {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#sobre #secaoSobre > #linha > div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#sobre #secaoSobre > #linha > div:last-child {
+    margin-left: 4%;
+}
+
+#sobre #secaoSobre > #linha > div > span {
+    font-size: 52px;
+    line-height: 1;
+    font-weight: 600;
+    color: var(--bs-heading-color);
+}
+
+#sobre #secaoSobre > #linha > div > p {
+    padding-left: 12px;
+    line-height: 1.4;
+}
+
+#sobre #secaoXP {
+    padding-top: 8%;
+}
+
+#sobre #secaoXP > div > .cardXP {
+    background-color: var(--fundo-box);
+    border: 2px solid var(--borda-box);
+    margin-bottom: 4%;
+    padding: 15px 15px 20px 70px;
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.35s ease;
+}
+
+#sobre #right .duasCol {
+    position: sticky;
+    top: 0;
+
+}
+
+#sobre #right .duasCol > img {
+    max-width: 100%;
+    border-radius: 40px;
+}
+
+#sobre #right .duasCol {
+    display: grid;
+    grid-template-columns: 58% auto;
+}
+
+#sobre #right .duasCol > div {
+}
+
+#sobre #right .duasCol > div {
+    display: flex;
+    flex-direction: column;
+    padding-left: 7%;
+}
+
+#sobre #right .duasCol > div > a {
+    color: var(--var-cor-texto);
+    display: flex;
+    margin-bottom: 2em;
+    border: 2px solid var(--borda-box);
+    background-color: var(--fundo-box);
+    padding: 12px 15px;
+    border-radius: 12px;
+    align-items: center;
+    position: relative;
+    transition: all 0.35s ease;
+}
+
+#sobre #right .duasCol > div > a > span {
+    margin-left: 25px;
 }
