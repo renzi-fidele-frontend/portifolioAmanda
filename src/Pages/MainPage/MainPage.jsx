@@ -273,7 +273,8 @@ const MainPage = () => {
                         <div className={styles.conteudo}>
                             <h5>Criação de Landing Page</h5>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                magna aliqua.
                             </p>
                         </div>
                     </div>
@@ -287,7 +288,8 @@ const MainPage = () => {
                         <div className={styles.conteudo}>
                             <h5>Desenvolvimento Web</h5>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                magna aliqua.
                             </p>
                         </div>
                     </div>
@@ -301,7 +303,8 @@ const MainPage = () => {
                         <div className={styles.conteudo}>
                             <h5>Web design</h5>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                magna aliqua.
                             </p>
                         </div>
                     </div>
@@ -315,7 +318,8 @@ const MainPage = () => {
                         <div className={styles.conteudo}>
                             <h5>Gestão de tráfego</h5>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                magna aliqua.
                             </p>
                         </div>
                     </div>
@@ -329,7 +333,8 @@ const MainPage = () => {
                         <div className={styles.conteudo}>
                             <h5>Copywriting</h5>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                magna aliqua.
                             </p>
                         </div>
                     </div>
@@ -343,7 +348,8 @@ const MainPage = () => {
                         <div className={styles.conteudo}>
                             <h5>Edição de vídeo</h5>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                magna aliqua.
                             </p>
                         </div>
                     </div>
@@ -351,8 +357,10 @@ const MainPage = () => {
             </div>
 
             {/*Seção do portifólio */}
-            <div >
-
+            <div id={styles.portifolio}>
+                <h2 className={styles.titulo2}>
+                    <span>Meu Portifólio</span>
+                </h2>
             </div>
         </div>
     );

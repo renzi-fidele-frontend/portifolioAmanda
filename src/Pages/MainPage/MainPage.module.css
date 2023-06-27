@@ -338,6 +338,28 @@
     margin: 0.8em;
 }
 
+.serviceBox::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(238, 235, 235);
+    z-index: -1;
+    border-radius: 10px;
+    transform: rotate(0deg);
+    transition: all 0.35s ease;
+}
+
+.serviceBox:hover::after {
+    top: -6px;
+    left: 6px;
+    right: -6px;
+    bottom: 6px;
+    transform: rotate(4deg);
+}
+
 .serviceBox > .iconContainer {
     width: 70px;
     height: 70px;
@@ -387,4 +409,9 @@
 .serviceBox .conteudo > p {
     color: var(--var-cor-texto);
     font-weight: var(--weight-normal);
+}
+
+#portifolio {
+    background-color: var(--cor-fundo1);
+    padding: 5% 15%;
 }
