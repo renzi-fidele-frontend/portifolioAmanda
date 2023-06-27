@@ -8,7 +8,7 @@ import { AiFillSkype, AiOutlineWhatsApp, AiFillMail } from "react-icons/ai";
 import { SiGooglemeet } from "react-icons/si";
 import crazy from "../../Images/crazy.jpg";
 import { FaFilePdf } from "react-icons/fa";
-import {CiMonitor} from "react-icons/ci"
+import { CiMonitor } from "react-icons/ci";
 
 const MainPage = () => {
     const skillsRef = useRef();
@@ -265,49 +265,94 @@ const MainPage = () => {
                 </h2>
                 <div>
                     <div className={styles.serviceBox}>
-                        <div className={styles.iconBox}>
-                        <BsPhone/>
-                        </div>
-
-                        <div className={styles.conteudo}>
-                            <h5>Web design</h5>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, sed id nesciunt facilis numquam, ipsum
-                                beatae sequi recusandae voluptatum tenetur culpa cumque laboriosam error. Reiciendis id repellat consequatur sed
-                                officia?
-                            </p>
-                        </div>
-                    </div>
-                    <div className={styles.serviceBox}>
-                        <div >
+                        <div className={styles.iconContainer}>
                             <i className={styles.iconBox}>
-                            <CiMonitor/>
+                                <CiMonitor />
                             </i>
-                            
                         </div>
-
                         <div className={styles.conteudo}>
-                            <h5>Web design</h5>
+                            <h5>Criação de Landing Page</h5>
                             <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, sed id nesciunt facilis numquam, ipsum
-                                beatae sequi recusandae voluptatum tenetur culpa cumque laboriosam error. Reiciendis id repellat consequatur sed
-                                officia?
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                     </div>
-                    <div className={styles.serviceBox}>
-                        <div className={styles.iconBox}></div>
 
+                    <div className={styles.serviceBox}>
+                        <div className={styles.iconContainer}>
+                            <i className={styles.iconBox}>
+                                <CiMonitor />
+                            </i>
+                        </div>
+                        <div className={styles.conteudo}>
+                            <h5>Desenvolvimento Web</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className={styles.serviceBox}>
+                        <div className={styles.iconContainer}>
+                            <i className={styles.iconBox}>
+                                <CiMonitor />
+                            </i>
+                        </div>
                         <div className={styles.conteudo}>
                             <h5>Web design</h5>
                             <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, sed id nesciunt facilis numquam, ipsum
-                                beatae sequi recusandae voluptatum tenetur culpa cumque laboriosam error. Reiciendis id repellat consequatur sed
-                                officia?
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className={styles.serviceBox}>
+                        <div className={styles.iconContainer}>
+                            <i className={styles.iconBox}>
+                                <CiMonitor />
+                            </i>
+                        </div>
+                        <div className={styles.conteudo}>
+                            <h5>Gestão de tráfego</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className={styles.serviceBox}>
+                        <div className={styles.iconContainer}>
+                            <i className={styles.iconBox}>
+                                <CiMonitor />
+                            </i>
+                        </div>
+                        <div className={styles.conteudo}>
+                            <h5>Copywriting</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className={styles.serviceBox}>
+                        <div className={styles.iconContainer}>
+                            <i className={styles.iconBox}>
+                                <CiMonitor />
+                            </i>
+                        </div>
+                        <div className={styles.conteudo}>
+                            <h5>Edição de vídeo</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            {/*Seção do portifólio */}
+            <div >
+
             </div>
         </div>
     );
