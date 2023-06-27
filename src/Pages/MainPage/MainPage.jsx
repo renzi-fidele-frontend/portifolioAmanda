@@ -1,16 +1,49 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./MainPage.module.css";
 import icone from "../../Images/icone.svg";
-import me from "../../Images/me.jpg";
-import { BsDownload } from "react-icons/bs";
+import me from "../../Images/iii.jpg";
+import { BsDownload, BsPhone } from "react-icons/bs";
 import me1 from "../../Images/me2.jpg";
 import { AiFillSkype, AiOutlineWhatsApp, AiFillMail } from "react-icons/ai";
 import { SiGooglemeet } from "react-icons/si";
 import crazy from "../../Images/crazy.jpg";
+import { FaFilePdf } from "react-icons/fa";
+import {CiMonitor} from "react-icons/ci"
 
 const MainPage = () => {
+    const skillsRef = useRef();
+
+    const handleIntersection = (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+            // Start animation when the section is in the viewport
+            // Perform any animation logic here
+            skillsRef.current.classList.toggle(styles.skillVisto);
+        }
+    };
+
+    const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5, // Adjust the threshold as per your requirement
+    };
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(handleIntersection, observerOptions);
+        if (skillsRef.current) {
+            observer.observe(skillsRef.current);
+        }
+
+        return () => {
+            if (skillsRef.current) {
+                observer.unobserve(skillsRef.current);
+            }
+        };
+    }, []);
+
     return (
         <div id={styles.container}>
+            {/*Seção Inicial */}
             <div id={styles.inicio}>
                 <div>
                     {" "}
@@ -47,6 +80,8 @@ const MainPage = () => {
                     </div>
                 </div>
             </div>
+
+            {/*Seção sobre mim */}
             <div id={styles.sobre}>
                 <div id={styles.left}>
                     <div id={styles.secaoSobre}>
@@ -123,32 +158,154 @@ const MainPage = () => {
                     </div>
                 </div>
                 <div id={styles.right}>
-                    <div className={styles.duasCol}>
-                        <img src={crazy} alt="" />
-                        <div>
-                            <a href="">
-                                <AiFillSkype />
-                                <span>Skype me</span>
-                            </a>
-                            <a href="">
-                                <AiFillMail />
-                                <span>Mail Me</span>
-                            </a>
-                            <a href="">
-                                <AiOutlineWhatsApp />
-                                <span>Whatsapp Me</span>
-                            </a>
-                            <a href="">
-                                <SiGooglemeet />
-                                <span>Meet Me</span>
-                            </a>
-                            <a href="">
-                                <span>Resume</span>
-                            </a>
+                    <div ref={skillsRef}>
+                        <div className={styles.duasCol}>
+                            <img src={crazy} alt="" />
+                            <div>
+                                <a href="">
+                                    <AiFillSkype />
+                                    <span>Skype me</span>
+                                </a>
+                                <a href="">
+                                    <AiFillMail />
+                                    <span>Mail Me</span>
+                                </a>
+                                <a href="">
+                                    <AiOutlineWhatsApp />
+                                    <span>Whatsapp Me</span>
+                                </a>
+                                <a href="">
+                                    <SiGooglemeet />
+                                    <span>Meet Me</span>
+                                </a>
+                                <a href="">
+                                    <FaFilePdf />
+                                    <span>Resume</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div id={styles.skills}>
+                            <h2 className={styles.titulo1}>Habilidades</h2>
+                            <div>
+                                <div id={styles.skillLine}>
+                                    <span>HTML5</span>
+                                    <div>
+                                        <div style={{ width: "92%" }}>
+                                            <span>92%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id={styles.skillLine}>
+                                    <span>CSS</span>
+                                    <div>
+                                        <div style={{ width: "73%" }}>
+                                            <span>73%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id={styles.skillLine}>
+                                    <span>JavaScript</span>
+                                    <div>
+                                        <div style={{ width: "81%" }}>
+                                            <span>81%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id={styles.skillLine}>
+                                    <span>ReactJs</span>
+                                    <div>
+                                        <div style={{ width: "75%" }}>
+                                            <span>75%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id={styles.skillLine}>
+                                    <span>Firebase</span>
+                                    <div>
+                                        <div style={{ width: "55%" }}>
+                                            <span>55%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id={styles.skillLine}>
+                                    <span>Wordpress / Elementor</span>
+                                    <div>
+                                        <div style={{ width: "65%" }}>
+                                            <span>65%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id={styles.skillLine}>
+                                    <span>Python</span>
+                                    <div>
+                                        <div style={{ width: "70%" }}>
+                                            <span>70%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id={styles.skillLine}>
+                                    <span>Photoshop</span>
+                                    <div>
+                                        <div style={{ width: "30%" }}>
+                                            <span>30%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div id={styles.skills}>
-                        <h2 className={styles.titulo1}>Habilidades</h2>
+                </div>
+            </div>
+
+            {/*Seção dos serviços*/}
+            <div id={styles.servicos}>
+                <h2 className={styles.titulo2}>
+                    <span>Meus serviços</span>
+                </h2>
+                <div>
+                    <div className={styles.serviceBox}>
+                        <div className={styles.iconBox}>
+                        <BsPhone/>
+                        </div>
+
+                        <div className={styles.conteudo}>
+                            <h5>Web design</h5>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, sed id nesciunt facilis numquam, ipsum
+                                beatae sequi recusandae voluptatum tenetur culpa cumque laboriosam error. Reiciendis id repellat consequatur sed
+                                officia?
+                            </p>
+                        </div>
+                    </div>
+                    <div className={styles.serviceBox}>
+                        <div >
+                            <i className={styles.iconBox}>
+                            <CiMonitor/>
+                            </i>
+                            
+                        </div>
+
+                        <div className={styles.conteudo}>
+                            <h5>Web design</h5>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, sed id nesciunt facilis numquam, ipsum
+                                beatae sequi recusandae voluptatum tenetur culpa cumque laboriosam error. Reiciendis id repellat consequatur sed
+                                officia?
+                            </p>
+                        </div>
+                    </div>
+                    <div className={styles.serviceBox}>
+                        <div className={styles.iconBox}></div>
+
+                        <div className={styles.conteudo}>
+                            <h5>Web design</h5>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, sed id nesciunt facilis numquam, ipsum
+                                beatae sequi recusandae voluptatum tenetur culpa cumque laboriosam error. Reiciendis id repellat consequatur sed
+                                officia?
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
