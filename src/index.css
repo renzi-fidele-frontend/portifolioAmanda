@@ -8,7 +8,8 @@
     --font-normal: 17px;
     --weight-normal: 300;
     --fundo-box: white;
-    --borda-box: #e1e3e1;
+    --cor-borda: #e1e3e1;
+    --padding-secao: 5% 15%;
 }
 
 a {

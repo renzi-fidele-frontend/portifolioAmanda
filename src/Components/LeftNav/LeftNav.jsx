@@ -13,6 +13,10 @@ const LeftNav = () => {
         borderRadius: "13px",
     };
 
+    function lidarScroll(e) {
+        document.querySelector(styles.inicio).scrollIntoView({ behavior: "smooth" });
+    }
+
     useEffect(() => {}, [location.hash]);
 
     return (

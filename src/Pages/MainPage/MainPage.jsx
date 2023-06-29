@@ -2,16 +2,30 @@ import React, { useEffect, useRef } from "react";
 import styles from "./MainPage.module.css";
 import icone from "../../Images/icone.svg";
 import me from "../../Images/iii.jpg";
-import { BsDownload, BsPhone } from "react-icons/bs";
+import { BsDownload, BsPhone, BsPlusCircle } from "react-icons/bs";
 import me1 from "../../Images/me2.jpg";
 import { AiFillSkype, AiOutlineWhatsApp, AiFillMail } from "react-icons/ai";
 import { SiGooglemeet } from "react-icons/si";
 import crazy from "../../Images/crazy.jpg";
 import { FaFilePdf } from "react-icons/fa";
 import { CiMonitor } from "react-icons/ci";
+import project1 from "../../Images/FilmeLib.gif";
+import { ImNewTab } from "react-icons/im";
+import { useLocation } from "react-router-dom";
+import ProjectModal from "../../Components/ProjectModal/ProjectModal";
 
 const MainPage = () => {
     const skillsRef = useRef();
+
+    const cardHover = useRef();
+
+    const loc = useLocation();
+
+    const secinicio = useRef();
+    const secSobre = useRef();
+    const secServicos = useRef();
+    const secPortifolio = useRef();
+    const secContacto = useRef();
 
     const handleIntersection = (entries) => {
         const [entry] = entries;
@@ -41,10 +55,25 @@ const MainPage = () => {
         };
     }, []);
 
+    useEffect(() => {
+        const s = loc.hash;
+        if (s === "#inicio") {
+            secinicio.current.scrollIntoView({ behavior: "smooth" });
+        } else if (s === "#sobre") {
+            secSobre.current.scrollIntoView({ behavior: "smooth" });
+        } else if (s === "#servicos") {
+            secServicos.current.scrollIntoView({ behavior: "smooth" });
+        } else if (s === "#portifolio") {
+            secPortifolio.current.scrollIntoView({ behavior: "smooth" });
+        } else if (s === "#contacto") {
+            secContacto.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [loc.hash]);
+
     return (
         <div id={styles.container}>
             {/*Seção Inicial */}
-            <div id={styles.inicio}>
+            <div ref={secinicio} id={styles.inicio}>
                 <div>
                     {" "}
                     <div id={styles.left}>
@@ -82,7 +111,7 @@ const MainPage = () => {
             </div>
 
             {/*Seção sobre mim */}
-            <div id={styles.sobre}>
+            <div ref={secSobre} id={styles.sobre}>
                 <div id={styles.left}>
                     <div id={styles.secaoSobre}>
                         <h2 className={styles.titulo1}>
@@ -259,7 +288,7 @@ const MainPage = () => {
             </div>
 
             {/*Seção dos serviços*/}
-            <div id={styles.servicos}>
+            <div ref={secServicos} id={styles.servicos}>
                 <h2 className={styles.titulo2}>
                     <span>Meus serviços</span>
                 </h2>
@@ -357,11 +386,165 @@ const MainPage = () => {
             </div>
 
             {/*Seção do portifólio */}
-            <div id={styles.portifolio}>
+            <div ref={secPortifolio} id={styles.portifolio}>
                 <h2 className={styles.titulo2}>
                     <span>Meu Portifólio</span>
                 </h2>
+
+                <div>
+                    {/*Projeto 1 */}
+                    <div
+                        className={styles.portifolioCard}
+                        ref={cardHover}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.classList.toggle(styles.cardHover);
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.classList.toggle(styles.cardHover);
+                        }}
+                    >
+                        <div className={styles.portifolioText}>
+                            <h6>FilmesLib: Biblioteca de filmes</h6>
+                            <p>ReactJs, Firebase, Css</p>
+                            <a href="https://films-lib.vercel.app/" target="_blank">
+                                <ImNewTab />
+                            </a>
+                        </div>
+                        <div id={styles.projeto1} className={styles.portifolioImg}>
+                            <a href="#projecto1">
+                                <BsPlusCircle />
+                            </a>
+                            <ProjectModal />
+                        </div>
+                    </div>
+                    {/*Projeto 2 */}
+                    <div
+                        className={styles.portifolioCard}
+                        ref={cardHover}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.classList.toggle(styles.cardHover);
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.classList.toggle(styles.cardHover);
+                        }}
+                    >
+                        <div className={styles.portifolioText}>
+                            <h6>Custos: Gerenciador de projetos</h6>
+                            <p>ReactJs, Firebase, Css</p>
+                            <a href="https://films-lib.vercel.app/" target="_blank">
+                                <ImNewTab />
+                            </a>
+                        </div>
+                        <div id={styles.projeto2} className={styles.portifolioImg}>
+                            <a href="#projecto1">
+                                <BsPlusCircle />
+                            </a>
+                        </div>
+                    </div>
+                    {/*Projeto 3 */}
+                    <div
+                        className={styles.portifolioCard}
+                        ref={cardHover}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.classList.toggle(styles.cardHover);
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.classList.toggle(styles.cardHover);
+                        }}
+                    >
+                        <div className={styles.portifolioText}>
+                            <h6>FilmesLib: Biblioteca de filmes</h6>
+                            <p>ReactJs, Css</p>
+                            <a href="https://films-lib.vercel.app/" target="_blank">
+                                <ImNewTab />
+                            </a>
+                        </div>
+                        <div id={styles.projeto3} className={styles.portifolioImg}>
+                            <a href="#projecto1">
+                                <BsPlusCircle />
+                            </a>
+                        </div>
+                    </div>
+                    {/*Projeto 4 */}
+                    <div
+                        className={styles.portifolioCard}
+                        ref={cardHover}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.classList.toggle(styles.cardHover);
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.classList.toggle(styles.cardHover);
+                        }}
+                    >
+                        <div className={styles.portifolioText}>
+                            <h6>LP para Ebook digital - O método correto</h6>
+                            <p>WP, Elementor, JavaScript</p>
+                            <a href="https://films-lib.vercel.app/" target="_blank">
+                                <ImNewTab />
+                            </a>
+                        </div>
+                        <div id={styles.projeto4} className={styles.portifolioImg}>
+                            <a href="#projecto1">
+                                <BsPlusCircle />
+                            </a>
+                        </div>
+                    </div>
+                    {/*Projeto 5 */}
+                    <div
+                        className={styles.portifolioCard}
+                        ref={cardHover}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.classList.toggle(styles.cardHover);
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.classList.toggle(styles.cardHover);
+                        }}
+                    >
+                        <div className={styles.portifolioText}>
+                            <h6>LP para construtora Unity Carlessi</h6>
+                            <p>WP, Elementor, Javascript</p>
+                            <a href="https://unitycarlessi.com.br/" target="_blank">
+                                <ImNewTab />
+                            </a>
+                        </div>
+                        <div id={styles.projeto5} className={styles.portifolioImg}>
+                            <a href="#projecto1">
+                                <BsPlusCircle />
+                            </a>
+                        </div>
+                    </div>
+                    {/*Projeto 6 */}
+                    <div
+                        className={styles.portifolioCard}
+                        ref={cardHover}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.classList.toggle(styles.cardHover);
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.classList.toggle(styles.cardHover);
+                        }}
+                    >
+                        <div className={styles.portifolioText}>
+                            <h6>Lp para Ebook digital - Panetones artesanais</h6>
+                            <p>WP, Elementor, Javascript</p>
+                            <a href="https://films-lib.vercel.app/" target="_blank">
+                                <ImNewTab />
+                            </a>
+                        </div>
+                        <div id={styles.projeto6} className={styles.portifolioImg}>
+                            <a href="#projecto1">
+                                <BsPlusCircle />
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            {/*Seção dos testemunhos */}
+            <div id={styles.testemunhos}></div>
+
+            {/*Seção dos Contactos */}
+            <div ref={secContacto} id={styles.contacto}></div>
         </div>
     );
 };

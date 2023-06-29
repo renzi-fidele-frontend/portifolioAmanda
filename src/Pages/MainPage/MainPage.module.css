@@ -92,6 +92,9 @@
 
 /*--------------Seção sobre mim-----------------*/
 #sobre {
+    padding: var(--padding-secao);
+    display: grid;
+    grid-template-columns: 50% 50%;
     background-color: var(--cor-fundo1);
 }
 
@@ -114,12 +117,6 @@
     width: 8px;
     height: 8px;
     background: var(--var-cor-decoracao);
-}
-
-#sobre {
-    padding: 5% 15%;
-    display: grid;
-    grid-template-columns: 50% 50%;
 }
 
 #sobre > #left {
@@ -186,7 +183,7 @@
 
 #sobre #secaoXP > div > .cardXP {
     background-color: var(--fundo-box);
-    border: 2px solid var(--borda-box);
+    border: 2px solid var(--cor-borda);
     margin-bottom: 4%;
     padding: 15px 15px 20px 70px;
     border-radius: 12px;
@@ -215,7 +212,7 @@
     color: var(--var-cor-texto);
     display: flex;
     margin-bottom: 1.6em;
-    border: 2px solid var(--borda-box);
+    border: 2px solid var(--cor-borda);
     background-color: var(--fundo-box);
     padding: 12px 15px;
     border-radius: 12px;
@@ -290,7 +287,7 @@
 /*----------------Seção dos serviços------------*/
 #servicos {
     background-color: var(--cor-fundo0);
-    padding: 5% 15%;
+    padding: var(--padding-secao);
 }
 
 .titulo2 {
@@ -320,7 +317,7 @@
     bottom: 0;
     left: 0;
     width: 60px;
-    height: 3px;
+    height: 6px;
     background-color: var(--var-cor-decoracao);
 }
 
@@ -331,7 +328,7 @@
 
 .serviceBox {
     background-color: var(--cor-fundo1);
-    border: 2px solid var(--borda-box);
+    border: 2px solid var(--cor-borda);
     padding: 40px;
     border-radius: 10px;
     position: relative;
@@ -368,7 +365,7 @@
     justify-content: center;
     margin-bottom: 40px;
     position: relative;
-    z-index: 1;
+    z-index: 0;
 }
 
 .iconBox {
@@ -411,7 +408,130 @@
     font-weight: var(--weight-normal);
 }
 
+/*------------Secao do portifolio*/
 #portifolio {
     background-color: var(--cor-fundo1);
-    padding: 5% 15%;
+    padding: var(--padding-secao);
+}
+
+#portifolio > div {
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+}
+
+.portifolioCard {
+    border: 2px solid var(--cor-borda);
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    background-color: var(--cor-fundo0);
+    margin: 0.8em;
+}
+
+.portifolioText {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    background-color: var(--var-cor-cinza);
+    border: 2px solid var(--cor-borda);
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.35s ease;
+    opacity: 0;
+}
+
+.cardHover .portifolioText {
+    bottom: 20px;
+    opacity: 1;
+}
+
+.portifolioText > a {
+    position: absolute;
+    top: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    right: 15px;
+    background: var(--cor-fundo0);
+    color: var(--var-cor-texto);
+    border-radius: 50%;
+}
+
+.portifolioText > h6 {
+    color: var(--bs-heading-color);
+    font-size: 17px;
+    font-weight: 500;
+    margin-right: 11px;
+}
+
+.portifolioText > p {
+    font-size: 13px;
+    font-weight: var(--weight-normal);
+    color: var(--var-cor-texto);
+}
+
+.portifolioImg {
+    height: 300px;
+    overflow-y: hidden;
+    border-radius: 10px;
+    transition: ease-in-out 1.3s;
+    background-size: cover;
+}
+
+#projeto1 {
+    background-image: url("/src/Images/Miniblog.gif");
+    background-position: center center;
+}
+
+#projeto2 {
+    background-image: url("/src/Images/custos.gif");
+    background-position: center center;
+}
+
+#projeto3 {
+    background-image: url("/src/Images/FilmeLib.gif");
+}
+
+#projeto4 {
+    background-image: url("/src/Images/diabetes.gif");
+}
+
+#projeto5 {
+    background-image: url("/src/Images/unity.gif");
+}
+
+#projeto6 {
+    background-image: url("/src/Images/projetopanetones.gif");
+}
+
+.portifolioImg:hover {
+    background-position: bottom;
+}
+
+.portifolioImg > a {
+    position: absolute;
+    top: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--var-cor-decoracao);
+    color: var(--var-cor-texto);
+    border-radius: 50%;
+    border-color: red;
+    right: 20px;
+    border: none;
+    font-size: 27px;
+}
+
+/*------------Secao dos testemunhos-------*/
+#testemunhos {
+    background-color: var(--cor-fundo0);
+    padding: var(--padding-secao);
+}
+
+/*------------Secao dos contacto-------*/
+#contacto {
+    background-color: var(--cor-fundo1);
+    padding: var(--padding-secao);
 }

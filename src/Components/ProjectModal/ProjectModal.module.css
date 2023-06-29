@@ -1,0 +1,30 @@
+#container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    z-index: 4;
+    background-color: red;
+}
+
+#container > svg {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 33px;
+}
+#container > svg:hover {
+    cursor: pointer;
+}
+
+.left {
+}
+
+#detailsContainer > div {
+    display: flex;
+    border: 2px solid var(--px-border);
+    background-color: var(--px-bg);
+    padding: 12px 15px;
+    border-radius: 12px;
+    align-items: center;
+    position: relative;
+    transition: all 0.35s ease;
+}
