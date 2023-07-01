@@ -4,21 +4,10 @@ import ReactModal from "react-modal";
 import { useLocation, useNavigate } from "react-router-dom";
 import { FaCross, FaWindowClose } from "react-icons/fa";
 
-const customStyles = {
-    content: {
-        top: "50%",
-        left: "50%",
-        right: "auto",
-        bottom: "auto",
-        marginRight: "-50%",
-        transform: "translate(-50%, -50%)",
-    },
-};
-
 ReactModal.setAppElement("#root");
 
-const ProjectModal = ({ imagem, titulo, link, linguagens = [], plataforma, pais, tipo }) => {
-    const [isOpen, setIsOpen] = useState(true);
+const ProjectModal = () => {
+    const [isOpen, setIsOpen] = useState(false);
 
     const loc = useLocation();
 
@@ -43,42 +32,44 @@ const ProjectModal = ({ imagem, titulo, link, linguagens = [], plataforma, pais,
 
     return (
         <>
-            <ReactModal isOpen={isOpen} onRequestClose={fechado} id={styles.container}>
-                <div className={styles.left}>
-                    <img src={imagem} alt="" />
-                </div>
-                <div className={styles.right}>
-                    <h5>{titulo}</h5>
-                    <div id={styles.detailsContainer}>
-                        {/*Tipo */}
-                        <div>
-                            <h6>Tipo</h6>
-                            <p>{tipo}</p>
-                        </div>
-                        {/*Linguagens */}
-                        <div>
-                            <h6>Linguagens</h6>
-                            <p>{linguagens}</p>
-                        </div>
-                        {/*Plataforma */}
-                        <div>
-                            <h6>Plataforma</h6>
-                            <p>{plataforma}</p>
-                        </div>
-                        {/*País */}
-                        <div>
-                            <h6>País:</h6>
-                            <p>{pais}</p>
-                        </div>
-                        {/*País */}
-                        <div>
-                            <h6>Url do projeto:</h6>
-                            <p>{link}</p>
+            {loc.state ? (
+                <ReactModal isOpen={isOpen} onRequestClose={fechado} id={styles.container}>
+                    <div className={styles.left}>
+                        <video autoPlay src={loc.state.imagem}></video>
+                    </div>
+                    <div className={styles.right}>
+                        <h5>{loc.state.titulo}</h5>
+                        <div id={styles.detailsContainer}>
+                            {/*Tipo */}
+                            <div>
+                                <h6>Tipo:</h6>
+                                <p>{loc.state.tipo}</p>
+                            </div>
+                            {/*Linguagens */}
+                            <div>
+                                <h6>Linguagens:</h6>
+                                <p>{loc.state.linguagens}</p>
+                            </div>
+                            {/*Plataforma */}
+                            <div>
+                                <h6>Plataforma:</h6>
+                                <p>{loc.state.plataforma}</p>
+                            </div>
+                            {/*País */}
+                            <div>
+                                <h6>País:</h6>
+                                <p>{loc.state.pais}</p>
+                            </div>
+                            {/*País */}
+                            <div>
+                                <h6>Url do projeto:</h6>
+                                <p>{loc.state.link}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <FaWindowClose onClick={fechado}>Fechar</FaWindowClose>
-            </ReactModal>
+                    <FaWindowClose onClick={fechado}>Fechar</FaWindowClose>
+                </ReactModal>
+            ) : undefined}
         </>
     );
 };

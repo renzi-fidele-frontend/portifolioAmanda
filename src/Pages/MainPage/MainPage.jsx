@@ -11,8 +11,17 @@ import { FaFilePdf } from "react-icons/fa";
 import { CiMonitor } from "react-icons/ci";
 import project1 from "../../Images/FilmeLib.gif";
 import { ImNewTab } from "react-icons/im";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import ProjectModal from "../../Components/ProjectModal/ProjectModal";
+import video1 from "../../Videos/demoNossoBlog.webm";
+import video2 from "../../Videos/demoCustos.webm";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import avatar1 from "../../Images/avatar1.gif"
+
+// Import Swiper styles
+import "swiper/css";
 
 const MainPage = () => {
     const skillsRef = useRef();
@@ -41,6 +50,8 @@ const MainPage = () => {
         rootMargin: "0px",
         threshold: 0.5, // Adjust the threshold as per your requirement
     };
+
+    const navegar = useNavigate();
 
     useEffect(() => {
         const observer = new IntersectionObserver(handleIntersection, observerOptions);
@@ -73,7 +84,13 @@ const MainPage = () => {
     return (
         <div id={styles.container}>
             {/*Seção Inicial */}
-            <div ref={secinicio} id={styles.inicio}>
+            <div
+                ref={secinicio}
+                onMouseEnter={() => {
+                    navegar("/#inicio");
+                }}
+                id={styles.inicio}
+            >
                 <div>
                     {" "}
                     <div id={styles.left}>
@@ -111,7 +128,13 @@ const MainPage = () => {
             </div>
 
             {/*Seção sobre mim */}
-            <div ref={secSobre} id={styles.sobre}>
+            <div
+                ref={secSobre}
+                onMouseEnter={() => {
+                    navegar("/#sobre");
+                }}
+                id={styles.sobre}
+            >
                 <div id={styles.left}>
                     <div id={styles.secaoSobre}>
                         <h2 className={styles.titulo1}>
@@ -288,7 +311,13 @@ const MainPage = () => {
             </div>
 
             {/*Seção dos serviços*/}
-            <div ref={secServicos} id={styles.servicos}>
+            <div
+                ref={secServicos}
+                onMouseEnter={() => {
+                    navegar("/#servicos");
+                }}
+                id={styles.servicos}
+            >
                 <h2 className={styles.titulo2}>
                     <span>Meus serviços</span>
                 </h2>
@@ -386,7 +415,13 @@ const MainPage = () => {
             </div>
 
             {/*Seção do portifólio */}
-            <div ref={secPortifolio} id={styles.portifolio}>
+            <div
+                ref={secPortifolio}
+                onMouseEnter={() => {
+                    navegar("/#portifolio");
+                }}
+                id={styles.portifolio}
+            >
                 <h2 className={styles.titulo2}>
                     <span>Meu Portifólio</span>
                 </h2>
@@ -400,7 +435,7 @@ const MainPage = () => {
                             e.currentTarget.classList.toggle(styles.cardHover);
                         }}
                         onMouseLeave={(e) => {
-                            e.currentTarget.classList.toggle(styles.cardHover);
+                            e.currentTarget.classList.remove(styles.cardHover);
                         }}
                     >
                         <div className={styles.portifolioText}>
@@ -411,9 +446,20 @@ const MainPage = () => {
                             </a>
                         </div>
                         <div id={styles.projeto1} className={styles.portifolioImg}>
-                            <a href="#projecto1">
+                            <Link
+                                state={{
+                                    link: "https://films-lib.vercel.app/",
+                                    titulo: "FilmesLib: Biblioteca de filmes",
+                                    plataforma: "Vercel",
+                                    linguagens: "ReactJs, Firebase, Css",
+                                    tipo: "Website",
+                                    pais: "Moçambique",
+                                    imagem: video1,
+                                }}
+                                to={"#projecto1"}
+                            >
                                 <BsPlusCircle />
-                            </a>
+                            </Link>
                             <ProjectModal />
                         </div>
                     </div>
@@ -425,20 +471,31 @@ const MainPage = () => {
                             e.currentTarget.classList.toggle(styles.cardHover);
                         }}
                         onMouseLeave={(e) => {
-                            e.currentTarget.classList.toggle(styles.cardHover);
+                            e.currentTarget.classList.remove(styles.cardHover);
                         }}
                     >
                         <div className={styles.portifolioText}>
                             <h6>Custos: Gerenciador de projetos</h6>
                             <p>ReactJs, Firebase, Css</p>
-                            <a href="https://films-lib.vercel.app/" target="_blank">
+                            <a href="https://custos-five.vercel.app/" target="_blank">
                                 <ImNewTab />
                             </a>
                         </div>
                         <div id={styles.projeto2} className={styles.portifolioImg}>
-                            <a href="#projecto1">
+                            <Link
+                                state={{
+                                    link: "https://custos-five.vercel.app/",
+                                    titulo: "Custos: Gerenciador de projetos",
+                                    plataforma: "Vercel",
+                                    linguagens: "ReactJs, Firebase, Css",
+                                    tipo: "Website",
+                                    pais: "Moçambique",
+                                    imagem: video2,
+                                }}
+                                to={"#projecto2"}
+                            >
                                 <BsPlusCircle />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/*Projeto 3 */}
@@ -449,7 +506,7 @@ const MainPage = () => {
                             e.currentTarget.classList.toggle(styles.cardHover);
                         }}
                         onMouseLeave={(e) => {
-                            e.currentTarget.classList.toggle(styles.cardHover);
+                            e.currentTarget.classList.remove(styles.cardHover);
                         }}
                     >
                         <div className={styles.portifolioText}>
@@ -460,9 +517,20 @@ const MainPage = () => {
                             </a>
                         </div>
                         <div id={styles.projeto3} className={styles.portifolioImg}>
-                            <a href="#projecto1">
+                            <Link
+                                state={{
+                                    link: "https://films-lib.vercel.app/",
+                                    titulo: "FilmesLib: Biblioteca de filmes",
+                                    plataforma: "Vercel",
+                                    linguagens: "ReactJs, Css",
+                                    tipo: "Website",
+                                    pais: "Moçambique",
+                                    imagem: video2,
+                                }}
+                                to={"#projecto3"}
+                            >
                                 <BsPlusCircle />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/*Projeto 4 */}
@@ -473,20 +541,31 @@ const MainPage = () => {
                             e.currentTarget.classList.toggle(styles.cardHover);
                         }}
                         onMouseLeave={(e) => {
-                            e.currentTarget.classList.toggle(styles.cardHover);
+                            e.currentTarget.classList.remove(styles.cardHover);
                         }}
                     >
                         <div className={styles.portifolioText}>
                             <h6>LP para Ebook digital - O método correto</h6>
                             <p>WP, Elementor, JavaScript</p>
-                            <a href="https://films-lib.vercel.app/" target="_blank">
+                            <a href="https://ometodocorreto.com/" target="_blank">
                                 <ImNewTab />
                             </a>
                         </div>
                         <div id={styles.projeto4} className={styles.portifolioImg}>
-                            <a href="#projecto1">
+                            <Link
+                                state={{
+                                    link: "https://ometodocorreto.com/",
+                                    titulo: "LP para Ebook digital - O método correto",
+                                    plataforma: "Wordpress",
+                                    linguagens: "WP, Elementor, JavaScript",
+                                    tipo: "Landing Page",
+                                    pais: "Brasil",
+                                    imagem: video2,
+                                }}
+                                to={"#projecto4"}
+                            >
                                 <BsPlusCircle />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/*Projeto 5 */}
@@ -497,7 +576,7 @@ const MainPage = () => {
                             e.currentTarget.classList.toggle(styles.cardHover);
                         }}
                         onMouseLeave={(e) => {
-                            e.currentTarget.classList.toggle(styles.cardHover);
+                            e.currentTarget.classList.remove(styles.cardHover);
                         }}
                     >
                         <div className={styles.portifolioText}>
@@ -508,9 +587,20 @@ const MainPage = () => {
                             </a>
                         </div>
                         <div id={styles.projeto5} className={styles.portifolioImg}>
-                            <a href="#projecto1">
+                            <Link
+                                state={{
+                                    link: "https://unitycarlessi.com.br/",
+                                    titulo: "LP para construtora Unity Carlessi",
+                                    plataforma: "Wordpress",
+                                    linguagens: "WP, Elementor, JavaScript",
+                                    tipo: "Landing Page",
+                                    pais: "Brasil",
+                                    imagem: video2,
+                                }}
+                                to={"#projecto5"}
+                            >
                                 <BsPlusCircle />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/*Projeto 6 */}
@@ -521,30 +611,127 @@ const MainPage = () => {
                             e.currentTarget.classList.toggle(styles.cardHover);
                         }}
                         onMouseLeave={(e) => {
-                            e.currentTarget.classList.toggle(styles.cardHover);
+                            e.currentTarget.classList.remove(styles.cardHover);
                         }}
                     >
                         <div className={styles.portifolioText}>
                             <h6>Lp para Ebook digital - Panetones artesanais</h6>
                             <p>WP, Elementor, Javascript</p>
-                            <a href="https://films-lib.vercel.app/" target="_blank">
+                            <a href="https://anovafase.com/panetones-artesanais/" target="_blank">
                                 <ImNewTab />
                             </a>
                         </div>
                         <div id={styles.projeto6} className={styles.portifolioImg}>
-                            <a href="#projecto1">
+                            <Link
+                                state={{
+                                    link: "https://anovafase.com/panetones-artesanais/",
+                                    titulo: "Lp para Ebook digital - Panetones artesanais",
+                                    plataforma: "Wordpress",
+                                    linguagens: "WP, Elementor, JavaScript",
+                                    tipo: "Landing Page",
+                                    pais: "Brasil",
+                                    imagem: video2,
+                                }}
+                                to={"#projecto6"}
+                            >
                                 <BsPlusCircle />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/*Seção dos testemunhos */}
-            <div id={styles.testemunhos}></div>
+            <div
+                onMouseEnter={() => {
+                    navegar("/#testemunhos");
+                }}
+                id={styles.testemunhos}
+            >
+                <h2 className={styles.titulo2}>
+                    <span>Testemunhos</span>
+                </h2>
+
+                <Swiper
+                    id={styles.swipperContainer}
+                    spaceBetween={50}
+                    slidesPerView={3}
+
+                    onSlideChange={() => console.log("slide change")}
+                    onSwiper={(swiper) => console.log(swiper)}
+                >
+                    <SwiperSlide>
+                        <div className={styles.testemunhoCard}>
+                            <div id={styles.avatar}>
+                                <img src={avatar1} alt="" />
+                            </div>
+                            <div id={styles.historia}>
+                                <h5>Professional de excelente qualidade</h5>
+                                <p>Eu considero o Renzi muito proativo e super talentoso, cuidou do meu problema num instante</p>
+                                <div>
+                                    <p>Amanda Caleiras</p>
+                                    <span>Ceo na ANOVAFASE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className={styles.testemunhoCard}>
+                            <div id={styles.avatar}>
+                                <img src={avatar1} alt="" />
+                            </div>
+                            <div id={styles.historia}>
+                                <h5>Professional de excelente qualidade</h5>
+                                <p>Eu considero o Renzi muito proativo e super talentoso, cuidou do meu problema num instante</p>
+                                <div>
+                                    <p>Amanda Caleiras</p>
+                                    <span>Ceo na ANOVAFASE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className={styles.testemunhoCard}>
+                            <div id={styles.avatar}>
+                                <img src={avatar1} alt="" />
+                            </div>
+                            <div id={styles.historia}>
+                                <h5>Professional de excelente qualidade</h5>
+                                <p>Eu considero o Renzi muito proativo e super talentoso, cuidou do meu problema num instante</p>
+                                <div>
+                                    <p>Amanda Caleiras</p>
+                                    <span>Ceo na ANOVAFASE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className={styles.testemunhoCard}>
+                            <div id={styles.avatar}>
+                                <img src={avatar1} alt="" />
+                            </div>
+                            <div id={styles.historia}>
+                                <h5>Professional de excelente qualidade</h5>
+                                <p>Eu considero o Renzi muito proativo e super talentoso, cuidou do meu problema num instante</p>
+                                <div>
+                                    <p>Amanda Caleiras</p>
+                                    <span>Ceo na ANOVAFASE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+
+                </Swiper>
+            </div>
 
             {/*Seção dos Contactos */}
-            <div ref={secContacto} id={styles.contacto}></div>
+            <div
+                ref={secContacto}
+                onMouseEnter={() => {
+                    navegar("/#contacto");
+                }}
+                id={styles.contacto}
+            ></div>
         </div>
     );
 };

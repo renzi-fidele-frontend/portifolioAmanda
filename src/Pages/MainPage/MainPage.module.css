@@ -297,7 +297,6 @@
     padding-right: 45px;
     font-size: 40px;
     font-weight: 600;
-    margin: 0;
     padding-bottom: 10px;
     text-transform: uppercase;
     margin-bottom: 0.9em;
@@ -460,7 +459,7 @@
 
 .portifolioText > h6 {
     color: var(--bs-heading-color);
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
     margin-right: 11px;
 }
@@ -528,7 +527,44 @@
 #testemunhos {
     background-color: var(--cor-fundo0);
     padding: var(--padding-secao);
+    text-align: left;
 }
+
+#swipperContainer {
+    text-align: center;
+    max-width: 100%;
+    margin-top: 0.9em;
+}
+
+#swipperContainer .testemunhoCard {
+    border: 2px solid var(--cor-borda);
+    padding: 25px;
+    border-radius: 10px;
+    position: relative;
+    background-color: var(--cor-fundo0);
+    text-align: center;
+}
+
+#swipperContainer {
+}
+
+#swipperContainer {
+}
+
+#swipperContainer {
+}
+
+#swipperContainer {
+}
+
+
+
+
+
+
+
+
+
 
 /*------------Secao dos contacto-------*/
 #contacto {
