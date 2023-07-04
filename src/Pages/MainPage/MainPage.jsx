@@ -1,27 +1,32 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./MainPage.module.css";
-import icone from "../../Images/icone.svg";
-import me from "../../Images/iii.jpg";
-import { BsDownload, BsPhone, BsPlusCircle } from "react-icons/bs";
-import me1 from "../../Images/me2.jpg";
-import { AiFillSkype, AiOutlineWhatsApp, AiFillMail } from "react-icons/ai";
-import { SiGooglemeet } from "react-icons/si";
-import crazy from "../../Images/crazy.jpg";
-import { FaFilePdf } from "react-icons/fa";
-import { CiMonitor } from "react-icons/ci";
-import project1 from "../../Images/FilmeLib.gif";
-import { ImNewTab } from "react-icons/im";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import ProjectModal from "../../Components/ProjectModal/ProjectModal";
+
+//  Imagens
 import video1 from "../../Videos/demoNossoBlog.webm";
 import video2 from "../../Videos/demoCustos.webm";
+import avatar1 from "../../Images/avatar1.gif";
+import me from "../../Images/iii.jpg";
+import me1 from "../../Images/me2.jpg";
+import crazy from "../../Images/crazy.jpg";
+
+//  Icons
+import { BiSolidMessageAltDetail, BiSolidPhoneCall } from "react-icons/bi";
+import { SiGooglemeet } from "react-icons/si";
+import { FaFilePdf } from "react-icons/fa";
+import { CiMonitor } from "react-icons/ci";
+import { ImNewTab, ImLocation2 } from "react-icons/im";
+import { BsDownload, BsPhone, BsPlusCircle } from "react-icons/bs";
+import { AiFillSkype, AiOutlineWhatsApp, AiFillMail } from "react-icons/ai";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-import avatar1 from "../../Images/avatar1.gif"
-
+import { Pagination, Autoplay } from "swiper";
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
 const MainPage = () => {
     const skillsRef = useRef();
@@ -35,6 +40,7 @@ const MainPage = () => {
     const secServicos = useRef();
     const secPortifolio = useRef();
     const secContacto = useRef();
+    const secTestemunhos = useRef();
 
     const handleIntersection = (entries) => {
         const [entry] = entries;
@@ -78,6 +84,8 @@ const MainPage = () => {
             secPortifolio.current.scrollIntoView({ behavior: "smooth" });
         } else if (s === "#contacto") {
             secContacto.current.scrollIntoView({ behavior: "smooth" });
+        } else if (s === "#testemunhos") {
+            secTestemunhos.current.scrollIntoView({ behavior: "smooth" });
         }
     }, [loc.hash]);
 
@@ -643,6 +651,7 @@ const MainPage = () => {
 
             {/*Seção dos testemunhos */}
             <div
+                ref={secTestemunhos}
                 onMouseEnter={() => {
                     navegar("/#testemunhos");
                 }}
@@ -653,74 +662,77 @@ const MainPage = () => {
                 </h2>
 
                 <Swiper
+                    modules={[Pagination, Autoplay]}
                     id={styles.swipperContainer}
                     spaceBetween={50}
                     slidesPerView={3}
-
-                    onSlideChange={() => console.log("slide change")}
-                    onSwiper={(swiper) => console.log(swiper)}
+                    speed={500}
+                    autoplay={true}
+                    pagination={{ type: "bullets", el: `.${styles.pag}`, clickable: true }}
                 >
-                    <SwiperSlide>
-                        <div className={styles.testemunhoCard}>
-                            <div id={styles.avatar}>
-                                <img src={avatar1} alt="" />
-                            </div>
-                            <div id={styles.historia}>
-                                <h5>Professional de excelente qualidade</h5>
-                                <p>Eu considero o Renzi muito proativo e super talentoso, cuidou do meu problema num instante</p>
-                                <div>
-                                    <p>Amanda Caleiras</p>
-                                    <span>Ceo na ANOVAFASE</span>
+                    <div>
+                        <SwiperSlide>
+                            <div className={styles.testemunhoCard}>
+                                <div id={styles.avatar}>
+                                    <img src={avatar1} alt="" />
+                                </div>
+                                <div id={styles.historia}>
+                                    <h5>Professional de excelente qualidade</h5>
+                                    <p>Eu considero o Renzi muito proativo e super talentoso, cuidou do meu problema num instante</p>
+                                    <div>
+                                        <p>Amanda Caleiras</p>
+                                        <span>Ceo na ANOVAFASE</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className={styles.testemunhoCard}>
-                            <div id={styles.avatar}>
-                                <img src={avatar1} alt="" />
-                            </div>
-                            <div id={styles.historia}>
-                                <h5>Professional de excelente qualidade</h5>
-                                <p>Eu considero o Renzi muito proativo e super talentoso, cuidou do meu problema num instante</p>
-                                <div>
-                                    <p>Amanda Caleiras</p>
-                                    <span>Ceo na ANOVAFASE</span>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className={styles.testemunhoCard}>
+                                <div id={styles.avatar}>
+                                    <img src={avatar1} alt="" />
+                                </div>
+                                <div id={styles.historia}>
+                                    <h5>Professional de excelente qualidade</h5>
+                                    <p>Eu considero o Renzi muito proativo e super talentoso, cuidou do meu problema num instante</p>
+                                    <div>
+                                        <p>Amanda Caleiras</p>
+                                        <span>Ceo na ANOVAFASE</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className={styles.testemunhoCard}>
-                            <div id={styles.avatar}>
-                                <img src={avatar1} alt="" />
-                            </div>
-                            <div id={styles.historia}>
-                                <h5>Professional de excelente qualidade</h5>
-                                <p>Eu considero o Renzi muito proativo e super talentoso, cuidou do meu problema num instante</p>
-                                <div>
-                                    <p>Amanda Caleiras</p>
-                                    <span>Ceo na ANOVAFASE</span>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className={styles.testemunhoCard}>
+                                <div id={styles.avatar}>
+                                    <img src={avatar1} alt="" />
+                                </div>
+                                <div id={styles.historia}>
+                                    <h5>Professional de excelente qualidade</h5>
+                                    <p>Eu considero o Renzi muito proativo e super talentoso, cuidou do meu problema num instante</p>
+                                    <div>
+                                        <p>Amanda Caleiras</p>
+                                        <span>Ceo na ANOVAFASE</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className={styles.testemunhoCard}>
-                            <div id={styles.avatar}>
-                                <img src={avatar1} alt="" />
-                            </div>
-                            <div id={styles.historia}>
-                                <h5>Professional de excelente qualidade</h5>
-                                <p>Eu considero o Renzi muito proativo e super talentoso, cuidou do meu problema num instante</p>
-                                <div>
-                                    <p>Amanda Caleiras</p>
-                                    <span>Ceo na ANOVAFASE</span>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className={styles.testemunhoCard}>
+                                <div id={styles.avatar}>
+                                    <img src={avatar1} alt="" />
+                                </div>
+                                <div id={styles.historia}>
+                                    <h5>Professional de excelente qualidade</h5>
+                                    <p>Eu considero o Renzi muito proativo e super talentoso, cuidou do meu problema num instante</p>
+                                    <div>
+                                        <p>Amanda Caleiras</p>
+                                        <span>Ceo na ANOVAFASE</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </SwiperSlide>
-
+                        </SwiperSlide>
+                    </div>
+                    <div className={styles.pag}></div>
                 </Swiper>
             </div>
 
@@ -731,7 +743,87 @@ const MainPage = () => {
                     navegar("/#contacto");
                 }}
                 id={styles.contacto}
-            ></div>
+            >
+                <div id={styles.left}>
+                    <h3>Vamos discutir acerca do seu projecto</h3>
+                    <div id={styles.iconsCont}>
+                        <div>
+                            <div id={styles.left}>
+                                <i>
+                                    <BiSolidMessageAltDetail />
+                                </i>
+                            </div>
+                            <div id={styles.right}>
+                                <h5>Converse comigo</h5>
+                                <p>Estou aqui para te ajudar.</p>
+                                <span>renzifidele2001@gmail.com</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div id={styles.left}>
+                                <i>
+                                    <ImLocation2 />
+                                </i>
+                            </div>
+                            <div id={styles.right}>
+                                <h5>Encontre-me</h5>
+                                <p>Venha dizer Hello em meu escritório.</p>
+                                <span>Maputo, Moçambique</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div id={styles.left}>
+                                <i>
+                                    <BiSolidPhoneCall />
+                                </i>
+                            </div>
+                            <div id={styles.right}>
+                                <h5>Ligue pra mim</h5>
+                                <p>Disponível a qualquer momento.</p>
+                                <span>+258 85 6261 526</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id={styles.locationCont}>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d557.9820380597123!2d32.54581336066112!3d-25.876657213551134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-PT!2smz!4v1688428470244!5m2!1spt-PT!2smz"
+                            width="502"
+                            height="215"
+                            style={{ border: 0, borderRadius: "8px" }}
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                </div>
+                <div id={styles.right}>
+                    <h6>
+                        Alguma idéia? Eu tenho a skill.
+                        <br />
+                        Vamos nos unir.
+                    </h6>
+                    <p>Me conte um pouco sobre você o que tens em mente.</p>
+                    <form>
+                        <fieldset id={styles.fieldNome}>
+                            <label htmlFor="">Primeiro nome</label>
+                            <input type="text" placeholder="Nome * "/>
+                        </fieldset>
+                        <fieldset id={styles.fieldEmail}>
+                            <label htmlFor="">Seu Email</label>
+                            <input type="text" placeholder="Email *"/>
+                        </fieldset>
+                        <fieldset id={styles.fieldAssunto}>
+                            <label htmlFor="">Assunto</label>
+                            <input type="text" placeholder="Assunto *" />
+                        </fieldset>
+                        <fieldset id={styles.fieldMensagem}>
+                            <label htmlFor="">Sua mensagem</label>
+                            <textarea  placeholder="Mensagem *"/>
+                        </fieldset>
+                        <button>Enviar mensagem</button>
+                    </form>
+                </div>
+            </div>
         </div>
     );
 };

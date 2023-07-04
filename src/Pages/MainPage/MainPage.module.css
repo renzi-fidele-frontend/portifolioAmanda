@@ -76,10 +76,15 @@
     font-size: 17px;
     border-radius: 10px;
     transition: all 0.35s ease;
-    font-weight: 500;
+    font-weight: 400;
     border: 2px solid var(--var-cor-decoracao);
     margin-top: 2em;
     color: #001d35;
+}
+
+#inicio #right > button:hover {
+    background-color: #001d35;
+    color: var(--var-cor-decoracao);
 }
 
 #inicio #right > button > svg {
@@ -532,8 +537,6 @@
 
 #swipperContainer {
     text-align: center;
-    max-width: 100%;
-    margin-top: 0.9em;
 }
 
 #swipperContainer .testemunhoCard {
@@ -545,29 +548,187 @@
     text-align: center;
 }
 
-#swipperContainer {
+.pag {
+    margin-top: 3%;
+    margin-bottom: 2%;
 }
 
-#swipperContainer {
+#swipperContainer #avatar {
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--cor-borda);
+    border-radius: 50%;
+    padding: 3px;
+    margin: 0 auto;
 }
 
-#swipperContainer {
+#swipperContainer #avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    max-width: 100%;
 }
 
-#swipperContainer {
+#swipperContainer #historia h5 {
+    margin-top: 5%;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.1em;
+    color: var(--bs-heading-color);
 }
 
+#swipperContainer #historia > p {
+    font-weight: var(--weight-normal);
+    font-size: 15px;
+    margin-bottom: 1em;
+}
 
+#swipperContainer #historia > div > span {
+    font-weight: var(--weight-normal);
+    font-size: 13px;
+    color: grey;
+}
 
-
-
-
-
-
-
+#swipperContainer #historia > div > p {
+    font-weight: var(--weight-normal);
+    font-size: 15px;
+    margin-bottom: 3px;
+}
 
 /*------------Secao dos contacto-------*/
 #contacto {
     background-color: var(--cor-fundo1);
     padding: var(--padding-secao);
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#contacto > #left > h3 {
+    color: var(--bs-heading-color);
+    margin-bottom: 6%;
+    font-size: 1.75em;
+    font-weight: 400;
+}
+
+#contacto #iconsCont > div {
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 7%;
+    color: var(--bs-heading-color);
+}
+
+#contacto #iconsCont > div > #left {
+    font-size: 2em;
+    color: var(--var-cor-decoracao);
+    margin-right: 3%;
+}
+
+#contacto #iconsCont > div > #left i {
+    background-color: #001d35;
+    align-items: center;
+    display: flex;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+#contacto #iconsCont > div > #right > p {
+    margin-block: 6px;
+    font-size: 16px;
+    color: var(--var-cor-texto);
+}
+
+#contacto #iconsCont > div > #right > h5 {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+#contacto #iconsCont > div > #right > span {
+    font-weight: 600;
+    color: rgb(59, 59, 59);
+}
+
+#contacto #locationCont {
+    border: 2px solid var(--cor-borda);
+    width: fit-content;
+    padding: 5px;
+    background-color: var(--cor-fundo0);
+    border-radius: 8px;
+}
+
+#contacto > #right {
+    background-color: var(--cor-fundo0);
+    border: 2px solid var(--cor-borda);
+    border-radius: 8px;
+    height: fit-content;
+    padding: 7%;
+    color: var(--bs-heading-color);
+}
+
+#contacto > #right > h6 {
+    margin-bottom: 2.5%;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+#contacto > #right > p {
+    font-size: 17px;
+    color: var(--var-cor-texto);
+    margin-bottom: 10%;
+}
+
+#contacto > #right > form {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#contacto > #right > form > fieldset {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 4%;
+}
+
+#contacto > #right > form > fieldset > label {
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+#contacto > #right > form > fieldset > input,
+#contacto > #right > form > fieldset > textarea {
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    padding: 7px;
+    font-size: 17px;
+    font-weight: 400;
+    max-width: 100%;
+}
+
+#fieldNome {
+    margin-right: 8%;
+}
+
+#fieldMensagem,
+#fieldAssunto,
+#contacto > #right > form > button {
+    grid-column: 1/3;
+}
+
+#contacto > #right > form > button {
+    padding: 15px 35px;
+    background-color: var(--var-cor-decoracao);
+    font-size: 22px;
+    border-radius: 10px;
+    transition: all 0.35s ease;
+    font-weight: 400;
+    border: 2px solid var(--var-cor-decoracao);
+    margin-top: 2%;
+    color: #001d35;
+}
+
+#contacto > #right > form > button:hover {
+    cursor: pointer;
+    background-color: #001d35;
+    color: var(--var-cor-decoracao);
 }

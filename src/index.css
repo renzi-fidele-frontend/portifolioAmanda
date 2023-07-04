@@ -10,8 +10,14 @@
     --fundo-box: white;
     --cor-borda: #e1e3e1;
     --padding-secao: 5% 15%;
+    --swiper-theme-color: var(--var-cor-decoracao);
+    --swiper-pagination-bullet-size: 13px;
 }
 
 a {
     text-decoration: none;
+}
+
+fieldset {
+    border: none;
 }

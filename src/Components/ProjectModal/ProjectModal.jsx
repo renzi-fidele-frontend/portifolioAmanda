@@ -4,6 +4,7 @@ import ReactModal from "react-modal";
 import { useLocation, useNavigate } from "react-router-dom";
 import { FaCross, FaWindowClose } from "react-icons/fa";
 
+
 ReactModal.setAppElement("#root");
 
 const ProjectModal = () => {
