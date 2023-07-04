@@ -92,7 +92,7 @@ const MainPage = () => {
     return (
         <div id={styles.container}>
             {/*Seção Inicial */}
-            <div
+            <section
                 ref={secinicio}
                 onMouseEnter={() => {
                     navegar("/#inicio");
@@ -133,10 +133,10 @@ const MainPage = () => {
                         </button>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/*Seção sobre mim */}
-            <div
+            <section
                 ref={secSobre}
                 onMouseEnter={() => {
                     navegar("/#sobre");
@@ -316,10 +316,10 @@ const MainPage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/*Seção dos serviços*/}
-            <div
+            <section
                 ref={secServicos}
                 onMouseEnter={() => {
                     navegar("/#servicos");
@@ -420,10 +420,10 @@ const MainPage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/*Seção do portifólio */}
-            <div
+            <section
                 ref={secPortifolio}
                 onMouseEnter={() => {
                     navegar("/#portifolio");
@@ -647,7 +647,7 @@ const MainPage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/*Seção dos testemunhos */}
             <div
@@ -737,7 +737,7 @@ const MainPage = () => {
             </div>
 
             {/*Seção dos Contactos */}
-            <div
+            <section
                 ref={secContacto}
                 onMouseEnter={() => {
                     navegar("/#contacto");
@@ -806,11 +806,11 @@ const MainPage = () => {
                     <form>
                         <fieldset id={styles.fieldNome}>
                             <label htmlFor="">Primeiro nome</label>
-                            <input type="text" placeholder="Nome * "/>
+                            <input type="text" placeholder="Nome * " />
                         </fieldset>
                         <fieldset id={styles.fieldEmail}>
                             <label htmlFor="">Seu Email</label>
-                            <input type="text" placeholder="Email *"/>
+                            <input type="text" placeholder="Email *" />
                         </fieldset>
                         <fieldset id={styles.fieldAssunto}>
                             <label htmlFor="">Assunto</label>
@@ -818,12 +818,15 @@ const MainPage = () => {
                         </fieldset>
                         <fieldset id={styles.fieldMensagem}>
                             <label htmlFor="">Sua mensagem</label>
-                            <textarea  placeholder="Mensagem *"/>
+                            <textarea placeholder="Mensagem *" />
                         </fieldset>
                         <button>Enviar mensagem</button>
                     </form>
                 </div>
-            </div>
+            </section>
+
+            {/*Secao do Footer */}
+            <footer id={styles.footer}></footer>
         </div>
     );
 };
