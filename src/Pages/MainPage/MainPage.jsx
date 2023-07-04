@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import styles from "./MainPage.module.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import ProjectModal from "../../Components/ProjectModal/ProjectModal";
+import curiculo from "../../Images/FrontEnd.pdf"
 
 //  Imagens
 import video1 from "../../Videos/demoNossoBlog.webm";
@@ -18,7 +19,8 @@ import { FaFilePdf } from "react-icons/fa";
 import { CiMonitor } from "react-icons/ci";
 import { ImNewTab, ImLocation2 } from "react-icons/im";
 import { BsDownload, BsPhone, BsPlusCircle } from "react-icons/bs";
-import { AiFillSkype, AiOutlineWhatsApp, AiFillMail } from "react-icons/ai";
+import { AiFillSkype, AiOutlineWhatsApp, AiFillMail, AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
+import { MdOutlineWorkHistory } from "react-icons/md";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -151,18 +153,18 @@ const MainPage = () => {
                         <h6>Meu nome é Renzi Fidele</h6>
                         <h5>Eu estou disponível para colaborar em projetos Web</h5>
                         <p>
-                            Nascido em 2000, tipo AB morando nos EUA. Fornecemos design na tela para sites e aplicativos, bem como implementação
-                            de front-end. Continuaremos a buscar uma ampla gama de expressões e melhores códigos buscando nossos “likes”.
+                            Nascido em 2001, sou um desenvolvedor de front-end apaixonado por transformar ideias em realidade digital. Com uma
+                            mentalidade orientada para a excelência, estou comprometido em aprimorar minhas habilidades constantemente.
                         </p>
                         <div id={styles.linha}>
                             <div>
-                                <span>5k</span>
+                                <span>20+</span>
                                 <p>
                                     Projetos <br /> Completados.
                                 </p>
                             </div>
                             <div>
-                                <span>3k</span>
+                                <span>13</span>
                                 <p>
                                     Clientes <br /> Satisfeitos.
                                 </p>
@@ -174,43 +176,50 @@ const MainPage = () => {
                         <div>
                             <div className={styles.cardXP}>
                                 <div id={styles.leftCard}>
-                                    <img src="" alt="" />
+                                    <i>
+                                        <MdOutlineWorkHistory />
+                                    </i>
                                 </div>
-                                <div id="rightCard">
-                                    <span>2019 - Present</span>
-                                    <h5>Art Director - Facebook Inc</h5>
+                                <div id={styles.rightCard}>
+                                    <span>2022 - Present</span>
+                                    <h5>Web Freelancer - Workana</h5>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eius corrupti animi quis at quia corporis
-                                        vitae! Voluptatibus consequuntur quo dolores obcaecati minus itaque assumenda, explicabo, recusandae ipsa
-                                        ratione nobis!
+                                        Como freelancer na Workana, ofereço serviços profissionais na área de desenvolvimento web com 1 ano de
+                                        experiência principalmente em Wordpress(elementor). Trabalho com dedicação e comprometimento para atender
+                                        a necessidade de cada cliente, buscando sempre a excelência no resultado final.
                                     </p>
                                 </div>
                             </div>
                             <div className={styles.cardXP}>
                                 <div id={styles.leftCard}>
-                                    <img src="" alt="" />
+                                    <i>
+                                        <MdOutlineWorkHistory />
+                                    </i>
                                 </div>
-                                <div id="rightCard">
-                                    <span>2019 - Present</span>
-                                    <h5>Art Director - Facebook Inc</h5>
+                                <div id={styles.rightCard}>
+                                    <span>2022 - Present</span>
+                                    <h5>Desenvolvedor FrontEnd - ANOVAFASE</h5>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eius corrupti animi quis at quia corporis
-                                        vitae! Voluptatibus consequuntur quo dolores obcaecati minus itaque assumenda, explicabo, recusandae ipsa
-                                        ratione nobis!
+                                        Atual desenvolvedor front-end para uma equipe de marketing digital chamada "ANF", "A nova Fase". Eu
+                                        construí muitas páginas diferentes, usei diferentes estratégias de interface do usuário/ux, para tornar
+                                        as páginas de destino altamente conversíveis.
                                     </p>
                                 </div>
                             </div>
                             <div className={styles.cardXP}>
                                 <div id={styles.leftCard}>
-                                    <img src="" alt="" />
+                                    <i>
+                                        <MdOutlineWorkHistory />
+                                    </i>
                                 </div>
-                                <div id="rightCard">
-                                    <span>2019 - Present</span>
-                                    <h5>Art Director - Facebook Inc</h5>
+                                <div id={styles.rightCard}>
+                                    <span>2022 - 2023</span>
+                                    <h5>Desenvolvedor FrontEnd - Nosso ads</h5>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eius corrupti animi quis at quia corporis
-                                        vitae! Voluptatibus consequuntur quo dolores obcaecati minus itaque assumenda, explicabo, recusandae ipsa
-                                        ratione nobis!
+                                        Fui responsável por construir um serviço de cartão de visitas personalizado utilizando o poderoso plugin
+                                        Elementor do WordPress. Com habilidades de design e conhecimentos avançados do Elementor, criei layouts
+                                        atrativos e funcionais que ajudaram nossos clientes a se destacarem no mundo digital. Tive a oportunidade
+                                        de expandir minha expertise em marketing digital e gestão de tráfego por meio do Facebook Ads.
                                     </p>
                                 </div>
                             </div>
@@ -222,25 +231,25 @@ const MainPage = () => {
                         <div className={styles.duasCol}>
                             <img src={crazy} alt="" />
                             <div>
-                                <a href="">
-                                    <AiFillSkype />
-                                    <span>Skype me</span>
+                                <a href="https://www.linkedin.com/in/renzi-fidele-4886151bb/" target="_blank">
+                                    <AiFillLinkedin />
+                                    <span>LinkedIn</span>
                                 </a>
-                                <a href="">
-                                    <AiFillMail />
-                                    <span>Mail Me</span>
+                                <a href="https://github.com/renzi-fidele-frontend" target="_blank">
+                                    <AiFillGithub />
+                                    <span>Github</span>
                                 </a>
-                                <a href="">
+                                <a href="mailto:renzifidele2001@gmail.com" target="_blank">
+                                    <AiOutlineMail />
+                                    <span>Mail</span>
+                                </a>
+                                <a href="https://wa.link/azvl93" target="_blank">
                                     <AiOutlineWhatsApp />
-                                    <span>Whatsapp Me</span>
+                                    <span>WhatsApp</span>
                                 </a>
-                                <a href="">
-                                    <SiGooglemeet />
-                                    <span>Meet Me</span>
-                                </a>
-                                <a href="">
+                                <a href={curiculo} target="_blank">
                                     <FaFilePdf />
-                                    <span>Resume</span>
+                                    <span>Currículo</span>
                                 </a>
                             </div>
                         </div>

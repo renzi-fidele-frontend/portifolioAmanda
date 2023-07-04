@@ -190,10 +190,42 @@
     background-color: var(--fundo-box);
     border: 2px solid var(--cor-borda);
     margin-bottom: 4%;
-    padding: 15px 15px 20px 70px;
+    padding: 15px 15px 20px 20px;
+    display: flex;
+    flex-flow: row;
     border-radius: 12px;
     position: relative;
     transition: all 0.35s ease;
+}
+
+#sobre #secaoXP > div > .cardXP #leftCard {
+    margin-right: 18px;
+    color: var(--var-cor-decoracao);
+    font-size: 26px;
+}
+
+#sobre #secaoXP > div > .cardXP #leftCard > i {
+    background-color: #001d35;
+    align-items: center;
+    display: flex;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+#sobre #secaoXP > div > .cardXP #rightCard span {
+    font-size: 13px;
+    color: var(--var-cor-texto);
+}
+
+#sobre #secaoXP > div > .cardXP #rightCard h5 {
+    color: var(--bs-heading-color);
+    font-size: 18px;
+    margin-block: 5px;
+    font-weight: 500    ;
+}
+
+#sobre #secaoXP > div > .cardXP #rightCard p {
+    color: var(--var-cor-texto);
 }
 
 #sobre #right .duasCol > img {
@@ -228,6 +260,7 @@
 
 #sobre #right .duasCol > div > a:hover {
     background-color: var(--var-cor-decoracao);
+    border-color: var(--var-cor-decoracao);
 }
 
 #sobre #right .duasCol > div > a > span {
@@ -239,7 +272,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: var(--cor-fundo1);
+    background-color: inherit;
     font-size: 25px;
 }
 
@@ -537,13 +570,13 @@
 
 #swipperContainer {
     text-align: center;
+    width: 100%;
 }
 
 #swipperContainer .testemunhoCard {
     border: 2px solid var(--cor-borda);
     padding: 25px;
     border-radius: 10px;
-    position: relative;
     background-color: var(--cor-fundo0);
     text-align: center;
 }
