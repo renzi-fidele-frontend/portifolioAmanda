@@ -4,7 +4,6 @@ import ReactModal from "react-modal";
 import { useLocation, useNavigate } from "react-router-dom";
 import { FaCross, FaWindowClose } from "react-icons/fa";
 
-
 ReactModal.setAppElement("#root");
 
 const ProjectModal = () => {
@@ -36,7 +35,7 @@ const ProjectModal = () => {
             {loc.state ? (
                 <ReactModal isOpen={isOpen} onRequestClose={fechado} id={styles.container}>
                     <div className={styles.left}>
-                        <video autoPlay src={loc.state.imagem}></video>
+                        {loc.state.imagem ? <video autoPlay src={loc.state.imagem}></video> : <img src={loc.state.img} alt="" />}
                     </div>
                     <div className={styles.right}>
                         <h5>{loc.state.titulo}</h5>

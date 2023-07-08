@@ -12,6 +12,7 @@
     --padding-secao: 5% 15%;
     --swiper-theme-color: var(--var-cor-decoracao);
     --swiper-pagination-bullet-size: 13px;
+    --cor-hover: #001d35;
 }
 
 a {

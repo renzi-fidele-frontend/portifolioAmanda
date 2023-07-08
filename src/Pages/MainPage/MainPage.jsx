@@ -2,25 +2,27 @@ import React, { useEffect, useRef } from "react";
 import styles from "./MainPage.module.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import ProjectModal from "../../Components/ProjectModal/ProjectModal";
-import curiculo from "../../Images/FrontEnd.pdf"
+import curiculo from "../../Images/FrontEnd.pdf";
 
 //  Imagens
 import video1 from "../../Videos/demoNossoBlog.webm";
 import video2 from "../../Videos/demoCustos.webm";
+import video3 from "../../Videos/FilmeLib.webm";
+import demo4 from "../../Images/DemoDiabetes.jpg";
+
 import avatar1 from "../../Images/avatar1.gif";
 import me from "../../Images/iii.jpg";
-import me1 from "../../Images/me2.jpg";
 import crazy from "../../Images/crazy.jpg";
 
 //  Icons
-import { BiSolidMessageAltDetail, BiSolidPhoneCall } from "react-icons/bi";
-import { SiGooglemeet } from "react-icons/si";
+import { BiCopyAlt, BiSolidMessageAltDetail, BiSolidPhoneCall, BiVideo } from "react-icons/bi";
+import { SiGoogleads } from "react-icons/si";
 import { FaFilePdf } from "react-icons/fa";
-import { CiMonitor } from "react-icons/ci";
 import { ImNewTab, ImLocation2 } from "react-icons/im";
-import { BsDownload, BsPhone, BsPlusCircle } from "react-icons/bs";
-import { AiFillSkype, AiOutlineWhatsApp, AiFillMail, AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
-import { MdOutlineWorkHistory } from "react-icons/md";
+import { BsDownload, BsGlobe, BsPlusCircle } from "react-icons/bs";
+import { AiOutlineWhatsApp, AiFillLinkedin, AiFillGithub, AiOutlineMail, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
+import { MdOutlineDesignServices, MdOutlineWorkHistory } from "react-icons/md";
+import { CgWebsite } from "react-icons/cg";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -339,93 +341,123 @@ const MainPage = () => {
                     <span>Meus serviços</span>
                 </h2>
                 <div>
-                    <div className={styles.serviceBox}>
+                    <div
+                        className={styles.serviceBox}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.classList.toggle(styles.ServicoEntrou);
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.classList.remove(styles.ServicoEntrou);
+                        }}
+                    >
                         <div className={styles.iconContainer}>
                             <i className={styles.iconBox}>
-                                <CiMonitor />
+                                <CgWebsite />
                             </i>
                         </div>
                         <div className={styles.conteudo}>
                             <h5>Criação de Landing Page</h5>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua.
-                            </p>
+                            <p>Páginas otimizadas que convertem. Design atraente e focado em resultados.</p>
                         </div>
                     </div>
 
-                    <div className={styles.serviceBox}>
+                    <div
+                        onMouseEnter={(e) => {
+                            e.currentTarget.classList.toggle(styles.ServicoEntrou);
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.classList.remove(styles.ServicoEntrou);
+                        }}
+                        className={styles.serviceBox}
+                    >
                         <div className={styles.iconContainer}>
                             <i className={styles.iconBox}>
-                                <CiMonitor />
+                                <BsGlobe />
                             </i>
                         </div>
                         <div className={styles.conteudo}>
                             <h5>Desenvolvimento Web</h5>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua.
-                            </p>
+                            <p>Soluções web personalizadas para impulsionar seu negócio utilizando as melhores tecnologias do mercado.</p>
                         </div>
                     </div>
 
-                    <div className={styles.serviceBox}>
+                    <div
+                        onMouseEnter={(e) => {
+                            e.currentTarget.classList.toggle(styles.ServicoEntrou);
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.classList.remove(styles.ServicoEntrou);
+                        }}
+                        className={styles.serviceBox}
+                    >
                         <div className={styles.iconContainer}>
                             <i className={styles.iconBox}>
-                                <CiMonitor />
+                                <MdOutlineDesignServices />
                             </i>
                         </div>
                         <div className={styles.conteudo}>
                             <h5>Web design</h5>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua.
-                            </p>
+                            <p>Designs modernos e intuitivos que cativam e envolvem seu público para garantir conversão e confiança.</p>
                         </div>
                     </div>
 
-                    <div className={styles.serviceBox}>
+                    <div
+                        onMouseEnter={(e) => {
+                            e.currentTarget.classList.toggle(styles.ServicoEntrou);
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.classList.remove(styles.ServicoEntrou);
+                        }}
+                        className={styles.serviceBox}
+                    >
                         <div className={styles.iconContainer}>
                             <i className={styles.iconBox}>
-                                <CiMonitor />
+                                <SiGoogleads />
                             </i>
                         </div>
                         <div className={styles.conteudo}>
                             <h5>Gestão de tráfego</h5>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua.
-                            </p>
+                            <p>Aumente sua visibilidade e resultados com estratégias eficazes de marketing digital.</p>
                         </div>
                     </div>
 
-                    <div className={styles.serviceBox}>
+                    <div
+                        onMouseEnter={(e) => {
+                            e.currentTarget.classList.toggle(styles.ServicoEntrou);
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.classList.remove(styles.ServicoEntrou);
+                        }}
+                        className={styles.serviceBox}
+                    >
                         <div className={styles.iconContainer}>
                             <i className={styles.iconBox}>
-                                <CiMonitor />
+                                <BiCopyAlt />
                             </i>
                         </div>
                         <div className={styles.conteudo}>
                             <h5>Copywriting</h5>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua.
-                            </p>
+                            <p>Mensagens persuasivas que impactam seu público-alvo e impulsionam as conversões.</p>
                         </div>
                     </div>
 
-                    <div className={styles.serviceBox}>
+                    <div
+                        onMouseEnter={(e) => {
+                            e.currentTarget.classList.toggle(styles.ServicoEntrou);
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.classList.remove(styles.ServicoEntrou);
+                        }}
+                        className={styles.serviceBox}
+                    >
                         <div className={styles.iconContainer}>
                             <i className={styles.iconBox}>
-                                <CiMonitor />
+                                <BiVideo />
                             </i>
                         </div>
                         <div className={styles.conteudo}>
                             <h5>Edição de vídeo</h5>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua.
-                            </p>
+                            <p>Transforme suas ideias em vídeos cativantes e profissionais com efeitos impressionantes com o Filmora.</p>
                         </div>
                     </div>
                 </div>
@@ -456,9 +488,9 @@ const MainPage = () => {
                         }}
                     >
                         <div className={styles.portifolioText}>
-                            <h6>FilmesLib: Biblioteca de filmes</h6>
+                            <h6>Nosso Blog: Blog de curiosidades</h6>
                             <p>ReactJs, Firebase, Css</p>
-                            <a href="https://films-lib.vercel.app/" target="_blank">
+                            <a href="https://nossoblog.vercel.app/" target="_blank">
                                 <ImNewTab />
                             </a>
                         </div>
@@ -466,7 +498,7 @@ const MainPage = () => {
                             <Link
                                 state={{
                                     link: "https://films-lib.vercel.app/",
-                                    titulo: "FilmesLib: Biblioteca de filmes",
+                                    titulo: "Nosso Blog: Blog de curiosidades",
                                     plataforma: "Vercel",
                                     linguagens: "ReactJs, Firebase, Css",
                                     tipo: "Website",
@@ -542,7 +574,7 @@ const MainPage = () => {
                                     linguagens: "ReactJs, Css",
                                     tipo: "Website",
                                     pais: "Moçambique",
-                                    imagem: video2,
+                                    imagem: video3,
                                 }}
                                 to={"#projecto3"}
                             >
@@ -577,7 +609,8 @@ const MainPage = () => {
                                     linguagens: "WP, Elementor, JavaScript",
                                     tipo: "Landing Page",
                                     pais: "Brasil",
-                                    imagem: video2,
+
+                                    img: demo4,
                                 }}
                                 to={"#projecto4"}
                             >
@@ -835,7 +868,27 @@ const MainPage = () => {
             </section>
 
             {/*Secao do Footer */}
-            <footer id={styles.footer}></footer>
+            <footer id={styles.footer}>
+                <div>
+                    <img src="" alt="" />
+                    <p></p>
+                    <div>
+                        <a href="https://www.linkedin.com/in/renzi-fidele-4886151bb/" target="_blank">
+                            <AiFillLinkedin />
+                        </a>
+                        <a href="https://www.instagram.com/thats.renzy/" target="_blank">
+                            <AiFillInstagram />
+                        </a>
+                        <a href="https://web.facebook.com/renzy00/" target="_blank">
+                            <AiFillFacebook />
+                        </a>
+                        <a href="https://wa.link/azvl93" target="_blank">
+                            <AiOutlineWhatsApp />
+                            </a>
+                    </div>
+                    <span>© 2023 copyright - Todos os direitos reservados</span>
+                </div>
+            </footer>
         </div>
     );
 };

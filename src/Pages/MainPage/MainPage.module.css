@@ -79,11 +79,11 @@
     font-weight: 400;
     border: 2px solid var(--var-cor-decoracao);
     margin-top: 2em;
-    color: #001d35;
+    color: var(--cor-hover);
 }
 
 #inicio #right > button:hover {
-    background-color: #001d35;
+    background-color: var(--cor-hover);
     color: var(--var-cor-decoracao);
 }
 
@@ -205,7 +205,7 @@
 }
 
 #sobre #secaoXP > div > .cardXP #leftCard > i {
-    background-color: #001d35;
+    background-color: var(--cor-hover);
     align-items: center;
     display: flex;
     padding: 15px;
@@ -221,7 +221,7 @@
     color: var(--bs-heading-color);
     font-size: 18px;
     margin-block: 5px;
-    font-weight: 500    ;
+    font-weight: 500;
 }
 
 #sobre #secaoXP > div > .cardXP #rightCard p {
@@ -368,30 +368,29 @@
     border: 2px solid var(--cor-borda);
     padding: 40px;
     border-radius: 10px;
-    position: relative;
     margin: 0.8em;
+    transition: all 0.6s ease-in-out;
 }
 
-.serviceBox::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgb(238, 235, 235);
-    z-index: -1;
-    border-radius: 10px;
-    transform: rotate(0deg);
-    transition: all 0.35s ease;
+.serviceBox:hover {
+    cursor: pointer;
+    background-image: url("/src/Images/blurry-gradient-haikei.svg");
+    transform: translateY(-10px);
+    /*
+    background: url("/src/Images/polygon-scatter-haikei\(1\).svg");*/
 }
 
-.serviceBox:hover::after {
-    top: -6px;
-    left: 6px;
-    right: -6px;
-    bottom: 6px;
-    transform: rotate(4deg);
+.ServicoEntrou {
+    animation: in 0.1s ease-in-out;
+}
+
+@keyframes in {
+    from {
+        opacity: 0.7;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .serviceBox > .iconContainer {
@@ -413,8 +412,12 @@
     position: relative;
     color: var(--var-cor-texto);
     display: flex;
-    transition: all 0.35s ease;
+    transition: transform 0.35s ease;
     padding: 0.3em;
+}
+
+.ServicoEntrou .iconBox {
+    border: 3px solid var(--cor-hover);
 }
 
 .iconBox::after {
@@ -429,6 +432,14 @@
     border-radius: 10px;
     transform: rotate(10deg);
     transition: all 0.35s ease;
+}
+
+.ServicoEntrou .iconBox::after {
+    transform: rotate(0);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .serviceBox .conteudo > h5 {
@@ -659,7 +670,7 @@
 }
 
 #contacto #iconsCont > div > #left i {
-    background-color: #001d35;
+    background-color: var(--cor-hover);
     align-items: center;
     display: flex;
     padding: 15px;
@@ -757,11 +768,48 @@
     font-weight: 400;
     border: 2px solid var(--var-cor-decoracao);
     margin-top: 2%;
-    color: #001d35;
+    color: var(--cor-hover);
 }
 
 #contacto > #right > form > button:hover {
     cursor: pointer;
-    background-color: #001d35;
+    background-color: var(--cor-hover);
     color: var(--var-cor-decoracao);
+}
+
+/*-----------Secao do Footer--------------------*/
+#footer {
+    text-align: center;
+    padding-bottom: 1.5em;
+}
+
+#footer > div > div > a {
+    margin-inline: 5px;
+    font-size: 22px;
+    border-radius: 7px;
+    color: var(--cor-hover);
+    display: flex;
+    width: fit-content;
+    padding: 10px;
+    background-color: var(--var-cor-decoracao);
+    transition: .3s ease-in-out all;
+}
+
+#footer > div > div > a:hover {
+    background-color: var(--cor-hover);
+    color: white;
+}
+
+
+#footer > div > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 10px;
+}
+
+#footer > div > span {
+    font-weight: var(--weight-normal);
+    color: var(--var-cor-texto);
+    font-size: 13px;
 }
