@@ -46,3 +46,10 @@
     width: 70%;
     text-align: center;
 }
+
+@media screen and (max-width: 1208px) {
+    #container {
+        opacity: 0;
+    }
+
+}

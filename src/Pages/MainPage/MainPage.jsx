@@ -13,11 +13,12 @@ import demo4 from "../../Images/DemoDiabetes.jpg";
 import avatar1 from "../../Images/avatar1.gif";
 import me from "../../Images/iii.jpg";
 import crazy from "../../Images/crazy.jpg";
+import logo from "../../Images/lg.png";
 
 //  Icons
 import { BiCopyAlt, BiSolidMessageAltDetail, BiSolidPhoneCall, BiVideo } from "react-icons/bi";
 import { SiGoogleads } from "react-icons/si";
-import { FaFilePdf } from "react-icons/fa";
+import { FaBars, FaFilePdf } from "react-icons/fa";
 import { ImNewTab, ImLocation2 } from "react-icons/im";
 import { BsDownload, BsGlobe, BsPlusCircle } from "react-icons/bs";
 import { AiOutlineWhatsApp, AiFillLinkedin, AiFillGithub, AiOutlineMail, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
@@ -95,6 +96,14 @@ const MainPage = () => {
 
     return (
         <div id={styles.container}>
+            {/*Header invisivel */}
+            <header id={styles.header}>
+                <img src={logo} alt="logo " />
+                <span>
+                    <FaBars />
+                </span>
+            </header>
+
             {/*Seção Inicial */}
             <section
                 ref={secinicio}
@@ -705,9 +714,9 @@ const MainPage = () => {
 
                 <Swiper
                     modules={[Pagination, Autoplay]}
-                    id={styles.swipperContainer}
+                    className={styles.swipperContainer}
                     spaceBetween={50}
-                    slidesPerView={3}
+                    slidesPerView={"auto"}
                     speed={500}
                     autoplay={true}
                     pagination={{ type: "bullets", el: `.${styles.pag}`, clickable: true }}
@@ -870,8 +879,6 @@ const MainPage = () => {
             {/*Secao do Footer */}
             <footer id={styles.footer}>
                 <div>
-                    <img src="" alt="" />
-                    <p></p>
                     <div>
                         <a href="https://www.linkedin.com/in/renzi-fidele-4886151bb/" target="_blank">
                             <AiFillLinkedin />
@@ -884,7 +891,7 @@ const MainPage = () => {
                         </a>
                         <a href="https://wa.link/azvl93" target="_blank">
                             <AiOutlineWhatsApp />
-                            </a>
+                        </a>
                     </div>
                     <span>© 2023 copyright - Todos os direitos reservados</span>
                 </div>

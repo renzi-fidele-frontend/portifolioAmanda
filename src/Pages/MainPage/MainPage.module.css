@@ -243,12 +243,11 @@
     display: flex;
     flex-direction: column;
     padding-left: 7%;
-}
+    justify-content: space-between;}
 
 #sobre #right .duasCol > div > a {
     color: var(--var-cor-texto);
     display: flex;
-    margin-bottom: 1.6em;
     border: 2px solid var(--cor-borda);
     background-color: var(--fundo-box);
     padding: 12px 15px;
@@ -579,12 +578,12 @@
     text-align: left;
 }
 
-#swipperContainer {
+.swipperContainer {
     text-align: center;
-    width: 100%;
+    width: fit-content;
 }
 
-#swipperContainer .testemunhoCard {
+.swipperContainer .testemunhoCard {
     border: 2px solid var(--cor-borda);
     padding: 25px;
     border-radius: 10px;
@@ -597,7 +596,7 @@
     margin-bottom: 2%;
 }
 
-#swipperContainer #avatar {
+.swipperContainer #avatar {
     width: 100px;
     height: 100px;
     border: 2px solid var(--cor-borda);
@@ -606,7 +605,7 @@
     margin: 0 auto;
 }
 
-#swipperContainer #avatar img {
+.swipperContainer #avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -614,7 +613,7 @@
     max-width: 100%;
 }
 
-#swipperContainer #historia h5 {
+.swipperContainer #historia h5 {
     margin-top: 5%;
     margin-bottom: 0.5em;
     font-weight: 400;
@@ -623,19 +622,19 @@
     color: var(--bs-heading-color);
 }
 
-#swipperContainer #historia > p {
+.swipperContainer #historia > p {
     font-weight: var(--weight-normal);
     font-size: 15px;
     margin-bottom: 1em;
 }
 
-#swipperContainer #historia > div > span {
+.swipperContainer #historia > div > span {
     font-weight: var(--weight-normal);
     font-size: 13px;
     color: grey;
 }
 
-#swipperContainer #historia > div > p {
+.swipperContainer #historia > div > p {
     font-weight: var(--weight-normal);
     font-size: 15px;
     margin-bottom: 3px;
@@ -780,7 +779,7 @@
 /*-----------Secao do Footer--------------------*/
 #footer {
     text-align: center;
-    padding-bottom: 1.5em;
+    padding-block: 1.5em;
 }
 
 #footer > div > div > a {
@@ -792,7 +791,7 @@
     width: fit-content;
     padding: 10px;
     background-color: var(--var-cor-decoracao);
-    transition: .3s ease-in-out all;
+    transition: 0.3s ease-in-out all;
 }
 
 #footer > div > div > a:hover {
@@ -800,16 +799,219 @@
     color: white;
 }
 
-
 #footer > div > div {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-block: 10px;
+    margin-bottom: 10px;
 }
 
 #footer > div > span {
     font-weight: var(--weight-normal);
     color: var(--var-cor-texto);
     font-size: 13px;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    border-bottom: 1px solid var(--cor-borda);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--var-cor-cinza);
+    display: none;
+}
+
+@media screen and (max-width: 1656px) {
+    #inicio > div {
+        padding-inline: 8%;
+    }
+}
+
+@media screen and (max-width: 1452px) {
+    #sobre #secaoSobre > h5 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #sobre #rightCard > p {
+        font-size: 14px;
+    }
+    #sobre #secaoXP > div > .cardXP #rightCard h5 {
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (max-width: 1604px) {
+    #sobre > #left {
+        padding-right: 10%;
+    }
+}
+
+
+@media screen and (max-width: 1208px) {
+    #header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 3%;
+    }
+
+    #header > img {
+        width: 150px;
+    }
+
+    #header > span {
+        font-size: 40px;
+        display: inherit;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1092px) {
+    #inicio > div {
+        padding-inline: 6%;
+    }
+
+    #inicio #right > h3 {
+        font-size: 50px;
+    }
+
+    #iconTop,
+    #iconLow {
+        width: 60px;
+    }
+
+    #iconTop {
+        top: -24px;
+        right: -12px;
+    }
+
+    #iconLow {
+        bottom: -24px;
+        left: -12px;
+    }
+
+    #servicos > div {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media screen and (max-width: 1048px) {
+    #header > img {
+        width: 130px;
+    }
+
+    #inicio > div {
+        display: flex;
+        flex-flow: column-reverse;
+        padding-inline: 14%;
+        padding-top: 11%;
+        padding-bottom: 7%;
+    }
+
+    #inicio #right {
+        text-align: center;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    #inicio #right > h4 {
+        margin-bottom: 16px;
+    }
+
+    #inicio #right > h3 {
+        font-size: 60;
+        text-shadow: initial;
+        letter-spacing: 2px;
+    }
+
+    #inicio #right > button {
+        margin-block: 1.7em;
+    }
+
+    #sobre {
+        display: flex;
+        flex-flow: column;
+    }
+
+    #sobre #secaoSobre {
+        padding-bottom: 3%;
+    }
+
+    #sobre #right > div {
+        margin-top: 4%;
+    }
+
+    #sobre #right .duasCol {
+        padding-right: 25%;
+    }
+}
+
+@media screen and (max-width: 944px) {
+    #inicio > div {
+        padding-top: 14%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #inicio #right > h3 {
+        font-size: 42px;
+    }
+
+    #sobre #right .duasCol {
+        padding-right: 15%;
+    }
+
+}
+
+@media screen and (max-width: 698px) {
+    #inicio > div {
+        padding-top: 17%;
+    }
+
+    #header > img {
+        width: 130px;
+    }
+
+    #sobre #right .duasCol {
+        padding-right: 10%;
+    }
+
+}
+
+@media screen and (max-width: 572px) {
+    #inicio > div {
+        padding-top: 20%;
+    }
+
+    #inicio #right > h3 {
+        font-size: 35px;
+    }
+
+    #inicio #right > h4 {
+        font-size: 20px;
+    }
+
+    #inicio > div {
+        padding-inline: 8%;
+    }
+
+    #sobre #right .duasCol {
+        padding-right: 0%;
+    }
+}
+
+
+
+@media screen and (max-width: 486px) {
+    #inicio > div {
+        padding-inline: 4%;
+    }
 }
