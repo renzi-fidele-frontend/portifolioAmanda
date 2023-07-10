@@ -327,8 +327,8 @@ const MainPage = () => {
                                 <div id={styles.skillLine}>
                                     <span>Photoshop</span>
                                     <div>
-                                        <div style={{ width: "30%" }}>
-                                            <span>30%</span>
+                                        <div style={{ width: "40%" }}>
+                                            <span>40%</span>
                                         </div>
                                     </div>
                                 </div>

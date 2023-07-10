@@ -243,7 +243,8 @@
     display: flex;
     flex-direction: column;
     padding-left: 7%;
-    justify-content: space-between;}
+    justify-content: space-between;
+}
 
 #sobre #right .duasCol > div > a {
     color: var(--var-cor-texto);
@@ -835,6 +836,10 @@
     #sobre #secaoSobre > h5 {
         font-size: 25px;
     }
+
+    #sobre #right .duasCol {
+        margin-bottom: 3em;
+    }
 }
 
 @media screen and (max-width: 1300px) {
@@ -846,13 +851,11 @@
     }
 }
 
-
 @media screen and (max-width: 1604px) {
     #sobre > #left {
         padding-right: 10%;
     }
 }
-
 
 @media screen and (max-width: 1208px) {
     #header {
@@ -872,6 +875,19 @@
         display: inherit;
         align-items: center;
     }
+
+    .titulo2 > span {
+        font-size: 32px;
+    }
+
+    .titulo1 {
+        font-size: 18px;
+    }
+
+    #sobre #right .duasCol {
+        margin-bottom: 2em;
+    }
+
 }
 
 @media screen and (max-width: 1092px) {
@@ -945,12 +961,21 @@
         padding-bottom: 3%;
     }
 
+    #sobre #secaoXP {
+        padding-top: 4%;
+    }
+
     #sobre #right > div {
-        margin-top: 4%;
+        margin-top: 0%;
     }
 
     #sobre #right .duasCol {
         padding-right: 25%;
+        margin-bottom: 6%;
+    }
+
+    .titulo1 {
+        margin-bottom: 21px;
     }
 }
 
@@ -968,7 +993,6 @@
     #sobre #right .duasCol {
         padding-right: 15%;
     }
-
 }
 
 @media screen and (max-width: 698px) {
@@ -983,7 +1007,6 @@
     #sobre #right .duasCol {
         padding-right: 10%;
     }
-
 }
 
 @media screen and (max-width: 572px) {
@@ -1008,10 +1031,34 @@
     }
 }
 
+@media screen and (max-width: 530px) {
+    #sobre #left {
+        padding-right: 4%;
+    }
 
+    #sobre #right .duasCol {
+        grid-template-columns: 100%;
+    }
+
+    #sobre #right .duasCol > div {
+        margin-top: 2%;
+        padding-left: 0;
+    }
+
+    #sobre #right .duasCol > div > a {
+        margin-top: 2.2%;
+        padding: 16px 19px;
+    }
+}
 
 @media screen and (max-width: 486px) {
     #inicio > div {
         padding-inline: 4%;
     }
+
+    #sobre #left {
+        padding-right: 1%;
+    }
+
+
 }
