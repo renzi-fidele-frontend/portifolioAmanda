@@ -581,7 +581,7 @@
 
 .swipperContainer {
     text-align: center;
-    width: fit-content;
+    max-width: 100%;
 }
 
 .swipperContainer .testemunhoCard {
@@ -695,7 +695,7 @@
 
 #contacto #locationCont {
     border: 2px solid var(--cor-borda);
-    width: fit-content;
+    width: 80%;
     padding: 5px;
     background-color: var(--cor-fundo0);
     border-radius: 8px;
@@ -826,6 +826,10 @@
     display: none;
 }
 
+#header > img:hover, #header > span {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1656px) {
     #inicio > div {
         padding-inline: 8%;
@@ -846,6 +850,18 @@
     #sobre #right .duasCol {
         margin-bottom: 3em;
     }
+
+    #contacto > #right > h6 {
+        font-size: 1.5em;
+    }
+
+    #contacto > #right > h3 {
+        font-size: 1.5em;
+    }
+
+    #fieldNome > input {
+        margin-right: 10px;
+    }
 }
 
 @media screen and (max-width: 1300px) {
@@ -854,6 +870,14 @@
     }
     #sobre #secaoXP > div > .cardXP #rightCard h5 {
         font-size: 16px;
+    }
+
+    #contacto #locationCont {
+        width: 95%;
+    }
+
+    #contacto {
+        grid-template-columns: 43% 57%;
     }
 }
 
@@ -917,7 +941,8 @@
         left: -12px;
     }
 
-    #servicos > div, #portifolio > div {
+    #servicos > div,
+    #portifolio > div {
         grid-template-columns: 33% 33% 33%;
     }
 }
@@ -992,6 +1017,18 @@
     .serviceBox > .conteudo > p {
         font-size: 14px;
     }
+
+    #contacto {
+        grid-template-columns: 90%;
+    }
+
+    #locationCont {
+        margin-bottom: 2%;
+    }
+
+    #contacto #iconsCont > div {
+        margin-bottom: 4%;
+    }
 }
 
 @media screen and (max-width: 944px) {
@@ -1005,7 +1042,8 @@
 }
 
 @media screen and (max-width: 797px) {
-    #servicos > div, #portifolio > div {
+    #servicos > div,
+    #portifolio > div {
         grid-template-columns: 50% 50%;
     }
 }
@@ -1018,9 +1056,21 @@
     #sobre #right .duasCol {
         padding-right: 15%;
     }
+
+    #contacto {
+        grid-template-columns: 100%;
+    }
 }
 
 @media screen and (max-width: 698px) {
+    #header > img {
+        width: 110px;
+    }
+
+    #header > span {
+        font-size: 35px;
+    }
+
     #inicio > div {
         padding-top: 17%;
     }
@@ -1039,6 +1089,10 @@
 
     #sobre #secaoSobre > #linha > div > span {
         font-size: 40px;
+    }
+
+    #contacto > #left > h3 {
+        font-size: 1.5em;
     }
 }
 
@@ -1075,8 +1129,29 @@
         margin-bottom: 0.45em;
     }
 
-    .serviceBox, .portifolioCard {
+    .serviceBox,
+    .portifolioCard {
         margin: 0.4em;
+    }
+
+    #contacto > #right {
+        padding: 3%;
+    }
+
+    #fieldNome {
+        margin-right: 0;
+    }
+
+    #contacto > #right > form > fieldset {
+        grid-column: 1/3;
+    }
+
+    #fieldNome > input {
+        margin-right: 0;
+    }
+
+    #contacto > #right > form > button {
+        font-size: 18px;
     }
 }
 
@@ -1098,15 +1173,48 @@
         margin-top: 2.2%;
         padding: 16px 19px;
     }
+
+    #contacto > #right > h6 {
+        font-size: 1.3em;
+    }
+
+    #contacto #iconsCont > div > #right > h5 {
+        font-size: 14px;
+    }
+
+    #contacto #iconsCont > div > #right > p {
+        font-size: 13px;
+    }
+
+    #contacto #iconsCont > div > #right > span {
+        font-size: 13px;
+    }
+
+    .swipperContainer #historia > h5 {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 510px) {
-    #servicos > div, #portifolio > div {
+    #servicos > div,
+    #portifolio > div {
         grid-template-columns: 100%;
     }
 }
 
 @media screen and (max-width: 486px) {
+    #header > img {
+        width: 90px;
+    }
+
+    #header > span {
+        font-size: 27px;
+    }
+
+    #contacto > #left > h3 {
+        font-size: 1.3em;
+    }
+
     #inicio > div {
         padding-inline: 4%;
         padding-top: 25%;
@@ -1153,4 +1261,9 @@
     .portifolioText > p {
         font-size: 13px;
     }
+
+    .swipperContainer #historia > h5 {
+        font-size: 18px;
+    }
+
 }

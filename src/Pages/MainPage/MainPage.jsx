@@ -30,8 +30,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import "swiper/css/pagination";
 
 const MainPage = () => {
     const skillsRef = useRef();
@@ -97,7 +97,7 @@ const MainPage = () => {
     return (
         <div id={styles.container}>
             {/*Header invisivel */}
-            <header id={styles.header}>
+            <header id={styles.header} onClick={()=> {navegar("/#inicio")}}>
                 <img src={logo} alt="logo " />
                 <span>
                     <FaBars />
@@ -713,13 +713,13 @@ const MainPage = () => {
                 </h2>
 
                 <Swiper
-                    modules={[Pagination, Autoplay]}
+                    modules={[Autoplay, Pagination]}
                     className={styles.swipperContainer}
-                    spaceBetween={50}
-                    slidesPerView={"auto"}
                     speed={500}
                     autoplay={true}
                     pagination={{ type: "bullets", el: `.${styles.pag}`, clickable: true }}
+                    slidesPerView={"auto"}
+                    breakpoints={{ 1024: { slidesPerView: 2 }, 1200: {slidesPerView: 4, spaceBetween: 50}, 1663: {slidesPerView: 3} }}
                 >
                     <div>
                         <SwiperSlide>
@@ -838,7 +838,7 @@ const MainPage = () => {
                     <div id={styles.locationCont}>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d557.9820380597123!2d32.54581336066112!3d-25.876657213551134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-PT!2smz!4v1688428470244!5m2!1spt-PT!2smz"
-                            width="502"
+                            width="100%"
                             height="215"
                             style={{ border: 0, borderRadius: "8px" }}
                             allowfullscreen=""
