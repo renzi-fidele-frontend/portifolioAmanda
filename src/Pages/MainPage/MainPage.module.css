@@ -832,6 +832,12 @@
     }
 }
 
+@media screen and (max-width: 1604px) {
+    #sobre > #left {
+        padding-right: 10%;
+    }
+}
+
 @media screen and (max-width: 1452px) {
     #sobre #secaoSobre > h5 {
         font-size: 25px;
@@ -848,12 +854,6 @@
     }
     #sobre #secaoXP > div > .cardXP #rightCard h5 {
         font-size: 16px;
-    }
-}
-
-@media screen and (max-width: 1604px) {
-    #sobre > #left {
-        padding-right: 10%;
     }
 }
 
@@ -888,6 +888,9 @@
         margin-bottom: 2em;
     }
 
+    .portifolioImg {
+        height: 240px;
+    }
 }
 
 @media screen and (max-width: 1092px) {
@@ -914,8 +917,8 @@
         left: -12px;
     }
 
-    #servicos > div {
-        grid-template-columns: auto auto auto;
+    #servicos > div, #portifolio > div {
+        grid-template-columns: 33% 33% 33%;
     }
 }
 
@@ -977,11 +980,33 @@
     .titulo1 {
         margin-bottom: 21px;
     }
+
+    .serviceBox {
+        padding: 20px;
+    }
+
+    .serviceBox > .conteudo > h5 {
+        font-size: 1.1em;
+    }
+
+    .serviceBox > .conteudo > p {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 944px) {
     #inicio > div {
         padding-top: 14%;
+    }
+
+    .titulo2 > span {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 797px) {
+    #servicos > div, #portifolio > div {
+        grid-template-columns: 50% 50%;
     }
 }
 
@@ -1007,6 +1032,14 @@
     #sobre #right .duasCol {
         padding-right: 10%;
     }
+
+    #sobre #secaoSobre > h5 {
+        font-size: 21px;
+    }
+
+    #sobre #secaoSobre > #linha > div > span {
+        font-size: 40px;
+    }
 }
 
 @media screen and (max-width: 572px) {
@@ -1028,6 +1061,22 @@
 
     #sobre #right .duasCol {
         padding-right: 0%;
+    }
+
+    #servicos .iconBox {
+        font-size: 2em;
+    }
+
+    #servicos .iconContainer {
+        margin-bottom: 15px;
+    }
+
+    .titulo2 {
+        margin-bottom: 0.45em;
+    }
+
+    .serviceBox, .portifolioCard {
+        margin: 0.4em;
     }
 }
 
@@ -1051,14 +1100,57 @@
     }
 }
 
+@media screen and (max-width: 510px) {
+    #servicos > div, #portifolio > div {
+        grid-template-columns: 100%;
+    }
+}
+
 @media screen and (max-width: 486px) {
     #inicio > div {
         padding-inline: 4%;
+        padding-top: 25%;
     }
 
     #sobre #left {
         padding-right: 1%;
     }
 
+    .titulo1 {
+        font-size: 17px;
+    }
 
+    #sobre #secaoSobre > #linha > div > span {
+        font-size: 35px;
+    }
+
+    #sobre #secaoSobre > #linha > div > p {
+        line-height: 1.1em;
+        font-size: 13px;
+    }
+
+    #sobre #secaoSobre > h5 {
+        font-size: 18px;
+    }
+
+    #skillLine {
+        font-size: 14px;
+    }
+
+    #sobre #right .duasCol {
+        margin-bottom: 1em;
+    }
+
+    .titulo2 > span {
+        font-size: 22px;
+    }
+
+    .portifolioText > h6 {
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .portifolioText > p {
+        font-size: 13px;
+    }
 }
