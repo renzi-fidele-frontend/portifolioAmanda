@@ -32,6 +32,7 @@ import { Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
+import { NavValue } from "../../Context/NavContext";
 
 const MainPage = () => {
     const skillsRef = useRef();
@@ -63,6 +64,13 @@ const MainPage = () => {
     };
 
     const navegar = useNavigate();
+
+    //  Contexto da nav
+    const navAtivo = NavValue();
+
+    useEffect(() => {
+        console.log(navAtivo.nav);
+    }, [navAtivo.nav]);
 
     useEffect(() => {
         const observer = new IntersectionObserver(handleIntersection, observerOptions);
@@ -97,9 +105,19 @@ const MainPage = () => {
     return (
         <div id={styles.container}>
             {/*Header invisivel */}
-            <header id={styles.header} onClick={()=> {navegar("/#inicio")}}>
-                <img src={logo} alt="logo " />
-                <span>
+            <header id={styles.header}>
+                <img
+                    src={logo}
+                    alt="logo "
+                    onClick={() => {
+                        navegar("/#inicio");
+                    }}
+                />
+                <span
+                    onClick={(e) => {
+                        navAtivo.setNav(!navAtivo.nav);
+                    }}
+                >
                     <FaBars />
                 </span>
             </header>
@@ -716,10 +734,11 @@ const MainPage = () => {
                     modules={[Autoplay, Pagination]}
                     className={styles.swipperContainer}
                     speed={500}
+                    spaceBetween={20}
                     autoplay={true}
                     pagination={{ type: "bullets", el: `.${styles.pag}`, clickable: true }}
                     slidesPerView={"auto"}
-                    breakpoints={{ 1024: { slidesPerView: 2 }, 1200: {slidesPerView: 4, spaceBetween: 50}, 1663: {slidesPerView: 3} }}
+                    breakpoints={{ 1024: { slidesPerView: 2 }, 1200: { slidesPerView: 4, spaceBetween: 25 }, 1663: { slidesPerView: 3 } }}
                 >
                     <div>
                         <SwiperSlide>

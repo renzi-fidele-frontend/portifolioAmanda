@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./LeftNav.module.css";
 import { Link, NavLink } from "react-router-dom";
 import { IoHome } from "react-icons/io5";
 import { BsPersonFill, BsBriefcaseFill, BsGrid1X2Fill, BsTelephoneFill } from "react-icons/bs";
 import logo from "../../Images/lg.png";
+import { NavValue } from "../../Context/NavContext";
+import { motion } from "framer-motion";
 
 const LeftNav = () => {
     //  Estilo de NavLink ativo
@@ -13,14 +15,19 @@ const LeftNav = () => {
         borderRadius: "13px",
     };
 
-    function lidarScroll(e) {
-        document.querySelector(styles.inicio).scrollIntoView({ behavior: "smooth" });
-    }
+    const navRef = useRef();
+
+    //  Contexto da nav
+    const navAtivo = NavValue();
 
     useEffect(() => {}, [location.hash]);
 
+    useEffect(() => {
+        navAtivo.nav === true ? navRef.current.classList.toggle(styles.ativo) : navRef.current.classList.remove(styles.ativo);
+    }, [navAtivo.nav]);
+
     return (
-        <div id={styles.container}>
+        <div id={styles.container} ref={navRef}>
             <Link id={styles.logo} to="#inicio">
                 <img src={logo} alt="logo" />
             </Link>

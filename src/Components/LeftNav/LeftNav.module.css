@@ -15,7 +15,7 @@
 }
 
 #nav ul {
-    padding: .7em;
+    padding: 0.7em;
     border-top: 1px #e1e3e1 solid;
 }
 
@@ -31,10 +31,9 @@
 }
 
 #nav ul a p {
-    margin-top: .8em;
+    margin-top: 0.8em;
     font-size: 15px;
     font-weight: 400;
-    
 }
 
 #logo {
@@ -50,6 +49,45 @@
 @media screen and (max-width: 1208px) {
     #container {
         opacity: 0;
+        position: sticky;
+        width: fit-content;
+        transform: translateX(-200px);
+        z-index: 10;
+        transition: all ease-in-out 0.4s;
     }
 
+    .ativo {
+        transform: translateX(0) !important;
+        opacity: 1 !important;
+    }
+
+    #nav > ul {
+        padding-top: 2em;
+    }
+}
+
+@media screen and (max-width: 1033px) {
+    #nav > ul > a {
+        margin-bottom: 0.5em;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1033px) {
+    #nav > ul > a {
+        margin-bottom: 0.9em;
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 551px) {
+    #container {
+        height: fit-content;
+        border-radius: 0 0 7px 7px;
+    }
+
+    #nav > ul > a > p {
+        font-size: 14px;
+    }
 }
