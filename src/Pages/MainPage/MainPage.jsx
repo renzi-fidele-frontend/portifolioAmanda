@@ -25,6 +25,9 @@ import { AiOutlineWhatsApp, AiFillLinkedin, AiFillGithub, AiOutlineMail, AiFillI
 import { MdOutlineDesignServices, MdOutlineWorkHistory } from "react-icons/md";
 import { CgWebsite } from "react-icons/cg";
 
+//  Typewriter
+import Typewriter from "typewriter-effect";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
@@ -110,7 +113,7 @@ const MainPage = () => {
                     src={logo}
                     alt="logo "
                     onClick={() => {
-                        navegar("/#inicio");
+                        secinicio.current.scrollIntoView({ behavior: "smooth" });
                     }}
                 />
                 <span
@@ -154,7 +157,18 @@ const MainPage = () => {
                     <div id={styles.right}>
                         <h6>👋 Olá, me chamo</h6>
                         <h3>Renzi Fidele</h3>
-                        <h4>Sou um desenvolvedor de front-end</h4>
+                        <h4>
+                            Sou<span></span>
+                            <Typewriter
+                                options={{
+                                    strings: ["um desenvolvedor de front-end", "um programador", "a melhor escolha pra você"],
+                                    autoStart: true,
+                                    loop: true,
+                                    delay: 75,
+                                    wrapperClassName: styles.textoDinamico,
+                                }}
+                            />
+                        </h4>
                         <p>
                             Posso criar um site do nada, totalmente formado. Eu não uso truques, nem isso é mágica. Eu me especializei em
                             manipular a própria estrutura da web, suas matérias-primas de HTML, CSS, JavaScript e ReactJs.{" "}

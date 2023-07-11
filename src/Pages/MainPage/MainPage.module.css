@@ -68,6 +68,15 @@
     font-weight: 400;
     margin-bottom: 25px;
     font-size: 25px;
+    display: flex;
+}
+
+/*Texto dinamico*/
+.textoDinamico {
+    margin-left: 7px;
+    font-size: inherit;
+    text-transform: lowercase;
+    display: inline;
 }
 
 #inicio #right > button {
