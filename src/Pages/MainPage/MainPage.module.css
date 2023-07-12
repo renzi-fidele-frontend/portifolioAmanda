@@ -733,7 +733,7 @@
 
 #contacto > #right > form {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
 }
 
 #contacto > #right > form > fieldset {
@@ -758,8 +758,8 @@
     max-width: 100%;
 }
 
-#fieldNome {
-    margin-right: 8%;
+#fieldNome > input {
+    width: 96%;
 }
 
 #fieldMensagem,
@@ -1108,6 +1108,11 @@
 @media screen and (max-width: 572px) {
     #inicio > div {
         padding-top: 20%;
+    }
+
+    #fieldNome > input{
+        width: 100%;
+        
     }
 
     #inicio #right > h3 {
