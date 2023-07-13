@@ -177,14 +177,9 @@ const MainPage = () => {
                             manipular a própria estrutura da web, suas matérias-primas de HTML, CSS, JavaScript e ReactJs.{" "}
                         </p>
 
-                        <button
-                            onClick={(e) => {
-                                e.preventDefault;
-                                navegar(pdf)
-                            }}
-                        >
+                        <a href={pdf} target="_blank" rel="noreferrer">
                             <BsDownload /> Baixar CV
-                        </button>
+                        </a>
                     </div>
                 </div>
             </section>

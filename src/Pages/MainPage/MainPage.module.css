@@ -79,7 +79,7 @@
     display: inline;
 }
 
-#inicio #right > button {
+#inicio #right > a {
     padding: 15px 35px;
     background-color: var(--var-cor-decoracao);
     font-size: 17px;
@@ -91,16 +91,16 @@
     color: var(--cor-hover);
 }
 
-#inicio #right > button:hover {
+#inicio #right > a:hover {
     background-color: var(--cor-hover);
     color: var(--var-cor-decoracao);
 }
 
-#inicio #right > button > svg {
+#inicio #right > a > svg {
     margin-right: 15px;
 }
 
-#inicio #right > button:hover {
+#inicio #right > a:hover {
     cursor: pointer;
 }
 
@@ -985,7 +985,7 @@
         letter-spacing: 2px;
     }
 
-    #inicio #right > button {
+    #inicio #right > a {
         margin-block: 1.7em;
     }
 
