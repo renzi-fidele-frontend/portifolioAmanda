@@ -9,6 +9,9 @@ import video1 from "../../Videos/demoNossoBlog.webm";
 import video2 from "../../Videos/demoCustos.webm";
 import video3 from "../../Videos/FilmeLib.webm";
 import demo4 from "../../Images/DemoDiabetes.jpg";
+import demo5 from "../../Images/demoCarlessi.gif"
+import demo6 from "../../Images/demoPanetones.gif"
+
 
 import avatar1 from "../../Images/avatar1.gif";
 import me from "../../Images/iii.jpg";
@@ -686,7 +689,7 @@ const MainPage = () => {
                                     linguagens: "WP, Elementor, JavaScript",
                                     tipo: "Landing Page",
                                     pais: "Brasil",
-                                    imagem: video2,
+                                    img: demo5,
                                 }}
                                 to={"#projecto5"}
                             >
@@ -721,7 +724,7 @@ const MainPage = () => {
                                     linguagens: "WP, Elementor, JavaScript",
                                     tipo: "Landing Page",
                                     pais: "Brasil",
-                                    imagem: video2,
+                                    img: demo6,
                                 }}
                                 to={"#projecto6"}
                             >
