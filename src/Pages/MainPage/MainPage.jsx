@@ -9,9 +9,9 @@ import video1 from "../../Videos/demoNossoBlog.webm";
 import video2 from "../../Videos/demoCustos.webm";
 import video3 from "../../Videos/FilmeLib.webm";
 import demo4 from "../../Images/DemoDiabetes.jpg";
-import demo5 from "../../Images/demoCarlessi.gif"
-import demo6 from "../../Images/demoPanetones.gif"
-
+import demo5 from "../../Images/demoCarlessi.gif";
+import demo6 from "../../Images/demoPanetones.gif";
+import pdf from "../../Images/PersonalCv.pdf";
 
 import avatar1 from "../../Images/avatar1.gif";
 import me from "../../Images/iii.jpg";
@@ -176,7 +176,13 @@ const MainPage = () => {
                             Posso criar um site do nada, totalmente formado. Eu não uso truques, nem isso é mágica. Eu me especializei em
                             manipular a própria estrutura da web, suas matérias-primas de HTML, CSS, JavaScript e ReactJs.{" "}
                         </p>
-                        <button>
+
+                        <button
+                            onClick={(e) => {
+                                e.preventDefault;
+                                navegar(pdf)
+                            }}
+                        >
                             <BsDownload /> Baixar CV
                         </button>
                     </div>
