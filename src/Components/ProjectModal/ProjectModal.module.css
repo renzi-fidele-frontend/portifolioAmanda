@@ -153,6 +153,7 @@ video.loadingV {
     #detailsContainer > div {
         flex-flow: column;
         align-items: start;
+        padding-block: 3px;
     }
 }
 @media screen and (max-width: 538px) {
@@ -168,6 +169,15 @@ video.loadingV {
 @media screen and (max-width: 461px) {
     #container {
         inset-inline: 5px !important;
+        padding: 10px !important;
     }
 
+    .right h6,
+    .right p {
+        font-size: 13px;
+    }
+
+    .right h5 {
+        font-size: 15px;
+    }
 }
