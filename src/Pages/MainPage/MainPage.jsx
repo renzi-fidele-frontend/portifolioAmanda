@@ -177,7 +177,7 @@ const MainPage = () => {
                             manipular a própria estrutura da web, suas matérias-primas de HTML, CSS, JavaScript e ReactJs.{" "}
                         </p>
 
-                        <a href={pdf} target="_blank" rel="noreferrer">
+                        <a href={pdf} target="_blank">
                             <BsDownload /> Baixar CV
                         </a>
                     </div>
