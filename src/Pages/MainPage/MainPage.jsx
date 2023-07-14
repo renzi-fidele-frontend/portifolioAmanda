@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import styles from "./MainPage.module.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import ProjectModal from "../../Components/ProjectModal/ProjectModal";
-import curiculo from "../../Images/FrontEnd.pdf";
 
 //  Imagens
 import video1 from "../../Videos/demoNossoBlog.webm";
@@ -11,11 +10,12 @@ import video3 from "../../Videos/FilmeLib.webm";
 import demo4 from "../../Images/DemoDiabetes.jpg";
 import demo5 from "../../Images/demoCarlessi.gif";
 import demo6 from "../../Images/demoPanetones.gif";
-
 import avatar1 from "../../Images/avatar1.gif";
 import me from "../../Images/iii.jpg";
 import crazy from "../../Images/crazy.jpg";
 import logo from "../../Images/lg.png";
+import curiculo from "../../../public/PersonalCV.pdf";
+
 
 //  Icons
 import { BiCopyAlt, BiSolidMessageAltDetail, BiSolidPhoneCall, BiVideo } from "react-icons/bi";
@@ -176,7 +176,7 @@ const MainPage = () => {
                             manipular a própria estrutura da web, suas matérias-primas de HTML, CSS, JavaScript e ReactJs.{" "}
                         </p>
 
-                        <a href="portfolio-renzi.vercel.app/src/Images/PersonalCv.pdf" download={"Renzi_Fidele.pdf"} target="_blank">
+                        <a href={curiculo} download={"Renzi Fidele.pdf"} target="_blank">
                             <BsDownload /> Baixar CV
                         </a>
                     </div>
