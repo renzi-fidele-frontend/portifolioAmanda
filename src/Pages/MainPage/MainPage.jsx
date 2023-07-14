@@ -11,11 +11,14 @@ import demo4 from "../../Images/DemoDiabetes.jpg";
 import demo5 from "../../Images/demoCarlessi.gif";
 import demo6 from "../../Images/demoPanetones.gif";
 import avatar1 from "../../Images/avatar1.gif";
+import avatar2 from "../../Images/avatar2.gif";
+import avatar3 from "../../Images/avatar3.png";
+import avatar4 from "../../Images/avatar4.gif";
+
 import me from "../../Images/iii.jpg";
 import crazy from "../../Images/crazy.jpg";
 import logo from "../../Images/lg.png";
 import curiculo from "../../../src/Images/Renzi_Fidele.pdf";
-
 
 //  Icons
 import { BiCopyAlt, BiSolidMessageAltDetail, BiSolidPhoneCall, BiVideo } from "react-icons/bi";
@@ -776,14 +779,14 @@ const MainPage = () => {
                         <SwiperSlide>
                             <div className={styles.testemunhoCard}>
                                 <div id={styles.avatar}>
-                                    <img src={avatar1} alt="" />
+                                    <img src={avatar2} alt="" />
                                 </div>
                                 <div id={styles.historia}>
                                     <h5>Professional de excelente qualidade</h5>
-                                    <p>Eu considero o Renzi muito proativo e super talentoso, cuidou do meu problema num instante</p>
+                                    <p>Renzi foi super prático, fez um ótimo trabalho em pouquíssimo tempo cobrou um ótimo valor</p>
                                     <div>
-                                        <p>Amanda Caleiras</p>
-                                        <span>Ceo na ANOVAFASE</span>
+                                        <p>Devid Ronald</p>
+                                        <span>Cliente no Workana</span>
                                     </div>
                                 </div>
                             </div>
@@ -791,14 +794,17 @@ const MainPage = () => {
                         <SwiperSlide>
                             <div className={styles.testemunhoCard}>
                                 <div id={styles.avatar}>
-                                    <img src={avatar1} alt="" />
+                                    <img src={avatar3} alt="" />
                                 </div>
                                 <div id={styles.historia}>
                                     <h5>Professional de excelente qualidade</h5>
-                                    <p>Eu considero o Renzi muito proativo e super talentoso, cuidou do meu problema num instante</p>
+                                    <p>
+                                        Seus serviços foram essenciais para o sucesso do meu
+                                        projeto online! 💯
+                                    </p>
                                     <div>
-                                        <p>Amanda Caleiras</p>
-                                        <span>Ceo na ANOVAFASE</span>
+                                        <p>Ermelinda Manuel</p>
+                                        <span>Assistente financeira</span>
                                     </div>
                                 </div>
                             </div>
@@ -806,14 +812,14 @@ const MainPage = () => {
                         <SwiperSlide>
                             <div className={styles.testemunhoCard}>
                                 <div id={styles.avatar}>
-                                    <img src={avatar1} alt="" />
+                                    <img src={avatar4} alt="" />
                                 </div>
                                 <div id={styles.historia}>
                                     <h5>Professional de excelente qualidade</h5>
-                                    <p>Eu considero o Renzi muito proativo e super talentoso, cuidou do meu problema num instante</p>
+                                    <p>Incrível! Contratei o Renzi como freelancer web e fiquei impressionado com seu trabalho! 🚀</p>
                                     <div>
-                                        <p>Amanda Caleiras</p>
-                                        <span>Ceo na ANOVAFASE</span>
+                                        <p>Daniel França</p>
+                                        <span>Ceo no Nosso ads</span>
                                     </div>
                                 </div>
                             </div>
