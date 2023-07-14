@@ -150,6 +150,6 @@
 
 
 video.loadingV {
-    background-color: red;
+    background-image: url("/src/Images/loadVideo.svg");
     
 }
