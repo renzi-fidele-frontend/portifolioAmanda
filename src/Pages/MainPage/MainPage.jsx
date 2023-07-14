@@ -296,7 +296,7 @@ const MainPage = () => {
                                     <AiOutlineWhatsApp />
                                     <span>WhatsApp</span>
                                 </a>
-                                <a href={curiculo} target="_blank">
+                                <a href={curiculo} target="_blank" download={"Renzi Fidele.pdf"} >
                                     <FaFilePdf />
                                     <span>Currículo</span>
                                 </a>
