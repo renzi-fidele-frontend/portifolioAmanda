@@ -16,3 +16,9 @@
         grid-template-columns: 0 100%;
     }
 }
+
+
+video.loadingV {
+    background-color: red;
+
+}

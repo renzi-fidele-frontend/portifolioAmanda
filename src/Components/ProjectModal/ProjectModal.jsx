@@ -35,7 +35,20 @@ const ProjectModal = () => {
             {loc.state ? (
                 <ReactModal isOpen={isOpen} onRequestClose={fechado} id={styles.container}>
                     <div className={styles.left}>
-                        {loc.state.imagem ? <video autoPlay src={loc.state.imagem}></video> : <img src={loc.state.img} alt="" />}
+                        {loc.state.imagem ? (
+                            <video
+                                onCanPlay={(e) => {
+                                    e.currentTarget.classList.remove(styles.loadingV);
+                                }}
+                                onLoadStart={(e) => {
+                                    e.currentTarget.classList.add(styles.loadingV);
+                                }}
+                                autoPlay={true}
+                                src={loc.state.imagem}
+                            ></video>
+                        ) : (
+                            <img src={loc.state.img} alt="" />
+                        )}
                     </div>
                     <div className={styles.right}>
                         <h5>{loc.state.titulo}</h5>
