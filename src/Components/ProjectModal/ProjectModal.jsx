@@ -37,11 +37,11 @@ const ProjectModal = () => {
                     <div className={styles.left}>
                         {loc.state.imagem ? (
                             <video
+                                onProgress={(e) => {
+                                    e.currentTarget.classList.add(styles.loadingV);
+                                }}
                                 onCanPlay={(e) => {
                                     e.currentTarget.classList.remove(styles.loadingV);
-                                }}
-                                onLoadStart={(e) => {
-                                    e.currentTarget.classList.add(styles.loadingV);
                                 }}
                                 autoPlay={true}
                                 src={loc.state.imagem}
