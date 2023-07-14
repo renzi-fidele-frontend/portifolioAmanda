@@ -11,7 +11,6 @@ import video3 from "../../Videos/FilmeLib.webm";
 import demo4 from "../../Images/DemoDiabetes.jpg";
 import demo5 from "../../Images/demoCarlessi.gif";
 import demo6 from "../../Images/demoPanetones.gif";
-import pdf from "../../Images/PersonalCv.pdf";
 
 import avatar1 from "../../Images/avatar1.gif";
 import me from "../../Images/iii.jpg";
