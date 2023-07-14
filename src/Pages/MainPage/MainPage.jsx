@@ -14,7 +14,7 @@ import avatar1 from "../../Images/avatar1.gif";
 import me from "../../Images/iii.jpg";
 import crazy from "../../Images/crazy.jpg";
 import logo from "../../Images/lg.png";
-import curiculo from "../../../public/PersonalCV.pdf";
+import curiculo from "../../../src/Images/Renzi_Fidele.pdf";
 
 
 //  Icons
