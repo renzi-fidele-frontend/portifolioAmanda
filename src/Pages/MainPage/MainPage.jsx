@@ -40,7 +40,10 @@ import { Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
+
 import { NavValue } from "../../Context/NavContext";
+
+import emailjs from "@emailjs/browser";
 
 const MainPage = () => {
     const skillsRef = useRef();
@@ -109,6 +112,26 @@ const MainPage = () => {
             secTestemunhos.current.scrollIntoView({ behavior: "smooth" });
         }
     }, [loc.hash]);
+
+    const formRef = useRef();
+
+    //  Enviar mensagem para email
+    async function sendMessage(e) {
+        e.preventDefault();
+        emailjs
+            .sendForm("service_ru19i6o", "template_x79mlbg", formRef.current, "psXngkmWfHJgvC3ju")
+            .then(
+                (result) => {
+                    alert("Email enviado com sucesso");
+                },
+                (error) => {
+                    alert(`Ops, erro ao enviar email`);
+                }
+            )
+            .catch((err) => {
+                console.log(`Ops, houve erro: ${err}, ao enviar a msg do form`);
+            });
+    }
 
     return (
         <div id={styles.container}>
@@ -296,7 +319,7 @@ const MainPage = () => {
                                     <AiOutlineWhatsApp />
                                     <span>WhatsApp</span>
                                 </a>
-                                <a href={curiculo} target="_blank" download={"Renzi Fidele.pdf"} >
+                                <a href={curiculo} target="_blank" download={"Renzi Fidele.pdf"}>
                                     <FaFilePdf />
                                     <span>Currículo</span>
                                 </a>
@@ -798,10 +821,7 @@ const MainPage = () => {
                                 </div>
                                 <div id={styles.historia}>
                                     <h5>Professional de excelente qualidade</h5>
-                                    <p>
-                                        Seus serviços foram essenciais para o sucesso do meu
-                                        projeto online! 💯
-                                    </p>
+                                    <p>Seus serviços foram essenciais para o sucesso do meu projeto online! 💯</p>
                                     <div>
                                         <p>Ermelinda Manuel</p>
                                         <span>Assistente financeira</span>
@@ -896,24 +916,24 @@ const MainPage = () => {
                         Vamos nos unir.
                     </h6>
                     <p>Me conte um pouco sobre você o que tens em mente.</p>
-                    <form>
+                    <form ref={formRef}>
                         <fieldset id={styles.fieldNome}>
                             <label htmlFor="">Primeiro nome</label>
-                            <input type="text" placeholder="Nome * " />
+                            <input type="text" name="nome" placeholder="Nome * " />
                         </fieldset>
                         <fieldset id={styles.fieldEmail}>
                             <label htmlFor="">Seu Email</label>
-                            <input type="text" placeholder="Email *" />
+                            <input type="text" name="email" placeholder="Email *" />
                         </fieldset>
                         <fieldset id={styles.fieldAssunto}>
                             <label htmlFor="">Assunto</label>
-                            <input type="text" placeholder="Assunto *" />
+                            <input type="text" name="assunto" placeholder="Assunto *" />
                         </fieldset>
                         <fieldset id={styles.fieldMensagem}>
                             <label htmlFor="">Sua mensagem</label>
-                            <textarea placeholder="Mensagem *" />
+                            <textarea name="mensagem" placeholder="Mensagem *" />
                         </fieldset>
-                        <button>Enviar mensagem</button>
+                        <button onClick={sendMessage}>Enviar mensagem</button>
                     </form>
                 </div>
             </section>
