@@ -177,7 +177,7 @@ const MainPage = () => {
                             manipular a própria estrutura da web, suas matérias-primas de HTML, CSS, JavaScript e ReactJs.{" "}
                         </p>
 
-                        <a href={pdf} target="_blank">
+                        <a href="portfolio-renzi.vercel.app/src/Images/PersonalCv.pdf" download={"Renzi_Fidele.pdf"} target="_blank">
                             <BsDownload /> Baixar CV
                         </a>
                     </div>
