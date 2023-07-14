@@ -37,7 +37,7 @@ const ProjectModal = () => {
                     <div className={styles.left}>
                         {loc.state.imagem ? (
                             <video
-                                onProgress={(e) => {
+                                onLoadStartCapture={(e) => {
                                     e.currentTarget.classList.add(styles.loadingV);
                                 }}
                                 onCanPlay={(e) => {
