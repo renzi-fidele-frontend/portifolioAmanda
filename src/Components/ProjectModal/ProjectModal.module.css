@@ -151,5 +151,7 @@
 
 video.loadingV {
     background-image: url("/src/Images/loadVideo.svg");
-    
+    background-repeat: no-repeat;
+    background-position: center;    
+    text-align: center;
 }
