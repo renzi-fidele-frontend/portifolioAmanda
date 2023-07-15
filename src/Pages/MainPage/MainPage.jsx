@@ -16,7 +16,7 @@ import avatar3 from "../../Images/avatar3.png";
 import avatar4 from "../../Images/avatar4.gif";
 
 import me from "../../Images/iii.jpg";
-import crazy from "../../Images/crazy.jpg";
+import crazy from "../../Images/meReal.gif";
 import logo from "../../Images/lg.png";
 import curiculo from "../../../src/Images/Renzi_Fidele.pdf";
 
