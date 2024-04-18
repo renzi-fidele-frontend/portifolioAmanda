@@ -3,11 +3,6 @@ import styles from "./MainPage.module.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import ProjectModal from "../../Components/ProjectModal/ProjectModal";
 
-import avatar1 from "../../Images/avatar1.gif";
-import avatar2 from "../../Images/avatar2.gif";
-import avatar3 from "../../Images/avatar3.png";
-import avatar4 from "../../Images/avatar4.gif";
-
 import me from "../../Images/me1.gif";
 import crazy from "../../Images/meReal.gif";
 import logo from "../../Images/lg.png";
@@ -37,8 +32,9 @@ import "swiper/css/pagination";
 import { NavValue } from "../../Context/NavContext";
 
 import emailjs from "@emailjs/browser";
-import { portfolio } from "./data";
+import { portfolio, testemunhos } from "./data";
 import ProjectCard from "../../Components/ProjectCard/ProjectCard";
+import TestemunhoCard from "../../Components/TestemunhoCard/TestemunhoCard";
 
 const MainPage = () => {
    const skillsRef = useRef();
@@ -578,66 +574,17 @@ const MainPage = () => {
                breakpoints={{ 1024: { slidesPerView: 2 }, 1200: { slidesPerView: 4, spaceBetween: 25 }, 1663: { slidesPerView: 3 } }}
             >
                <div>
-                  <SwiperSlide>
-                     <div className={styles.testemunhoCard}>
-                        <div id={styles.avatar}>
-                           <img src={avatar1} alt="" />
-                        </div>
-                        <div id={styles.historia}>
-                           <h5>Professional de excelente qualidade</h5>
-                           <p>Eu considero o Renzi muito proativo e super talentoso, cuidou do meu problema num instante</p>
-                           <div>
-                              <p>Amanda Caleiras</p>
-                              <span>Ceo na ANOVAFASE</span>
-                           </div>
-                        </div>
-                     </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                     <div className={styles.testemunhoCard}>
-                        <div id={styles.avatar}>
-                           <img src={avatar2} alt="" />
-                        </div>
-                        <div id={styles.historia}>
-                           <h5>Professional de excelente qualidade</h5>
-                           <p>Renzi foi super prático, fez um ótimo trabalho em pouquíssimo tempo cobrou um ótimo valor</p>
-                           <div>
-                              <p>Devid Ronald</p>
-                              <span>Cliente no Workana</span>
-                           </div>
-                        </div>
-                     </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                     <div className={styles.testemunhoCard}>
-                        <div id={styles.avatar}>
-                           <img src={avatar3} alt="" />
-                        </div>
-                        <div id={styles.historia}>
-                           <h5>Professional de excelente qualidade</h5>
-                           <p>Seus serviços foram essenciais para o sucesso do meu projeto online! 💯</p>
-                           <div>
-                              <p>Ermelinda Manuel</p>
-                              <span>Assistente financeira</span>
-                           </div>
-                        </div>
-                     </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                     <div className={styles.testemunhoCard}>
-                        <div id={styles.avatar}>
-                           <img src={avatar4} alt="" />
-                        </div>
-                        <div id={styles.historia}>
-                           <h5>Professional de excelente qualidade</h5>
-                           <p>Incrível! Contratei o Renzi como freelancer web e fiquei impressionado com seu trabalho! 🚀</p>
-                           <div>
-                              <p>Daniel França</p>
-                              <span>Ceo no Nosso ads</span>
-                           </div>
-                        </div>
-                     </div>
-                  </SwiperSlide>
+                  {testemunhos.map((v, k) => (
+                     <SwiperSlide key={k}>
+                        <TestemunhoCard
+                           fotoCliente={v.fotoCliente}
+                           nomeCliente={v.nomeCliente}
+                           profissaoCliente={v.profissaoCliente}
+                           testemunho={v.testemunho}
+                           topico={v.topico}
+                        />
+                     </SwiperSlide>
+                  ))}
                </div>
                <div className={styles.pag}></div>
             </Swiper>
