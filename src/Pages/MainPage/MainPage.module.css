@@ -1,1283 +1,1170 @@
 /*----------------Seção Inicial------------------*/
 #inicio > div {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    padding-inline: 15%;
-    padding-block: 10em;
-    color: var(--var-cor-texto);
+   display: grid;
+   grid-template-columns: 50% 50%;
+   padding-inline: 15%;
+   padding-block: 10em;
+   color: var(--var-cor-texto);
 }
 
 #inicio {
-    min-height: 100vh;
-    background-color: var(--cor-fundo0);
+   min-height: 100vh;
+   background-color: var(--cor-fundo0);
 }
 
 #me {
-    max-width: 100%;
-    border-radius: 40px;
+   max-width: 100%;
+   border-radius: 40px;
 }
 
 #iconTop {
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 90px;
-    display: inline-block;
+   position: absolute;
+   top: -50px;
+   right: -50px;
+   width: 90px;
+   display: inline-block;
 }
 
 #iconLow {
-    bottom: -40px;
-    left: -50px;
-    width: 90px;
-    display: inline-block;
-    position: absolute;
+   bottom: -40px;
+   left: -50px;
+   width: 90px;
+   display: inline-block;
+   position: absolute;
 }
 
 #inicio #left {
-    max-width: 100%;
-    position: relative;
+   max-width: 100%;
+   position: relative;
 }
 
 #inicio #right {
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    padding-left: 13%;
-    justify-content: center;
+   display: flex;
+   align-items: start;
+   flex-direction: column;
+   padding-left: 13%;
+   justify-content: center;
 }
 
 #inicio #right > h3 {
-    font-size: 62px;
-    font-weight: 700;
-    color: black;
-    margin-block: 10px;
-    text-shadow: 1px 1px 2px black;
+   font-size: 62px;
+   font-weight: 700;
+   color: black;
+   margin-block: 10px;
+   text-shadow: 1px 1px 2px black;
 }
 
 #inicio #right > h6 {
-    font-size: 20px;
-    font-weight: 400;
+   font-size: 20px;
+   font-weight: 400;
 }
 
 #inicio #right > p {
-    font-size: var(--font-normal);
-    font-weight: 300;
+   font-size: var(--font-normal);
+   font-weight: 300;
 }
 
 #inicio #right > h4 {
-    font-weight: 400;
-    margin-bottom: 25px;
-    font-size: 25px;
-    display: flex;
+   font-weight: 400;
+   margin-bottom: 25px;
+   font-size: 25px;
+   display: flex;
 }
 
 /*Texto dinamico*/
 .textoDinamico {
-    margin-left: 7px;
-    font-size: inherit;
-    text-transform: lowercase;
-    display: inline;
+   margin-left: 7px;
+   font-size: inherit;
+   text-transform: lowercase;
+   display: inline;
 }
 
 #inicio #right > a {
-    padding: 15px 35px;
-    background-color: var(--var-cor-decoracao);
-    font-size: 17px;
-    border-radius: 10px;
-    transition: all 0.35s ease;
-    font-weight: 400;
-    border: 2px solid var(--var-cor-decoracao);
-    margin-top: 2em;
-    color: var(--cor-hover);
+   padding: 15px 35px;
+   background-color: var(--var-cor-decoracao);
+   font-size: 17px;
+   border-radius: 10px;
+   transition: all 0.35s ease;
+   font-weight: 400;
+   border: 2px solid var(--var-cor-decoracao);
+   margin-top: 2em;
+   color: var(--cor-hover);
 }
 
 #inicio #right > a:hover {
-    background-color: var(--cor-hover);
-    color: var(--var-cor-decoracao);
+   background-color: var(--cor-hover);
+   color: var(--var-cor-decoracao);
 }
 
 #inicio #right > a > svg {
-    margin-right: 15px;
+   margin-right: 15px;
 }
 
 #inicio #right > a:hover {
-    cursor: pointer;
+   cursor: pointer;
 }
 
 /*--------------Seção sobre mim-----------------*/
 #sobre {
-    padding: var(--padding-secao);
-    display: grid;
-    grid-template-columns: 50% 50%;
-    background-color: var(--cor-fundo1);
+   padding: var(--padding-secao);
+   display: grid;
+   grid-template-columns: 50% 50%;
+   background-color: var(--cor-fundo1);
 }
 
 .titulo1 {
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-    padding-left: 20px;
-    color: var(--bs-heading-color);
-    margin-bottom: 30px;
+   font-size: 20px;
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   position: relative;
+   padding-left: 20px;
+   color: var(--bs-heading-color);
+   margin-bottom: 30px;
 }
 
 .titulo1::after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 0;
-    width: 8px;
-    height: 8px;
-    background: var(--var-cor-decoracao);
+   content: "";
+   position: absolute;
+   top: 10px;
+   left: 0;
+   width: 8px;
+   height: 8px;
+   background: var(--var-cor-decoracao);
 }
 
 #sobre > #left {
-    padding-right: 20%;
+   padding-right: 20%;
 }
 
 #sobre #secaoSobre {
-    padding-bottom: 8%;
-    border-bottom: #c0c0c0 1px solid;
+   padding-bottom: 8%;
+   border-bottom: #c0c0c0 1px solid;
 }
 
 #sobre #secaoSobre > h6 {
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 16px;
-    margin-bottom: 10px;
+   text-transform: uppercase;
+   font-weight: 600;
+   font-size: 16px;
+   margin-bottom: 10px;
 }
 
 #sobre #secaoSobre > h5 {
-    font-size: 30px;
-    margin-bottom: 26px;
-    text-transform: uppercase;
-    font-weight: 600;
-    line-height: 1.2;
+   font-size: 30px;
+   margin-bottom: 26px;
+   text-transform: uppercase;
+   font-weight: 600;
+   line-height: 1.2;
 }
 
 #sobre #secaoSobre > p {
-    font-size: var(--font-normal);
-    font-weight: var(--weight-normal);
-    margin-bottom: 16px;
+   font-size: var(--font-normal);
+   font-weight: var(--weight-normal);
+   margin-bottom: 16px;
 }
 
 #sobre #secaoSobre > #linha {
-    display: flex;
-    flex-flow: row nowrap;
+   display: flex;
+   flex-flow: row nowrap;
 }
 
 #sobre #secaoSobre > #linha > div {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: center;
+   align-items: center;
 }
 
 #sobre #secaoSobre > #linha > div:last-child {
-    margin-left: 4%;
+   margin-left: 4%;
 }
 
 #sobre #secaoSobre > #linha > div > span {
-    font-size: 52px;
-    line-height: 1;
-    font-weight: 600;
-    color: var(--bs-heading-color);
+   font-size: 52px;
+   line-height: 1;
+   font-weight: 600;
+   color: var(--bs-heading-color);
 }
 
 #sobre #secaoSobre > #linha > div > p {
-    padding-left: 12px;
-    line-height: 1.4;
+   padding-left: 12px;
+   line-height: 1.4;
 }
 
 #sobre #secaoXP {
-    padding-top: 8%;
+   padding-top: 8%;
 }
 
 #sobre #secaoXP > div > .cardXP {
-    background-color: var(--fundo-box);
-    border: 2px solid var(--cor-borda);
-    margin-bottom: 4%;
-    padding: 15px 15px 20px 20px;
-    display: flex;
-    flex-flow: row;
-    border-radius: 12px;
-    position: relative;
-    transition: all 0.35s ease;
+   background-color: var(--fundo-box);
+   border: 2px solid var(--cor-borda);
+   margin-bottom: 4%;
+   padding: 15px 15px 20px 20px;
+   display: flex;
+   flex-flow: row;
+   border-radius: 12px;
+   position: relative;
+   transition: all 0.35s ease;
 }
 
 #sobre #secaoXP > div > .cardXP #leftCard {
-    margin-right: 18px;
-    color: var(--var-cor-decoracao);
-    font-size: 26px;
+   margin-right: 18px;
+   color: var(--var-cor-decoracao);
+   font-size: 26px;
 }
 
 #sobre #secaoXP > div > .cardXP #leftCard > i {
-    background-color: var(--cor-hover);
-    align-items: center;
-    display: flex;
-    padding: 15px;
-    border-radius: 50%;
+   background-color: var(--cor-hover);
+   align-items: center;
+   display: flex;
+   padding: 15px;
+   border-radius: 50%;
 }
 
 #sobre #secaoXP > div > .cardXP #rightCard span {
-    font-size: 13px;
-    color: var(--var-cor-texto);
+   font-size: 13px;
+   color: var(--var-cor-texto);
 }
 
 #sobre #secaoXP > div > .cardXP #rightCard h5 {
-    color: var(--bs-heading-color);
-    font-size: 18px;
-    margin-block: 5px;
-    font-weight: 500;
+   color: var(--bs-heading-color);
+   font-size: 18px;
+   margin-block: 5px;
+   font-weight: 500;
 }
 
 #sobre #secaoXP > div > .cardXP #rightCard p {
-    color: var(--var-cor-texto);
+   color: var(--var-cor-texto);
 }
 
 #sobre #right .duasCol > img {
-    max-width: 100%;
-    border-radius: 40px;
+   max-width: 100%;
+   border-radius: 40px;
 }
 
 #sobre #right .duasCol {
-    display: grid;
-    grid-template-columns: 58% auto;
-    margin-bottom: 2.9%;
+   display: grid;
+   grid-template-columns: 58% auto;
+   margin-bottom: 2.9%;
 }
 
 #sobre #right .duasCol > div {
-    display: flex;
-    flex-direction: column;
-    padding-left: 7%;
-    justify-content: space-between;
+   display: flex;
+   flex-direction: column;
+   padding-left: 7%;
+   justify-content: space-between;
 }
 
 #sobre #right .duasCol > div > a {
-    color: var(--var-cor-texto);
-    display: flex;
-    border: 2px solid var(--cor-borda);
-    background-color: var(--fundo-box);
-    padding: 12px 15px;
-    border-radius: 12px;
-    align-items: center;
-    position: relative;
-    transition: all 0.35s ease;
+   color: var(--var-cor-texto);
+   display: flex;
+   border: 2px solid var(--cor-borda);
+   background-color: var(--fundo-box);
+   padding: 12px 15px;
+   border-radius: 12px;
+   align-items: center;
+   position: relative;
+   transition: all 0.35s ease;
 }
 
 #sobre #right .duasCol > div > a:hover {
-    background-color: var(--var-cor-decoracao);
-    border-color: var(--var-cor-decoracao);
+   background-color: var(--var-cor-decoracao);
+   border-color: var(--var-cor-decoracao);
 }
 
 #sobre #right .duasCol > div > a > span {
-    margin-left: 25px;
+   margin-left: 25px;
 }
 
 #sobre #right .duasCol > div > a > svg {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: inherit;
-    font-size: 25px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   background-color: inherit;
+   font-size: 25px;
 }
 
 #sobre #right > div {
-    position: sticky;
-    top: 0;
+   position: sticky;
+   top: 0;
 }
 
 /*-----------------Àrea das minhas habilidades----------------  */
 #skills {
-    padding-bottom: 2%;
+   padding-bottom: 2%;
 }
 
 #skillLine {
-    margin-bottom: 3%;
+   margin-bottom: 3%;
 }
 
 #skillLine > div {
-    background-color: white;
-    position: relative;
-    border: black 1px solid;
+   background-color: white;
+   position: relative;
+   border: black 1px solid;
 }
 
 .skillVisto #skillLine {
-    animation: entrar 3s ease;
+   animation: entrar 3s ease;
 }
 
 #skillLine > div > div {
-    background-color: var(--bs-heading-color);
-    position: relative;
-    text-align: end;
-    line-height: 7px;
+   background-color: var(--bs-heading-color);
+   position: relative;
+   text-align: end;
+   line-height: 7px;
 }
 
 @keyframes entrar {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
+   from {
+      width: 0;
+   }
+   to {
+      width: 100%;
+   }
 }
 
 #skillLine > div > div > span {
-    position: relative;
-    text-align: end;
-    top: -15px;
+   position: relative;
+   text-align: end;
+   top: -15px;
 }
 
 /*----------------Seção dos serviços------------*/
 #servicos {
-    background-color: var(--cor-fundo0);
-    padding: var(--padding-secao);
+   background-color: var(--cor-fundo0);
+   padding: var(--padding-secao);
 }
 
 .titulo2 {
-    position: relative;
-    display: inline-block;
-    vertical-align: top;
-    padding-right: 45px;
-    font-size: 40px;
-    font-weight: 600;
-    padding-bottom: 10px;
-    text-transform: uppercase;
-    margin-bottom: 0.9em;
+   position: relative;
+   display: inline-block;
+   vertical-align: top;
+   padding-right: 45px;
+   font-size: 40px;
+   font-weight: 600;
+   padding-bottom: 10px;
+   text-transform: uppercase;
+   margin-bottom: 0.9em;
 }
 
 .titulo2 > span {
-    font-size: 40px;
-    font-weight: 600;
-    text-transform: uppercase;
-    line-height: 1.2;
-    color: var(--bs-heading-color);
+   font-size: 40px;
+   font-weight: 600;
+   text-transform: uppercase;
+   line-height: 1.2;
+   color: var(--bs-heading-color);
 }
 
 .titulo2::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 6px;
-    background-color: var(--var-cor-decoracao);
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 60px;
+   height: 6px;
+   background-color: var(--var-cor-decoracao);
 }
 
 #servicos > div {
-    display: grid;
-    grid-template-columns: 32% 32% 32%;
+   display: grid;
+   grid-template-columns: 32% 32% 32%;
 }
 
 .serviceBox {
-    background-color: var(--cor-fundo1);
-    border: 2px solid var(--cor-borda);
-    padding: 40px;
-    border-radius: 10px;
-    margin: 0.8em;
-    transition: all 0.6s ease-in-out;
+   background-color: var(--cor-fundo1);
+   border: 2px solid var(--cor-borda);
+   padding: 40px;
+   border-radius: 10px;
+   margin: 0.8em;
+   transition: all 0.6s ease-in-out;
 }
 
 .serviceBox:hover {
-    cursor: pointer;
-    background-image: url("/src/Images/blurry-gradient-haikei.svg");
-    transform: translateY(-10px);
-    /*
+   cursor: pointer;
+   background-image: url("/src/Images/blurry-gradient-haikei.svg");
+   transform: translateY(-10px);
+   /*
     background: url("/src/Images/polygon-scatter-haikei\(1\).svg");*/
 }
 
 .ServicoEntrou {
-    animation: in 0.1s ease-in-out;
+   animation: in 0.1s ease-in-out;
 }
 
 @keyframes in {
-    from {
-        opacity: 0.7;
-    }
-    to {
-        opacity: 1;
-    }
+   from {
+      opacity: 0.7;
+   }
+   to {
+      opacity: 1;
+   }
 }
 
 .serviceBox > .iconContainer {
-    width: 70px;
-    height: 70px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
-    position: relative;
-    z-index: 0;
+   width: 70px;
+   height: 70px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 40px;
+   position: relative;
+   z-index: 0;
 }
 
 .iconBox {
-    width: fit-content;
-    background: var(--var-cor-decoracao);
-    border-radius: 10px;
-    font-size: 2.8em;
-    position: relative;
-    color: var(--var-cor-texto);
-    display: flex;
-    transition: transform 0.35s ease;
-    padding: 0.3em;
+   width: fit-content;
+   background: var(--var-cor-decoracao);
+   border-radius: 10px;
+   font-size: 2.8em;
+   position: relative;
+   color: var(--var-cor-texto);
+   display: flex;
+   transition: transform 0.35s ease;
+   padding: 0.3em;
 }
 
 .ServicoEntrou .iconBox {
-    border: 3px solid var(--cor-hover);
+   border: 3px solid var(--cor-hover);
 }
 
 .iconBox::after {
-    content: "";
-    position: absolute;
-    top: -8px;
-    left: 4px;
-    right: -10px;
-    bottom: 5px;
-    background-color: rgb(238, 235, 235);
-    z-index: -1;
-    border-radius: 10px;
-    transform: rotate(10deg);
-    transition: all 0.35s ease;
+   content: "";
+   position: absolute;
+   top: -8px;
+   left: 4px;
+   right: -10px;
+   bottom: 5px;
+   background-color: rgb(238, 235, 235);
+   z-index: -1;
+   border-radius: 10px;
+   transform: rotate(10deg);
+   transition: all 0.35s ease;
 }
 
 .ServicoEntrou .iconBox::after {
-    transform: rotate(0);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+   transform: rotate(0);
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
 }
 
 .serviceBox .conteudo > h5 {
-    font-size: 1.25rem;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-    color: var(--bs-heading-color);
+   font-size: 1.25rem;
+   margin-top: 0;
+   margin-bottom: 0.5rem;
+   font-weight: 500;
+   line-height: 1.2;
+   color: var(--bs-heading-color);
 }
 
 .serviceBox .conteudo > p {
-    color: var(--var-cor-texto);
-    font-weight: var(--weight-normal);
+   color: var(--var-cor-texto);
+   font-weight: var(--weight-normal);
 }
 
 /*------------Secao do portifolio*/
 #portifolio {
-    background-color: var(--cor-fundo1);
-    padding: var(--padding-secao);
+   background-color: var(--cor-fundo1);
+   padding: var(--padding-secao);
 }
 
 #portifolio > div {
-    display: grid;
-    grid-template-columns: 32% 32% 32%;
+   display: grid;
+   grid-template-columns: 32% 32% 32%;
 }
 
-.portifolioCard {
-    border: 2px solid var(--cor-borda);
-    padding: 10px;
-    border-radius: 10px;
-    position: relative;
-    background-color: var(--cor-fundo0);
-    margin: 0.8em;
-}
 
-.portifolioText {
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-    right: 20px;
-    background-color: var(--var-cor-cinza);
-    border: 2px solid var(--cor-borda);
-    padding: 20px;
-    border-radius: 10px;
-    transition: all 0.35s ease;
-    opacity: 0;
-}
 
-.cardHover .portifolioText {
-    bottom: 20px;
-    opacity: 1;
-}
-
-.portifolioText > a {
-    position: absolute;
-    top: 25px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    right: 15px;
-    background: var(--cor-fundo0);
-    color: var(--var-cor-texto);
-    border-radius: 50%;
-}
-
-.portifolioText > h6 {
-    color: var(--bs-heading-color);
-    font-size: 16px;
-    font-weight: 500;
-    margin-right: 11px;
-}
-
-.portifolioText > p {
-    font-size: 13px;
-    font-weight: var(--weight-normal);
-    color: var(--var-cor-texto);
-}
-
-.portifolioImg {
-    height: 300px;
-    overflow-y: hidden;
-    border-radius: 10px;
-    transition: ease-in-out 1.3s;
-    background-size: cover;
-}
-
-#projeto1 {
-    background-image: url("/src/Images/Miniblog.gif");
-    background-position: center center;
-}
-
-#projeto2 {
-    background-image: url("/src/Images/custos.gif");
-    background-position: center center;
-}
-
-#projeto3 {
-    background-image: url("/src/Images/FilmeLib.gif");
-}
-
-#projeto4 {
-    background-image: url("/src/Images/diabetes.gif");
-}
-
-#projeto5 {
-    background-image: url("/src/Images/unity.gif");
-}
-
-#projeto6 {
-    background-image: url("/src/Images/projetopanetones.gif");
-}
-
-.portifolioImg:hover {
-    background-position: bottom;
-}
-
-.portifolioImg > a {
-    position: absolute;
-    top: 20px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--var-cor-decoracao);
-    color: var(--var-cor-texto);
-    border-radius: 50%;
-    border-color: red;
-    right: 20px;
-    border: none;
-    font-size: 27px;
-}
 
 /*------------Secao dos testemunhos-------*/
 #testemunhos {
-    background-color: var(--cor-fundo0);
-    padding: var(--padding-secao);
-    text-align: left;
+   background-color: var(--cor-fundo0);
+   padding: var(--padding-secao);
+   text-align: left;
 }
 
 .swipperContainer {
-    text-align: center;
-    max-width: 100%;
+   text-align: center;
+   max-width: 100%;
 }
 
 .swipperContainer .testemunhoCard {
-    border: 2px solid var(--cor-borda);
-    padding: 25px;
-    border-radius: 10px;
-    background-color: var(--cor-fundo0);
-    text-align: center;
+   border: 2px solid var(--cor-borda);
+   padding: 25px;
+   border-radius: 10px;
+   background-color: var(--cor-fundo0);
+   text-align: center;
 }
 
 .pag {
-    margin-top: 3%;
-    margin-bottom: 2%;
+   margin-top: 3%;
+   margin-bottom: 2%;
 }
 
 .swipperContainer #avatar {
-    width: 100px;
-    height: 100px;
-    border: 2px solid var(--cor-borda);
-    border-radius: 50%;
-    padding: 3px;
-    margin: 0 auto;
+   width: 100px;
+   height: 100px;
+   border: 2px solid var(--cor-borda);
+   border-radius: 50%;
+   padding: 3px;
+   margin: 0 auto;
 }
 
 .swipperContainer #avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    max-width: 100%;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 50%;
+   max-width: 100%;
 }
 
 .swipperContainer #historia h5 {
-    margin-top: 5%;
-    margin-bottom: 0.5em;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 1.1em;
-    color: var(--bs-heading-color);
+   margin-top: 5%;
+   margin-bottom: 0.5em;
+   font-weight: 400;
+   font-size: 24px;
+   line-height: 1.1em;
+   color: var(--bs-heading-color);
 }
 
 .swipperContainer #historia > p {
-    font-weight: var(--weight-normal);
-    font-size: 15px;
-    margin-bottom: 1em;
+   font-weight: var(--weight-normal);
+   font-size: 15px;
+   margin-bottom: 1em;
 }
 
 .swipperContainer #historia > div > span {
-    font-weight: var(--weight-normal);
-    font-size: 13px;
-    color: grey;
+   font-weight: var(--weight-normal);
+   font-size: 13px;
+   color: grey;
 }
 
 .swipperContainer #historia > div > p {
-    font-weight: var(--weight-normal);
-    font-size: 15px;
-    margin-bottom: 3px;
+   font-weight: var(--weight-normal);
+   font-size: 15px;
+   margin-bottom: 3px;
 }
 
 /*------------Secao dos contacto-------*/
 #contacto {
-    background-color: var(--cor-fundo1);
-    padding: var(--padding-secao);
-    display: grid;
-    grid-template-columns: 50% 50%;
+   background-color: var(--cor-fundo1);
+   padding: var(--padding-secao);
+   display: grid;
+   grid-template-columns: 50% 50%;
 }
 
 #contacto > #left > h3 {
-    color: var(--bs-heading-color);
-    margin-bottom: 6%;
-    font-size: 1.75em;
-    font-weight: 400;
+   color: var(--bs-heading-color);
+   margin-bottom: 6%;
+   font-size: 1.75em;
+   font-weight: 400;
 }
 
 #contacto #iconsCont > div {
-    display: flex;
-    flex-flow: row;
-    margin-bottom: 7%;
-    color: var(--bs-heading-color);
+   display: flex;
+   flex-flow: row;
+   margin-bottom: 7%;
+   color: var(--bs-heading-color);
 }
 
 #contacto #iconsCont > div > #left {
-    font-size: 2em;
-    color: var(--var-cor-decoracao);
-    margin-right: 3%;
+   font-size: 2em;
+   color: var(--var-cor-decoracao);
+   margin-right: 3%;
 }
 
 #contacto #iconsCont > div > #left i {
-    background-color: var(--cor-hover);
-    align-items: center;
-    display: flex;
-    padding: 15px;
-    border-radius: 50%;
+   background-color: var(--cor-hover);
+   align-items: center;
+   display: flex;
+   padding: 15px;
+   border-radius: 50%;
 }
 
 #contacto #iconsCont > div > #right > p {
-    margin-block: 6px;
-    font-size: 16px;
-    color: var(--var-cor-texto);
+   margin-block: 6px;
+   font-size: 16px;
+   color: var(--var-cor-texto);
 }
 
 #contacto #iconsCont > div > #right > h5 {
-    font-size: 16px;
-    letter-spacing: 1px;
+   font-size: 16px;
+   letter-spacing: 1px;
 }
 
 #contacto #iconsCont > div > #right > span {
-    font-weight: 600;
-    color: rgb(59, 59, 59);
+   font-weight: 600;
+   color: rgb(59, 59, 59);
 }
 
 #contacto #locationCont {
-    border: 2px solid var(--cor-borda);
-    width: 80%;
-    padding: 5px;
-    background-color: var(--cor-fundo0);
-    border-radius: 8px;
+   border: 2px solid var(--cor-borda);
+   width: 80%;
+   padding: 5px;
+   background-color: var(--cor-fundo0);
+   border-radius: 8px;
 }
 
 #contacto > #right {
-    background-color: var(--cor-fundo0);
-    border: 2px solid var(--cor-borda);
-    border-radius: 8px;
-    height: fit-content;
-    padding: 7%;
-    color: var(--bs-heading-color);
+   background-color: var(--cor-fundo0);
+   border: 2px solid var(--cor-borda);
+   border-radius: 8px;
+   height: fit-content;
+   padding: 7%;
+   color: var(--bs-heading-color);
 }
 
 #contacto > #right > h6 {
-    margin-bottom: 2.5%;
-    font-size: 2em;
-    font-weight: 400;
+   margin-bottom: 2.5%;
+   font-size: 2em;
+   font-weight: 400;
 }
 
 #contacto > #right > p {
-    font-size: 17px;
-    color: var(--var-cor-texto);
-    margin-bottom: 10%;
+   font-size: 17px;
+   color: var(--var-cor-texto);
+   margin-bottom: 10%;
 }
 
 #contacto > #right > form {
-    display: grid;
-    grid-template-columns: 50% 50%;
+   display: grid;
+   grid-template-columns: 50% 50%;
 }
 
 #contacto > #right > form > fieldset {
-    display: flex;
-    flex-flow: column;
-    margin-bottom: 4%;
+   display: flex;
+   flex-flow: column;
+   margin-bottom: 4%;
 }
 
 #contacto > #right > form > fieldset > label {
-    font-size: 13px;
-    font-weight: 300;
-    margin-bottom: 5px;
+   font-size: 13px;
+   font-weight: 300;
+   margin-bottom: 5px;
 }
 
 #contacto > #right > form > fieldset > input,
 #contacto > #right > form > fieldset > textarea {
-    border: 1px solid var(--cor-borda);
-    border-radius: 4px;
-    padding: 7px;
-    font-size: 17px;
-    font-weight: 400;
-    max-width: 100%;
+   border: 1px solid var(--cor-borda);
+   border-radius: 4px;
+   padding: 7px;
+   font-size: 17px;
+   font-weight: 400;
+   max-width: 100%;
 }
 
 #fieldNome > input {
-    width: 96%;
+   width: 96%;
 }
 
 #fieldMensagem,
 #fieldAssunto,
 #contacto > #right > form > button {
-    grid-column: 1/3;
+   grid-column: 1/3;
 }
 
 #contacto > #right > form > button {
-    padding: 15px 35px;
-    background-color: var(--var-cor-decoracao);
-    font-size: 22px;
-    border-radius: 10px;
-    transition: all 0.35s ease;
-    font-weight: 400;
-    border: 2px solid var(--var-cor-decoracao);
-    margin-top: 2%;
-    color: var(--cor-hover);
+   padding: 15px 35px;
+   background-color: var(--var-cor-decoracao);
+   font-size: 22px;
+   border-radius: 10px;
+   transition: all 0.35s ease;
+   font-weight: 400;
+   border: 2px solid var(--var-cor-decoracao);
+   margin-top: 2%;
+   color: var(--cor-hover);
 }
 
 #contacto > #right > form > button:hover {
-    cursor: pointer;
-    background-color: var(--cor-hover);
-    color: var(--var-cor-decoracao);
+   cursor: pointer;
+   background-color: var(--cor-hover);
+   color: var(--var-cor-decoracao);
 }
 
 /*-----------Secao do Footer--------------------*/
 #footer {
-    text-align: center;
-    padding-block: 1.5em;
+   text-align: center;
+   padding-block: 1.5em;
 }
 
 #footer > div > div > a {
-    margin-inline: 5px;
-    font-size: 22px;
-    border-radius: 7px;
-    color: var(--cor-hover);
-    display: flex;
-    width: fit-content;
-    padding: 10px;
-    background-color: var(--var-cor-decoracao);
-    transition: 0.3s ease-in-out all;
+   margin-inline: 5px;
+   font-size: 22px;
+   border-radius: 7px;
+   color: var(--cor-hover);
+   display: flex;
+   width: fit-content;
+   padding: 10px;
+   background-color: var(--var-cor-decoracao);
+   transition: 0.3s ease-in-out all;
 }
 
 #footer > div > div > a:hover {
-    background-color: var(--cor-hover);
-    color: white;
+   background-color: var(--cor-hover);
+   color: white;
 }
 
 #footer > div > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 10px;
 }
 
 #footer > div > span {
-    font-weight: var(--weight-normal);
-    color: var(--var-cor-texto);
-    font-size: 13px;
+   font-weight: var(--weight-normal);
+   color: var(--var-cor-texto);
+   font-size: 13px;
 }
 
 #header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 11;
-    border-bottom: 1px solid var(--cor-borda);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: var(--var-cor-cinza);
-    display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 11;
+   border-bottom: 1px solid var(--cor-borda);
+   padding-top: 10px;
+   padding-bottom: 10px;
+   background-color: var(--var-cor-cinza);
+   display: none;
 }
 
-#header > img:hover, #header > span {
-    cursor: pointer;
+#header > img:hover,
+#header > span {
+   cursor: pointer;
 }
 
 @media screen and (max-width: 1656px) {
-    #inicio > div {
-        padding-inline: 8%;
-    }
+   #inicio > div {
+      padding-inline: 8%;
+   }
 }
 
 @media screen and (max-width: 1604px) {
-    #sobre > #left {
-        padding-right: 10%;
-    }
+   #sobre > #left {
+      padding-right: 10%;
+   }
 }
 
 @media screen and (max-width: 1452px) {
-    #sobre #secaoSobre > h5 {
-        font-size: 25px;
-    }
+   #sobre #secaoSobre > h5 {
+      font-size: 25px;
+   }
 
-    #sobre #right .duasCol {
-        margin-bottom: 3em;
-    }
+   #sobre #right .duasCol {
+      margin-bottom: 3em;
+   }
 
-    #contacto > #right > h6 {
-        font-size: 1.5em;
-    }
+   #contacto > #right > h6 {
+      font-size: 1.5em;
+   }
 
-    #contacto > #right > h3 {
-        font-size: 1.5em;
-    }
+   #contacto > #right > h3 {
+      font-size: 1.5em;
+   }
 
-    #fieldNome > input {
-        margin-right: 10px;
-    }
+   #fieldNome > input {
+      margin-right: 10px;
+   }
 }
 
 @media screen and (max-width: 1300px) {
-    #sobre #rightCard > p {
-        font-size: 14px;
-    }
-    #sobre #secaoXP > div > .cardXP #rightCard h5 {
-        font-size: 16px;
-    }
+   #sobre #rightCard > p {
+      font-size: 14px;
+   }
+   #sobre #secaoXP > div > .cardXP #rightCard h5 {
+      font-size: 16px;
+   }
 
-    #contacto #locationCont {
-        width: 95%;
-    }
+   #contacto #locationCont {
+      width: 95%;
+   }
 
-    #contacto {
-        grid-template-columns: 43% 57%;
-    }
+   #contacto {
+      grid-template-columns: 43% 57%;
+   }
 }
 
 @media screen and (max-width: 1208px) {
-    #header {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-        padding-inline: 3%;
-    }
+   #header {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: 3%;
+   }
 
-    #header > img {
-        width: 150px;
-    }
+   #header > img {
+      width: 150px;
+   }
 
-    #header > span {
-        font-size: 40px;
-        display: inherit;
-        align-items: center;
-    }
+   #header > span {
+      font-size: 40px;
+      display: inherit;
+      align-items: center;
+   }
 
-    .titulo2 > span {
-        font-size: 32px;
-    }
+   .titulo2 > span {
+      font-size: 32px;
+   }
 
-    .titulo1 {
-        font-size: 18px;
-    }
+   .titulo1 {
+      font-size: 18px;
+   }
 
-    #sobre #right .duasCol {
-        margin-bottom: 2em;
-    }
+   #sobre #right .duasCol {
+      margin-bottom: 2em;
+   }
 
-    .portifolioImg {
-        height: 240px;
-    }
+   .portifolioImg {
+      height: 240px;
+   }
 }
 
 @media screen and (max-width: 1092px) {
-    #inicio > div {
-        padding-inline: 6%;
-    }
+   #inicio > div {
+      padding-inline: 6%;
+   }
 
-    #inicio #right > h3 {
-        font-size: 50px;
-    }
+   #inicio #right > h3 {
+      font-size: 50px;
+   }
 
-    #iconTop,
-    #iconLow {
-        width: 60px;
-    }
+   #iconTop,
+   #iconLow {
+      width: 60px;
+   }
 
-    #iconTop {
-        top: -24px;
-        right: -12px;
-    }
+   #iconTop {
+      top: -24px;
+      right: -12px;
+   }
 
-    #iconLow {
-        bottom: -24px;
-        left: -12px;
-    }
+   #iconLow {
+      bottom: -24px;
+      left: -12px;
+   }
 
-    #servicos > div,
-    #portifolio > div {
-        grid-template-columns: 33% 33% 33%;
-    }
+   #servicos > div,
+   #portifolio > div {
+      grid-template-columns: 33% 33% 33%;
+   }
 }
 
 @media screen and (max-width: 1048px) {
-    #header > img {
-        width: 130px;
-    }
+   #header > img {
+      width: 130px;
+   }
 
-    #inicio > div {
-        display: flex;
-        flex-flow: column-reverse;
-        padding-inline: 14%;
-        padding-top: 11%;
-        padding-bottom: 7%;
-    }
+   #inicio > div {
+      display: flex;
+      flex-flow: column-reverse;
+      padding-inline: 14%;
+      padding-top: 11%;
+      padding-bottom: 7%;
+   }
 
-    #inicio #right {
-        text-align: center;
-        align-items: center;
-        padding-left: 0;
-    }
+   #inicio #right {
+      text-align: center;
+      align-items: center;
+      padding-left: 0;
+   }
 
-    #inicio #right > h4 {
-        margin-bottom: 16px;
-    }
+   #inicio #right > h4 {
+      margin-bottom: 16px;
+   }
 
-    #inicio #right > h3 {
-        font-size: 60;
-        text-shadow: initial;
-        letter-spacing: 2px;
-    }
+   #inicio #right > h3 {
+      font-size: 60;
+      text-shadow: initial;
+      letter-spacing: 2px;
+   }
 
-    #inicio #right > a {
-        margin-block: 1.7em;
-    }
+   #inicio #right > a {
+      margin-block: 1.7em;
+   }
 
-    #sobre {
-        display: flex;
-        flex-flow: column;
-    }
+   #sobre {
+      display: flex;
+      flex-flow: column;
+   }
 
-    #sobre #secaoSobre {
-        padding-bottom: 3%;
-    }
+   #sobre #secaoSobre {
+      padding-bottom: 3%;
+   }
 
-    #sobre #secaoXP {
-        padding-top: 4%;
-    }
+   #sobre #secaoXP {
+      padding-top: 4%;
+   }
 
-    #sobre #right > div {
-        margin-top: 0%;
-    }
+   #sobre #right > div {
+      margin-top: 0%;
+   }
 
-    #sobre #right .duasCol {
-        padding-right: 25%;
-        margin-bottom: 6%;
-    }
+   #sobre #right .duasCol {
+      padding-right: 25%;
+      margin-bottom: 6%;
+   }
 
-    .titulo1 {
-        margin-bottom: 21px;
-    }
+   .titulo1 {
+      margin-bottom: 21px;
+   }
 
-    .serviceBox {
-        padding: 20px;
-    }
+   .serviceBox {
+      padding: 20px;
+   }
 
-    .serviceBox > .conteudo > h5 {
-        font-size: 1.1em;
-    }
+   .serviceBox > .conteudo > h5 {
+      font-size: 1.1em;
+   }
 
-    .serviceBox > .conteudo > p {
-        font-size: 14px;
-    }
+   .serviceBox > .conteudo > p {
+      font-size: 14px;
+   }
 
-    #contacto {
-        grid-template-columns: 90%;
-    }
+   #contacto {
+      grid-template-columns: 90%;
+   }
 
-    #locationCont {
-        margin-bottom: 2%;
-    }
+   #locationCont {
+      margin-bottom: 2%;
+   }
 
-    #contacto #iconsCont > div {
-        margin-bottom: 4%;
-    }
+   #contacto #iconsCont > div {
+      margin-bottom: 4%;
+   }
 }
 
 @media screen and (max-width: 944px) {
-    #inicio > div {
-        padding-top: 14%;
-    }
+   #inicio > div {
+      padding-top: 14%;
+   }
 
-    .titulo2 > span {
-        font-size: 28px;
-    }
+   .titulo2 > span {
+      font-size: 28px;
+   }
 }
 
 @media screen and (max-width: 797px) {
-    #servicos > div,
-    #portifolio > div {
-        grid-template-columns: 50% 50%;
-    }
+   #servicos > div,
+   #portifolio > div {
+      grid-template-columns: 50% 50%;
+   }
 }
 
 @media screen and (max-width: 750px) {
-    #inicio #right > h3 {
-        font-size: 42px;
-    }
+   #inicio #right > h3 {
+      font-size: 42px;
+   }
 
-    #sobre #right .duasCol {
-        padding-right: 15%;
-    }
+   #sobre #right .duasCol {
+      padding-right: 15%;
+   }
 
-    #contacto {
-        grid-template-columns: 100%;
-    }
+   #contacto {
+      grid-template-columns: 100%;
+   }
 }
 
 @media screen and (max-width: 698px) {
-    #header > img {
-        width: 110px;
-    }
+   #header > img {
+      width: 110px;
+   }
 
-    #header > span {
-        font-size: 35px;
-    }
+   #header > span {
+      font-size: 35px;
+   }
 
-    #inicio > div {
-        padding-top: 17%;
-    }
+   #inicio > div {
+      padding-top: 17%;
+   }
 
-    #header > img {
-        width: 130px;
-    }
+   #header > img {
+      width: 130px;
+   }
 
-    #sobre #right .duasCol {
-        padding-right: 10%;
-    }
+   #sobre #right .duasCol {
+      padding-right: 10%;
+   }
 
-    #sobre #secaoSobre > h5 {
-        font-size: 21px;
-    }
+   #sobre #secaoSobre > h5 {
+      font-size: 21px;
+   }
 
-    #sobre #secaoSobre > #linha > div > span {
-        font-size: 40px;
-    }
+   #sobre #secaoSobre > #linha > div > span {
+      font-size: 40px;
+   }
 
-    #contacto > #left > h3 {
-        font-size: 1.5em;
-    }
+   #contacto > #left > h3 {
+      font-size: 1.5em;
+   }
 }
 
 @media screen and (max-width: 572px) {
-    #inicio > div {
-        padding-top: 20%;
-    }
+   #inicio > div {
+      padding-top: 20%;
+   }
 
-    #fieldNome > input{
-        width: 100%;
-        
-    }
+   #fieldNome > input {
+      width: 100%;
+   }
 
-    #inicio #right > h3 {
-        font-size: 35px;
-    }
+   #inicio #right > h3 {
+      font-size: 35px;
+   }
 
-    #inicio #right > h4 {
-        font-size: 20px;
-    }
+   #inicio #right > h4 {
+      font-size: 20px;
+   }
 
-    #inicio > div {
-        padding-inline: 8%;
-    }
+   #inicio > div {
+      padding-inline: 8%;
+   }
 
-    #sobre #right .duasCol {
-        padding-right: 0%;
-    }
+   #sobre #right .duasCol {
+      padding-right: 0%;
+   }
 
-    #servicos .iconBox {
-        font-size: 2em;
-    }
+   #servicos .iconBox {
+      font-size: 2em;
+   }
 
-    #servicos .iconContainer {
-        margin-bottom: 15px;
-    }
+   #servicos .iconContainer {
+      margin-bottom: 15px;
+   }
 
-    .titulo2 {
-        margin-bottom: 0.45em;
-    }
+   .titulo2 {
+      margin-bottom: 0.45em;
+   }
 
-    .serviceBox,
-    .portifolioCard {
-        margin: 0.4em;
-    }
+   .serviceBox {
+      margin: 0.4em;
+   }
 
-    #contacto > #right {
-        padding: 3%;
-    }
+   #contacto > #right {
+      padding: 3%;
+   }
 
-    #fieldNome {
-        margin-right: 0;
-    }
+   #fieldNome {
+      margin-right: 0;
+   }
 
-    #contacto > #right > form > fieldset {
-        grid-column: 1/3;
-    }
+   #contacto > #right > form > fieldset {
+      grid-column: 1/3;
+   }
 
-    #fieldNome > input {
-        margin-right: 0;
-    }
+   #fieldNome > input {
+      margin-right: 0;
+   }
 
-    #contacto > #right > form > button {
-        font-size: 18px;
-    }
+   #contacto > #right > form > button {
+      font-size: 18px;
+   }
 }
 
 @media screen and (max-width: 530px) {
-    #sobre #left {
-        padding-right: 4%;
-    }
+   #sobre #left {
+      padding-right: 4%;
+   }
 
-    #sobre #right .duasCol {
-        grid-template-columns: 100%;
-    }
+   #sobre #right .duasCol {
+      grid-template-columns: 100%;
+   }
 
-    #sobre #right .duasCol > div {
-        margin-top: 2%;
-        padding-left: 0;
-    }
+   #sobre #right .duasCol > div {
+      margin-top: 2%;
+      padding-left: 0;
+   }
 
-    #sobre #right .duasCol > div > a {
-        margin-top: 2.2%;
-        padding: 16px 19px;
-    }
+   #sobre #right .duasCol > div > a {
+      margin-top: 2.2%;
+      padding: 16px 19px;
+   }
 
-    #contacto > #right > h6 {
-        font-size: 1.3em;
-    }
+   #contacto > #right > h6 {
+      font-size: 1.3em;
+   }
 
-    #contacto #iconsCont > div > #right > h5 {
-        font-size: 14px;
-    }
+   #contacto #iconsCont > div > #right > h5 {
+      font-size: 14px;
+   }
 
-    #contacto #iconsCont > div > #right > p {
-        font-size: 13px;
-    }
+   #contacto #iconsCont > div > #right > p {
+      font-size: 13px;
+   }
 
-    #contacto #iconsCont > div > #right > span {
-        font-size: 13px;
-    }
+   #contacto #iconsCont > div > #right > span {
+      font-size: 13px;
+   }
 
-    .swipperContainer #historia > h5 {
-        font-size: 20px;
-    }
+   .swipperContainer #historia > h5 {
+      font-size: 20px;
+   }
 }
 
 @media screen and (max-width: 510px) {
-    #servicos > div,
-    #portifolio > div {
-        grid-template-columns: 100%;
-    }
+   #servicos > div,
+   #portifolio > div {
+      grid-template-columns: 100%;
+   }
 }
 
 @media screen and (max-width: 486px) {
-    #header > img {
-        width: 90px;
-    }
+   #header > img {
+      width: 90px;
+   }
 
-    #header > span {
-        font-size: 27px;
-    }
+   #header > span {
+      font-size: 27px;
+   }
 
-    #contacto > #left > h3 {
-        font-size: 1.3em;
-    }
+   #contacto > #left > h3 {
+      font-size: 1.3em;
+   }
 
-    #inicio > div {
-        padding-inline: 4%;
-        padding-top: 25%;
-    }
+   #inicio > div {
+      padding-inline: 4%;
+      padding-top: 25%;
+   }
 
-    #sobre #left {
-        padding-right: 1%;
-    }
+   #sobre #left {
+      padding-right: 1%;
+   }
 
-    .titulo1 {
-        font-size: 17px;
-    }
+   .titulo1 {
+      font-size: 17px;
+   }
 
-    #sobre #secaoSobre > #linha > div > span {
-        font-size: 35px;
-    }
+   #sobre #secaoSobre > #linha > div > span {
+      font-size: 35px;
+   }
 
-    #sobre #secaoSobre > #linha > div > p {
-        line-height: 1.1em;
-        font-size: 13px;
-    }
+   #sobre #secaoSobre > #linha > div > p {
+      line-height: 1.1em;
+      font-size: 13px;
+   }
 
-    #sobre #secaoSobre > h5 {
-        font-size: 18px;
-    }
+   #sobre #secaoSobre > h5 {
+      font-size: 18px;
+   }
 
-    #skillLine {
-        font-size: 14px;
-    }
+   #skillLine {
+      font-size: 14px;
+   }
 
-    #sobre #right .duasCol {
-        margin-bottom: 1em;
-    }
+   #sobre #right .duasCol {
+      margin-bottom: 1em;
+   }
 
-    .titulo2 > span {
-        font-size: 22px;
-    }
+   .titulo2 > span {
+      font-size: 22px;
+   }
 
-    .portifolioText > h6 {
-        font-size: 13px;
-        font-weight: 600;
-    }
-
-    .portifolioText > p {
-        font-size: 13px;
-    }
-
-    .swipperContainer #historia > h5 {
-        font-size: 18px;
-    }
-
+   .swipperContainer #historia > h5 {
+      font-size: 18px;
+   }
 }
