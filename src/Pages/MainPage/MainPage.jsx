@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./MainPage.module.css";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import ProjectModal from "../../Components/ProjectModal/ProjectModal";
 
 import avatar1 from "../../Images/avatar1.gif";
@@ -17,8 +17,8 @@ import curiculo from "../../../src/Images/Renzi_Fidele.pdf";
 import { BiCopyAlt, BiSolidMessageAltDetail, BiSolidPhoneCall, BiVideo } from "react-icons/bi";
 import { SiGoogleads } from "react-icons/si";
 import { FaBars, FaFilePdf } from "react-icons/fa";
-import { ImNewTab, ImLocation2 } from "react-icons/im";
-import { BsDownload, BsGlobe, BsPlusCircle } from "react-icons/bs";
+import { ImLocation2 } from "react-icons/im";
+import { BsDownload, BsGlobe } from "react-icons/bs";
 import { AiOutlineWhatsApp, AiFillLinkedin, AiFillGithub, AiOutlineMail, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
 import { MdOutlineDesignServices, MdOutlineWorkHistory } from "react-icons/md";
 import { CgWebsite } from "react-icons/cg";
@@ -546,6 +546,7 @@ const MainPage = () => {
                      imagemModal={v.imagemDestaque}
                      imagemThumbnail={v.imagemThumbnail}
                      key={k}
+                     thumbnailCentralizado={v.fotoCentralizada}
                   />
                ))}
 

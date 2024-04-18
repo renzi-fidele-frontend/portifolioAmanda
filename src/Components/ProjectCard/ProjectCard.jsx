@@ -10,7 +10,7 @@ const ProjectCard = ({ urlProjeto, titulo, plataforma, linguagens, tipo, pais, i
          <div className={styles.portifolioText}>
             <h6>{titulo}</h6>
             <p>{linguagens.join(", ")}</p>
-            <a href="https://nossoblog.vercel.app/" rel="noreferrer" target="_blank">
+            <a href={urlProjeto} rel="noreferrer" target="_blank">
                <ImNewTab />
             </a>
          </div>
