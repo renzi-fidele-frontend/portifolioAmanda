@@ -59,7 +59,7 @@
 }
 
 .portifolioImg:hover {
-   background-position: bottom;
+   background-position: bottom !important;
 }
 
 .portifolioImg > a {
