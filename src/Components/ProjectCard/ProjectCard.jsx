@@ -4,7 +4,18 @@ import { ImNewTab } from "react-icons/im";
 import { Link } from "react-router-dom";
 import { BsPlusCircle } from "react-icons/bs";
 
-const ProjectCard = ({ urlProjeto, titulo, plataforma, linguagens, tipo, pais, imagemModal, imagemThumbnail, thumbnailCentralizado }) => {
+const ProjectCard = ({
+   urlProjeto,
+   titulo,
+   plataforma,
+   linguagens,
+   tipo,
+   pais,
+   imagemDestaque,
+   videoDestaque,
+   imagemThumbnail,
+   thumbnailCentralizado,
+}) => {
    return (
       <div className={styles.portifolioCard}>
          <div className={styles.portifolioText}>
@@ -26,7 +37,8 @@ const ProjectCard = ({ urlProjeto, titulo, plataforma, linguagens, tipo, pais, i
                   linguagens: linguagens,
                   tipo: tipo,
                   pais: pais,
-                  imagem: imagemModal,
+                  imagem: imagemDestaque,
+                  video: videoDestaque,
                }}
                to={"#projecto1"}
             >

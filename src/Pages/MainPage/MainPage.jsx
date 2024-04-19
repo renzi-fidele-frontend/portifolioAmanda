@@ -422,7 +422,8 @@ const MainPage = () => {
                      linguagens={v.linguagens}
                      tipo={v.tipo}
                      pais={v.pais}
-                     imagemModal={v.imagemDestaque}
+                     imagemDestaque={v.imagemDestaque}
+                     videoDestaque={v.videoDestaque}
                      imagemThumbnail={v.imagemThumbnail}
                      key={k}
                      thumbnailCentralizado={v.fotoCentralizada}
