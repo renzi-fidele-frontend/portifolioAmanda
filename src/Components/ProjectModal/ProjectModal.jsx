@@ -23,16 +23,7 @@ const ProjectModal = () => {
    }
 
    useEffect(() => {
-      if (
-         loc.hash === "#projecto1" ||
-         loc.hash === "#projecto2" ||
-         loc.hash === "#projecto3" ||
-         loc.hash === "#projecto4" ||
-         loc.hash === "#projecto5" ||
-         loc.hash === "#projecto6"
-      ) {
-         setIsOpen(true);
-      }
+      if (loc.hash === "#projecto") setIsOpen(true);
    }, [loc.hash]);
 
    return (

@@ -40,7 +40,7 @@ const ProjectCard = ({
                   imagem: imagemDestaque,
                   video: videoDestaque,
                }}
-               to={"#projecto1"}
+               to={"#projecto"}
             >
                <BsPlusCircle />
             </Link>
