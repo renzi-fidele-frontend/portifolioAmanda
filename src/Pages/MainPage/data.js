@@ -1,3 +1,5 @@
+import { jsx as _jsx } from "react/jsx-runtime";
+
 //  Imagens dos prjetos
 import video1 from "../../Videos/demoNossoBlog.webm";
 import video2 from "../../Videos/demoCustos.webm";
@@ -11,6 +13,13 @@ import avatar1 from "../../Images/avatar1.gif";
 import avatar2 from "../../Images/avatar2.gif";
 import avatar3 from "../../Images/avatar3.png";
 import avatar4 from "../../Images/avatar4.gif";
+
+// Icones dos cards de serviço
+import { CgWebsite } from "react-icons/cg";
+import { BsGlobe } from "react-icons/bs";
+import { MdOutlineDesignServices } from "react-icons/md";
+import { SiGoogleads } from "react-icons/si";
+import { BiCopyAlt, BiVideo } from "react-icons/bi";
 
 export const testemunhos = [
    {
@@ -43,7 +52,38 @@ export const testemunhos = [
    },
 ];
 
-export const servicos = [];
+export const servicos = [
+   {
+      icone: /*#__PURE__*/ _jsx(CgWebsite, {}),
+      titulo: "Criação de Landing Page",
+      descricao: "Páginas otimizadas que convertem. Design atraente e focado em resultados.",
+   },
+   {
+      icone: /*#__PURE__*/ _jsx(BsGlobe, {}),
+      titulo: "Desenvolvimento Web",
+      descricao: "Soluções web personalizadas para impulsionar seu negócio utilizando as melhores tecnologias do mercado.",
+   },
+   {
+      icone: /*#__PURE__*/ _jsx(MdOutlineDesignServices, {}),
+      titulo: "Web design",
+      descricao: "Designs modernos e intuitivos que cativam e envolvem seu público para garantir conversão e confiança.",
+   },
+   {
+      icone: /*#__PURE__*/ _jsx(SiGoogleads, {}),
+      titulo: "Gestão de tráfego",
+      descricao: "Aumente sua visibilidade e resultados com estratégias eficazes de marketing digital.",
+   },
+   {
+      icone: /*#__PURE__*/ _jsx(BiCopyAlt, {}),
+      titulo: "Copywriting",
+      descricao: "Mensagens persuasivas que impactam seu público-alvo e impulsionam as conversões.",
+   },
+   {
+      icone: /*#__PURE__*/ _jsx(BiVideo, {}),
+      titulo: "Edição de vídeo",
+      descricao: "Transforme suas ideias em vídeos cativantes e profissionais com efeitos impressionantes com o Filmora.",
+   },
+];
 
 export const portfolio = [
    {

@@ -337,6 +337,22 @@
    padding: var(--padding-secao);
 }
 
+#servicos > div {
+   display: grid;
+   grid-template-columns: 32% 32% 32%;
+}
+
+/*------------Secao do portifolio*/
+#portifolio {
+   background-color: var(--cor-fundo1);
+   padding: var(--padding-secao);
+}
+
+#portifolio > div {
+   display: grid;
+   grid-template-columns: 32% 32% 32%;
+}
+
 .titulo2 {
    position: relative;
    display: inline-block;
@@ -365,115 +381,6 @@
    width: 60px;
    height: 6px;
    background-color: var(--var-cor-decoracao);
-}
-
-#servicos > div {
-   display: grid;
-   grid-template-columns: 32% 32% 32%;
-}
-
-.serviceBox {
-   background-color: var(--cor-fundo1);
-   border: 2px solid var(--cor-borda);
-   padding: 40px;
-   border-radius: 10px;
-   margin: 0.8em;
-   transition: all 0.6s ease-in-out;
-}
-
-.serviceBox:hover {
-   cursor: pointer;
-   background-image: url("/src/Images/blurry-gradient-haikei.svg");
-   transform: translateY(-10px);
-   /*
-    background: url("/src/Images/polygon-scatter-haikei\(1\).svg");*/
-}
-
-.ServicoEntrou {
-   animation: in 0.1s ease-in-out;
-}
-
-@keyframes in {
-   from {
-      opacity: 0.7;
-   }
-   to {
-      opacity: 1;
-   }
-}
-
-.serviceBox > .iconContainer {
-   width: 70px;
-   height: 70px;
-   display: inline-flex;
-   align-items: center;
-   justify-content: center;
-   margin-bottom: 40px;
-   position: relative;
-   z-index: 0;
-}
-
-.iconBox {
-   width: fit-content;
-   background: var(--var-cor-decoracao);
-   border-radius: 10px;
-   font-size: 2.8em;
-   position: relative;
-   color: var(--var-cor-texto);
-   display: flex;
-   transition: transform 0.35s ease;
-   padding: 0.3em;
-}
-
-.ServicoEntrou .iconBox {
-   border: 3px solid var(--cor-hover);
-}
-
-.iconBox::after {
-   content: "";
-   position: absolute;
-   top: -8px;
-   left: 4px;
-   right: -10px;
-   bottom: 5px;
-   background-color: rgb(238, 235, 235);
-   z-index: -1;
-   border-radius: 10px;
-   transform: rotate(10deg);
-   transition: all 0.35s ease;
-}
-
-.ServicoEntrou .iconBox::after {
-   transform: rotate(0);
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-}
-
-.serviceBox .conteudo > h5 {
-   font-size: 1.25rem;
-   margin-top: 0;
-   margin-bottom: 0.5rem;
-   font-weight: 500;
-   line-height: 1.2;
-   color: var(--bs-heading-color);
-}
-
-.serviceBox .conteudo > p {
-   color: var(--var-cor-texto);
-   font-weight: var(--weight-normal);
-}
-
-/*------------Secao do portifolio*/
-#portifolio {
-   background-color: var(--cor-fundo1);
-   padding: var(--padding-secao);
-}
-
-#portifolio > div {
-   display: grid;
-   grid-template-columns: 32% 32% 32%;
 }
 
 /*------------Secao dos testemunhos-------*/
@@ -859,18 +766,6 @@
       margin-bottom: 21px;
    }
 
-   .serviceBox {
-      padding: 20px;
-   }
-
-   .serviceBox > .conteudo > h5 {
-      font-size: 1.1em;
-   }
-
-   .serviceBox > .conteudo > p {
-      font-size: 14px;
-   }
-
    #contacto {
       grid-template-columns: 90%;
    }
@@ -974,20 +869,12 @@
       padding-right: 0%;
    }
 
-   #servicos .iconBox {
-      font-size: 2em;
-   }
-
    #servicos .iconContainer {
       margin-bottom: 15px;
    }
 
    .titulo2 {
       margin-bottom: 0.45em;
-   }
-
-   .serviceBox {
-      margin: 0.4em;
    }
 
    #contacto > #right {

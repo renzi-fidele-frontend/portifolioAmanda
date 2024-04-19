@@ -9,14 +9,12 @@ import logo from "../../Images/lg.png";
 import curiculo from "../../../src/Images/Renzi_Fidele.pdf";
 
 //  Icons
-import { BiCopyAlt, BiSolidMessageAltDetail, BiSolidPhoneCall, BiVideo } from "react-icons/bi";
-import { SiGoogleads } from "react-icons/si";
+import { BiSolidMessageAltDetail, BiSolidPhoneCall } from "react-icons/bi";
 import { FaBars, FaFilePdf } from "react-icons/fa";
 import { ImLocation2 } from "react-icons/im";
-import { BsDownload, BsGlobe } from "react-icons/bs";
+import { BsDownload } from "react-icons/bs";
 import { AiOutlineWhatsApp, AiFillLinkedin, AiFillGithub, AiOutlineMail, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
-import { MdOutlineDesignServices, MdOutlineWorkHistory } from "react-icons/md";
-import { CgWebsite } from "react-icons/cg";
+import { MdOutlineWorkHistory } from "react-icons/md";
 
 //  Typewriter
 import Typewriter from "typewriter-effect";
@@ -32,9 +30,10 @@ import "swiper/css/pagination";
 import { NavValue } from "../../Context/NavContext";
 
 import emailjs from "@emailjs/browser";
-import { portfolio, testemunhos } from "./data";
+import { portfolio, servicos, testemunhos } from "./data";
 import ProjectCard from "../../Components/ProjectCard/ProjectCard";
 import TestemunhoCard from "../../Components/TestemunhoCard/TestemunhoCard";
+import ServicoCard from "../../Components/ServicoCard/ServicoCard";
 
 const MainPage = () => {
    const skillsRef = useRef();
@@ -396,125 +395,9 @@ const MainPage = () => {
                <span>Meus serviços</span>
             </h2>
             <div>
-               <div
-                  className={styles.serviceBox}
-                  onMouseEnter={(e) => {
-                     e.currentTarget.classList.toggle(styles.ServicoEntrou);
-                  }}
-                  onMouseLeave={(e) => {
-                     e.currentTarget.classList.remove(styles.ServicoEntrou);
-                  }}
-               >
-                  <div className={styles.iconContainer}>
-                     <i className={styles.iconBox}>
-                        <CgWebsite />
-                     </i>
-                  </div>
-                  <div className={styles.conteudo}>
-                     <h5>Criação de Landing Page</h5>
-                     <p>Páginas otimizadas que convertem. Design atraente e focado em resultados.</p>
-                  </div>
-               </div>
-
-               <div
-                  onMouseEnter={(e) => {
-                     e.currentTarget.classList.toggle(styles.ServicoEntrou);
-                  }}
-                  onMouseLeave={(e) => {
-                     e.currentTarget.classList.remove(styles.ServicoEntrou);
-                  }}
-                  className={styles.serviceBox}
-               >
-                  <div className={styles.iconContainer}>
-                     <i className={styles.iconBox}>
-                        <BsGlobe />
-                     </i>
-                  </div>
-                  <div className={styles.conteudo}>
-                     <h5>Desenvolvimento Web</h5>
-                     <p>Soluções web personalizadas para impulsionar seu negócio utilizando as melhores tecnologias do mercado.</p>
-                  </div>
-               </div>
-
-               <div
-                  onMouseEnter={(e) => {
-                     e.currentTarget.classList.toggle(styles.ServicoEntrou);
-                  }}
-                  onMouseLeave={(e) => {
-                     e.currentTarget.classList.remove(styles.ServicoEntrou);
-                  }}
-                  className={styles.serviceBox}
-               >
-                  <div className={styles.iconContainer}>
-                     <i className={styles.iconBox}>
-                        <MdOutlineDesignServices />
-                     </i>
-                  </div>
-                  <div className={styles.conteudo}>
-                     <h5>Web design</h5>
-                     <p>Designs modernos e intuitivos que cativam e envolvem seu público para garantir conversão e confiança.</p>
-                  </div>
-               </div>
-
-               <div
-                  onMouseEnter={(e) => {
-                     e.currentTarget.classList.toggle(styles.ServicoEntrou);
-                  }}
-                  onMouseLeave={(e) => {
-                     e.currentTarget.classList.remove(styles.ServicoEntrou);
-                  }}
-                  className={styles.serviceBox}
-               >
-                  <div className={styles.iconContainer}>
-                     <i className={styles.iconBox}>
-                        <SiGoogleads />
-                     </i>
-                  </div>
-                  <div className={styles.conteudo}>
-                     <h5>Gestão de tráfego</h5>
-                     <p>Aumente sua visibilidade e resultados com estratégias eficazes de marketing digital.</p>
-                  </div>
-               </div>
-
-               <div
-                  onMouseEnter={(e) => {
-                     e.currentTarget.classList.toggle(styles.ServicoEntrou);
-                  }}
-                  onMouseLeave={(e) => {
-                     e.currentTarget.classList.remove(styles.ServicoEntrou);
-                  }}
-                  className={styles.serviceBox}
-               >
-                  <div className={styles.iconContainer}>
-                     <i className={styles.iconBox}>
-                        <BiCopyAlt />
-                     </i>
-                  </div>
-                  <div className={styles.conteudo}>
-                     <h5>Copywriting</h5>
-                     <p>Mensagens persuasivas que impactam seu público-alvo e impulsionam as conversões.</p>
-                  </div>
-               </div>
-
-               <div
-                  onMouseEnter={(e) => {
-                     e.currentTarget.classList.toggle(styles.ServicoEntrou);
-                  }}
-                  onMouseLeave={(e) => {
-                     e.currentTarget.classList.remove(styles.ServicoEntrou);
-                  }}
-                  className={styles.serviceBox}
-               >
-                  <div className={styles.iconContainer}>
-                     <i className={styles.iconBox}>
-                        <BiVideo />
-                     </i>
-                  </div>
-                  <div className={styles.conteudo}>
-                     <h5>Edição de vídeo</h5>
-                     <p>Transforme suas ideias em vídeos cativantes e profissionais com efeitos impressionantes com o Filmora.</p>
-                  </div>
-               </div>
+               {servicos.map((v, k) => (
+                  <ServicoCard descricao={v.descricao} icone={v.icone} titulo={v.titulo} key={k} />
+               ))}
             </div>
          </section>
 
