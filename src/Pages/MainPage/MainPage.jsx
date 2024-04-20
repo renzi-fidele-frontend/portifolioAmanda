@@ -186,7 +186,7 @@ const MainPage = () => {
                      própria estrutura da web, suas matérias-primas de HTML, CSS, JavaScript e ReactJs.{" "}
                   </p>
 
-                  <a href={curiculo} download={"Renzi Fidele.pdf"} target="_blank">
+                  <a href={curiculo} download={"Renzi Fidele.pdf"} target="_blank" rel="noreferrer">
                      <BsDownload /> Baixar CV
                   </a>
                </div>
@@ -287,23 +287,23 @@ const MainPage = () => {
                   <div className={styles.duasCol}>
                      <img src={crazy} alt="" />
                      <div>
-                        <a href="https://www.linkedin.com/in/renzi-fidele-4886151bb/" target="_blank">
+                        <a href="https://www.linkedin.com/in/renzi-fidele-4886151bb/" target="_blank" rel="noreferrer">
                            <AiFillLinkedin />
                            <span>LinkedIn</span>
                         </a>
-                        <a href="https://github.com/renzi-fidele-frontend" target="_blank">
+                        <a href="https://github.com/renzi-fidele-frontend" target="_blank" rel="noreferrer">
                            <AiFillGithub />
                            <span>Github</span>
                         </a>
-                        <a href="mailto:renzifidele2001@gmail.com" target="_blank">
+                        <a href="mailto:renzifidele2001@gmail.com" target="_blank" rel="noreferrer">
                            <AiOutlineMail />
                            <span>Mail</span>
                         </a>
-                        <a href="https://wa.link/azvl93" target="_blank">
+                        <a href="https://wa.link/azvl93" target="_blank" rel="noreferrer">
                            <AiOutlineWhatsApp />
                            <span>WhatsApp</span>
                         </a>
-                        <a href={curiculo} target="_blank" download={"Renzi Fidele.pdf"}>
+                        <a href={curiculo} target="_blank" rel="noreferrer" download={"Renzi Fidele.pdf"}>
                            <FaFilePdf />
                            <span>Currículo</span>
                         </a>
@@ -414,25 +414,27 @@ const MainPage = () => {
             </h2>
 
             <div>
-               {portfolio.map((v, k) => (
-                  <ProjectCard
-                     titulo={v.titulo}
-                     urlProjeto={v.url}
-                     plataforma={v.plataforma}
-                     linguagens={v.linguagens}
-                     tipo={v.tipo}
-                     pais={v.pais}
-                     imagemDestaque={v.imagemDestaque}
-                     videoDestaque={v.videoDestaque}
-                     imagemThumbnail={v.imagemThumbnail}
-                     key={k}
-                     thumbnailCentralizado={v.fotoCentralizada}
-                  />
-               ))}
-
-               {/* Modal do projeto individual */}
-               <ProjectModal />
+               {portfolio.map(
+                  (v, k) =>
+                     k < 6 && (
+                        <ProjectCard
+                           titulo={v.titulo}
+                           urlProjeto={v.url}
+                           plataforma={v.plataforma}
+                           linguagens={v.linguagens}
+                           tipo={v.tipo}
+                           pais={v.pais}
+                           imagemDestaque={v.imagemDestaque}
+                           videoDestaque={v.videoDestaque}
+                           imagemThumbnail={v.imagemThumbnail}
+                           key={k}
+                           thumbnailCentralizado={v.fotoCentralizada}
+                        />
+                     )
+               )}
             </div>
+            {/* Modal do projeto individual */}
+            <ProjectModal />
          </section>
 
          {/*Seção dos testemunhos */}
@@ -540,22 +542,22 @@ const MainPage = () => {
                   <br />
                   Vamos nos unir.
                </h6>
-               <p>Me conte um pouco sobre você o que tens em mente.</p>
+               <p>Me conte um pouco sobre você e o que tens em mente.</p>
                <form ref={formRef}>
                   <fieldset id={styles.fieldNome}>
-                     <label htmlFor="">Primeiro nome</label>
+                     <label>Primeiro nome</label>
                      <input type="text" name="nome" placeholder="Nome * " />
                   </fieldset>
                   <fieldset id={styles.fieldEmail}>
-                     <label htmlFor="">Seu Email</label>
+                     <label>Seu Email</label>
                      <input type="text" name="email" placeholder="Email *" />
                   </fieldset>
                   <fieldset id={styles.fieldAssunto}>
-                     <label htmlFor="">Assunto</label>
+                     <label>Assunto</label>
                      <input type="text" name="assunto" placeholder="Assunto *" />
                   </fieldset>
                   <fieldset id={styles.fieldMensagem}>
-                     <label htmlFor="">Sua mensagem</label>
+                     <label>Sua mensagem</label>
                      <textarea name="mensagem" placeholder="Mensagem *" />
                   </fieldset>
                   <button onClick={sendMessage}>Enviar mensagem</button>

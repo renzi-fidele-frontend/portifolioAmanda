@@ -1,19 +1,18 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Rubik", sans-serif;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: "Rubik", sans-serif;
 }
 
 #App {
-    display: grid;
-    grid-template-columns: 120px auto;
-    min-height: 100vh;
+   display: grid;
+   grid-template-columns: 120px calc(100% - 120px);
+   min-height: 100vh;
 }
 
 @media screen and (max-width: 1208px) {
-    #App {
-        grid-template-columns: 0 100%;
-    }
+   #App {
+      grid-template-columns: 0 100%;
+   }
 }
-

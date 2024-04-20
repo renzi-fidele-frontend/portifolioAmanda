@@ -1,20 +1,20 @@
 import { useState } from "react";
 import LeftNav from "./Components/LeftNav/LeftNav";
 import "./App.css";
-import MainPage from "./Pages/MainPage/MainPage";
 import { NavProvider } from "./Context/NavContext";
+import { Outlet } from "react-router-dom";
 
 function App() {
-    const [nav, setNav] = useState(false)
+   const [nav, setNav] = useState(false);
 
-    return (
-        <NavProvider value={{nav, setNav}}>
-            <div id="App">
-                <LeftNav />
-                <MainPage />
-            </div>
-        </NavProvider>
-    );
+   return (
+      <NavProvider value={{ nav, setNav }}>
+         <div id="App">
+            <LeftNav />
+            <Outlet/>
+         </div>
+      </NavProvider>
+   );
 }
 
 export default App;
