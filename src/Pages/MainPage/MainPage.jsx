@@ -5,12 +5,11 @@ import ProjectModal from "../../Components/ProjectModal/ProjectModal";
 
 import me from "../../Images/me1.gif";
 import crazy from "../../Images/meReal.gif";
-import logo from "../../Images/lg.png";
 import curiculo from "../../../src/Images/Renzi_Fidele.pdf";
 
 //  Icons
 import { BiSolidMessageAltDetail, BiSolidPhoneCall } from "react-icons/bi";
-import { FaBars, FaFilePdf, FaPlus } from "react-icons/fa";
+import { FaFilePdf, FaPlus } from "react-icons/fa";
 import { ImLocation2 } from "react-icons/im";
 import { BsDownload } from "react-icons/bs";
 import { AiOutlineWhatsApp, AiFillLinkedin, AiFillGithub, AiOutlineMail, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
@@ -34,6 +33,7 @@ import { portfolio, servicos, testemunhos } from "./data";
 import ProjectCard from "../../Components/ProjectCard/ProjectCard";
 import TestemunhoCard from "../../Components/TestemunhoCard/TestemunhoCard";
 import ServicoCard from "../../Components/ServicoCard/ServicoCard";
+import HeaderMobile from "../../Components/HeaderMobile/HeaderMobile";
 
 const MainPage = () => {
    const skillsRef = useRef();
@@ -63,9 +63,6 @@ const MainPage = () => {
    };
 
    const navegar = useNavigate();
-
-   //  Contexto da nav
-   const navAtivo = NavValue();
 
    useEffect(() => {
       const observer = new IntersectionObserver(handleIntersection, observerOptions);
@@ -115,22 +112,11 @@ const MainPage = () => {
    return (
       <div id={styles.container}>
          {/*Header invisivel */}
-         <header id={styles.header}>
-            <img
-               src={logo}
-               alt="logo "
-               onClick={() => {
-                  secinicio.current.scrollIntoView({ behavior: "smooth" });
-               }}
-            />
-            <span
-               onClick={() => {
-                  navAtivo.setNav(!navAtivo.nav);
-               }}
-            >
-               <FaBars />
-            </span>
-         </header>
+         <HeaderMobile
+            onLogoClick={() => {
+               secinicio.current.scrollIntoView({ behavior: "smooth" });
+            }}
+         />
 
          {/*Seção Inicial */}
          <section
