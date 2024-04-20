@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./MainPage.module.css";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import ProjectModal from "../../Components/ProjectModal/ProjectModal";
 
 import me from "../../Images/me1.gif";
@@ -10,7 +10,7 @@ import curiculo from "../../../src/Images/Renzi_Fidele.pdf";
 
 //  Icons
 import { BiSolidMessageAltDetail, BiSolidPhoneCall } from "react-icons/bi";
-import { FaBars, FaFilePdf } from "react-icons/fa";
+import { FaBars, FaFilePdf, FaPlus } from "react-icons/fa";
 import { ImLocation2 } from "react-icons/im";
 import { BsDownload } from "react-icons/bs";
 import { AiOutlineWhatsApp, AiFillLinkedin, AiFillGithub, AiOutlineMail, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
@@ -104,14 +104,9 @@ const MainPage = () => {
       e.preventDefault();
       emailjs
          .sendForm("service_ru19i6o", "template_x79mlbg", formRef.current, "psXngkmWfHJgvC3ju")
-         .then(
-            (result) => {
-               alert("Email enviado com sucesso");
-            },
-            (error) => {
-               alert(`Ops, erro ao enviar email`);
-            }
-         )
+         .then(() => {
+            alert("Email enviado com sucesso");
+         })
          .catch((err) => {
             console.log(`Ops, houve erro: ${err}, ao enviar a msg do form`);
          });
@@ -186,7 +181,7 @@ const MainPage = () => {
                      própria estrutura da web, suas matérias-primas de HTML, CSS, JavaScript e ReactJs.{" "}
                   </p>
 
-                  <a href={curiculo} download={"Renzi Fidele.pdf"} target="_blank" rel="noreferrer">
+                  <a className={styles.botao} href={curiculo} download={"Renzi Fidele.pdf"} target="_blank" rel="noreferrer">
                      <BsDownload /> Baixar CV
                   </a>
                </div>
@@ -433,6 +428,13 @@ const MainPage = () => {
                      )
                )}
             </div>
+
+            <section id={styles.portfolioBtnCt}>
+               <Link to={"/portfolio"} className={styles.botao}>
+                  <FaPlus /> <span>Ver mais</span>
+               </Link>
+            </section>
+
             {/* Modal do projeto individual */}
             <ProjectModal />
          </section>
@@ -457,7 +459,7 @@ const MainPage = () => {
                autoplay={true}
                pagination={{ type: "bullets", el: `.${styles.pag}`, clickable: true }}
                slidesPerView={"auto"}
-               breakpoints={{ 1024: { slidesPerView: 2 }, 1200: { slidesPerView: 4, spaceBetween: 25 }, 1663: { slidesPerView: 3 } }}
+               breakpoints={{ 950: { slidesPerView: 2 }, 1550: { slidesPerView: 3 } }}
             >
                <div>
                   {testemunhos.map((v, k) => (

@@ -3,12 +3,13 @@ import styles from "./Portfolio.module.css";
 import estiloMain from "../MainPage/MainPage.module.css";
 import { portfolio } from "../MainPage/data";
 import ProjectCard from "../../Components/ProjectCard/ProjectCard";
+import ProjectModal from "../../Components/ProjectModal/ProjectModal";
 
 const Portfolio = () => {
    return (
       <div id={estiloMain.portifolio}>
          <h2 className={estiloMain.titulo2}>
-            <span>Veja todo o meu trabalho feito</span>
+            <span>Veja todo o meu portfólio</span>
          </h2>
 
          <div>
@@ -28,6 +29,9 @@ const Portfolio = () => {
                />
             ))}
          </div>
+
+         {/* Modal do projeto individual */}
+         <ProjectModal />
       </div>
    );
 };

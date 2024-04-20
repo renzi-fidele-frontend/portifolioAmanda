@@ -13,13 +13,9 @@ const ProjectModal = () => {
 
    const navegar = useNavigate();
 
-   function aberto() {
-      setIsOpen(true);
-   }
-
-   function fechado() {
+   function fechar() {
       setIsOpen(false);
-      navegar("/");
+      navegar(-1);
    }
 
    useEffect(() => {
@@ -29,7 +25,7 @@ const ProjectModal = () => {
    return (
       <>
          {loc.state ? (
-            <ReactModal isOpen={isOpen} onRequestClose={fechado} id={styles.container}>
+            <ReactModal isOpen={isOpen} onRequestClose={fechar} id={styles.container}>
                <div className={styles.left}>
                   {loc.state.video && (
                      <video
@@ -75,7 +71,7 @@ const ProjectModal = () => {
                      </div>
                   </div>
                </div>
-               <FaWindowClose onClick={fechado}>Fechar</FaWindowClose>
+               <FaWindowClose onClick={fechar}>Fechar</FaWindowClose>
             </ReactModal>
          ) : undefined}
       </>
