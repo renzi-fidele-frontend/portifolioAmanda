@@ -26,8 +26,6 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 
-import { NavValue } from "../../Context/NavContext";
-
 import emailjs from "@emailjs/browser";
 import { portfolio, servicos, testemunhos } from "./data";
 import ProjectCard from "../../Components/ProjectCard/ProjectCard";
@@ -520,7 +518,7 @@ const MainPage = () => {
                      style={{ border: 0, borderRadius: "8px" }}
                      allowfullscreen=""
                      loading="lazy"
-                     referrerpolicy="no-referrer-when-downgrade"
+                     referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
                </div>
             </div>

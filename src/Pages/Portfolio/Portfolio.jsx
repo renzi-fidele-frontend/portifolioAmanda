@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./Portfolio.module.css";
 import estiloMain from "../MainPage/MainPage.module.css";
 import { portfolio } from "../MainPage/data";
 import ProjectCard from "../../Components/ProjectCard/ProjectCard";
 import ProjectModal from "../../Components/ProjectModal/ProjectModal";
+import HeaderMobile from "../../Components/HeaderMobile/HeaderMobile";
+import { useNavigate } from "react-router-dom";
+import useScrollTop from "../../Hooks/useScrollTop";
 
 const Portfolio = () => {
+   const navegar = useNavigate();
+   const ctRef = useRef();
+   const scrolltop = useScrollTop({ divRef: ctRef.current });
+
    return (
-      <div id={estiloMain.portifolio}>
+      <div ref={ctRef} id={estiloMain.portifolio}>
+         <HeaderMobile onLogoClick={() => navegar("/")} />
+
          <h2 className={estiloMain.titulo2}>
             <span>Veja todo o meu portfólio</span>
          </h2>

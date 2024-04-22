@@ -8,6 +8,14 @@ import demo4 from "../../Images/DemoDiabetes.jpg";
 import demo5 from "../../Images/demoCarlessi.gif";
 import demo6 from "../../Images/demoPanetones.gif";
 
+//  Thumbnails dos projetos
+import thumb1 from "../../Images/Miniblog.gif";
+import thumb2 from "../../Images/custos.gif";
+import thumb3 from "../../Images/FilmeLib.gif";
+import thumb4 from "../../Images/diabetes.gif";
+import thumb5 from "../../Images/unity.gif";
+import thumb6 from "../../Images/projetopanetones.gif";
+
 // Fotos dos clientes que testemunharam
 import avatar1 from "../../Images/avatar1.gif";
 import avatar2 from "../../Images/avatar2.gif";
@@ -94,7 +102,7 @@ export const portfolio = [
       tipo: "Website",
       pais: "Moçambique",
       videoDestaque: video1,
-      imagemThumbnail: "/src/Images/Miniblog.gif",
+      imagemThumbnail: thumb1,
       fotoCentralizada: true,
    },
    {
@@ -105,7 +113,8 @@ export const portfolio = [
       tipo: "Website",
       pais: "Moçambique",
       videoDestaque: video2,
-      imagemThumbnail: "/src/Images/custos.gif",
+      imagemThumbnail: thumb2,
+
       fotoCentralizada: true,
    },
    {
@@ -116,7 +125,7 @@ export const portfolio = [
       tipo: "Website",
       pais: "Moçambique",
       videoDestaque: video3,
-      imagemThumbnail: "/src/Images/FilmeLib.gif",
+      imagemThumbnail: thumb3,
       fotoCentralizada: false,
    },
    {
@@ -127,7 +136,7 @@ export const portfolio = [
       tipo: "Landing Page",
       pais: "Brasil",
       imagemDestaque: demo4,
-      imagemThumbnail: "/src/Images/diabetes.gif",
+      imagemThumbnail: thumb4,
       fotoCentralizada: false,
    },
    {
@@ -138,7 +147,7 @@ export const portfolio = [
       tipo: "Landing Page",
       pais: "Brasil",
       imagemDestaque: demo5,
-      imagemThumbnail: "/src/Images/unity.gif",
+      imagemThumbnail: thumb5,
       fotoCentralizada: false,
    },
    {
@@ -149,7 +158,7 @@ export const portfolio = [
       tipo: "Landing Page",
       pais: "Brasil",
       imagemDestaque: demo6,
-      imagemThumbnail: "/src/Images/projetopanetones.gif",
+      imagemThumbnail: thumb6,
       fotoCentralizada: false,
    },
 ];
