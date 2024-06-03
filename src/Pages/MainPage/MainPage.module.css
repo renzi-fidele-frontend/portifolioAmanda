@@ -4,6 +4,7 @@
    grid-template-columns: 50% 50%;
    padding-inline: 15%;
    padding-block: 10em;
+   align-items: center;
    color: var(--var-cor-texto);
 }
 
@@ -36,6 +37,7 @@
 #inicio #left {
    max-width: 100%;
    position: relative;
+   width: fit-content;
 }
 
 #inicio #right {
@@ -617,6 +619,21 @@
    #fieldNome > input {
       margin-right: 10px;
    }
+
+   #iconTop,
+   #iconLow {
+      width: 80px;
+   }
+
+   #iconTop {
+      top: -33px;
+      right: -33px;
+   }
+
+   #iconLow {
+      bottom: -33px;
+      left: -33px;
+   }
 }
 
 @media screen and (max-width: 1300px) {
@@ -633,6 +650,10 @@
 
    #contacto {
       grid-template-columns: 43% 57%;
+   }
+
+   #inicio #right > h4 {
+      font-size: 22px;
    }
 }
 
@@ -942,5 +963,25 @@
 
    .titulo2 > span {
       font-size: 22px;
+   }
+}
+
+@media screen and (max-width: 450px) {
+   #sobre #secaoXP {
+      padding-top: 1.4em;
+   }
+}
+
+@media screen and (max-width: 400px) {
+   #inicio #right > h4 {
+      font-size: 16px;
+   }
+
+   #inicio #right > h3 {
+      font-size: 30px;
+   }
+
+   #inicio #right > h6 {
+      font-size: 17px;
    }
 }
