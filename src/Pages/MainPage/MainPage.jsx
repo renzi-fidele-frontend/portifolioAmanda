@@ -374,11 +374,31 @@ const MainPage = () => {
             <h2 className={styles.titulo2}>
                <span>Meus serviços</span>
             </h2>
-            {/*   TODO: Tornar a seção dos serviçõs em swiper no mobile */}
-            <div>
+
+            <div id={styles.grelha}>
                {servicos.map((v, k) => (
                   <ServicoCard descricao={v.descricao} icone={v.icone} titulo={v.titulo} key={k} />
                ))}
+            </div>
+
+            <div className={styles.swiperMobileCt}>
+               <Swiper
+                  modules={[Pagination]}
+                  className={styles.swipperContainer}
+                  speed={500}
+                  spaceBetween={20}
+                  pagination={{ type: "bullets", el: `.${styles.pag}`, clickable: true }}
+                  slidesPerView={"auto"}
+                  breakpoints={{ 950: { slidesPerView: 2 }, 1550: { slidesPerView: 3 } }}
+               >
+                  {servicos.map((v, k) => (
+                     <SwiperSlide key={k}>
+                        <ServicoCard descricao={v.descricao} icone={v.icone} titulo={v.titulo} />
+                     </SwiperSlide>
+                  ))}
+
+                  <div className={styles.pag}></div>
+               </Swiper>
             </div>
          </section>
 

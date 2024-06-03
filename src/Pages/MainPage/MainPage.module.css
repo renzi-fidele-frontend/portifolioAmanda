@@ -343,9 +343,13 @@
    padding: var(--padding-secao);
 }
 
-#servicos > div {
+#servicos > #grelha {
    display: grid;
    grid-template-columns: 32% 32% 32%;
+}
+
+.swiperMobileCt {
+   display: none;
 }
 
 /*------------Secao do portifolio*/
@@ -703,7 +707,7 @@
       left: -12px;
    }
 
-   #servicos > div,
+   #servicos > #grelha,
    #portifolio > div {
       grid-template-columns: 33% 33% 33%;
    }
@@ -785,7 +789,7 @@
    .titulo2 > span {
       font-size: 28px;
    }
-   #servicos > div,
+   #servicos > #grelha,
    #portifolio > div {
       grid-template-columns: 50% 50%;
    }
@@ -826,7 +830,7 @@
       font-size: 1.5em;
    }
 
-   #servicos > div,
+   #servicos > #grelha,
    #portifolio > div {
       grid-template-columns: 100%;
    }
@@ -919,6 +923,14 @@
 
    #contacto #iconsCont > div > #right > span {
       font-size: 13px;
+   }
+
+   #servicos > #grelha {
+      display: none;
+   }
+
+   .swiperMobileCt {
+      display: initial !important;
    }
 }
 
