@@ -3,11 +3,12 @@ import LeftNav from "./Components/LeftNav/LeftNav";
 import "./App.css";
 import { NavProvider } from "./Context/NavContext";
 import { Outlet } from "react-router-dom";
-import useSubir from "./Hooks/useSubir";
 
 function App() {
    const [nav, setNav] = useState(false);
-   const subir = useSubir()
+
+   // TODO: Adicionar modo de idiomas em PT / EN
+
 
    return (
       <NavProvider value={{ nav, setNav }}>

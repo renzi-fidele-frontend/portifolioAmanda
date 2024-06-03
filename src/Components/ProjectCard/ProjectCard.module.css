@@ -77,6 +77,13 @@
    font-size: 27px;
 }
 
+@media screen and (max-width: 698px) {
+   .portifolioText {
+      bottom: 20px;
+      opacity: 1;
+   }
+}
+
 @media screen and (max-width: 572px) {
    .portifolioCard {
       margin: 0.4em;
@@ -93,3 +100,5 @@
       font-size: 13px;
    }
 }
+
+/*  TODO: Não esconder a div de classe portifolioText no Mobile  */

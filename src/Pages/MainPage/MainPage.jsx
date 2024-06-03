@@ -21,6 +21,7 @@ import Typewriter from "typewriter-effect";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -373,6 +374,7 @@ const MainPage = () => {
             <h2 className={styles.titulo2}>
                <span>Meus serviços</span>
             </h2>
+            {/*   TODO: Tornar a seção dos serviçõs em swiper no mobile */}
             <div>
                {servicos.map((v, k) => (
                   <ServicoCard descricao={v.descricao} icone={v.icone} titulo={v.titulo} key={k} />
@@ -392,6 +394,7 @@ const MainPage = () => {
                <span>Meu Portifólio</span>
             </h2>
 
+            {/*   TODO: Tornar a seção do portfólio em swiper no mobile */}
             <div>
                {portfolio.map(
                   (v, k) =>
