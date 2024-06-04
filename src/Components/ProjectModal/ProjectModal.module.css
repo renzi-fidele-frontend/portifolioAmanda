@@ -1,183 +1,185 @@
 #container {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    z-index: 4;
-    background-color: red;
-    animation: entrada 1s ease-in-out;
-    transition: 0.8s opacity;
-    margin-inline: 15%;
-    margin-block: 7%;
-    height: fit-content;
+   display: grid;
+   grid-template-columns: 60% 40%;
+   z-index: 999;
+   background-color: red;
+   animation: entrada 1s ease-in-out;
+   transition: 0.8s opacity;
+   margin-inline: 15%;
+   margin-block: 7%;
+   height: fit-content;
 }
 
+
+
 @keyframes entrada {
-    from {
-        opacity: 0;
-        scale: 0;
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-    }
+   from {
+      opacity: 0;
+      scale: 0;
+   }
+   to {
+      opacity: 1;
+      scale: 1;
+   }
 }
 
 #container > svg {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    font-size: 33px;
+   position: absolute;
+   right: 20px;
+   top: 20px;
+   font-size: 33px;
 }
 #container > svg:hover {
-    cursor: pointer;
+   cursor: pointer;
 }
 
 .left {
-    display: flex;
-    align-items: center;
+   display: flex;
+   align-items: center;
 }
 
 .left > img {
-    max-width: 100%;
+   max-width: 100%;
 }
 
 .left > video {
-    max-width: 100%;
+   max-width: 100%;
 }
 
 #detailsContainer > div {
-    display: flex;
-    border: 2px solid var(--cor-borda);
-    background-color: var(--px-bg);
-    padding: 12px 15px;
-    border-radius: 12px;
-    margin-top: 4%;
-    align-items: center;
-    position: relative;
-    transition: all 0.35s ease;
-    justify-content: space-between;
+   display: flex;
+   border: 2px solid var(--cor-borda);
+   background-color: var(--px-bg);
+   padding: 12px 15px;
+   border-radius: 12px;
+   margin-top: 4%;
+   align-items: center;
+   position: relative;
+   transition: all 0.35s ease;
+   justify-content: space-between;
 }
 
 .right h5 {
-    color: var(--bs-heading-color);
-    font-size: 22px;
-    padding-right: 13%;
+   color: var(--bs-heading-color);
+   font-size: 22px;
+   padding-right: 13%;
 }
 
 .right h6 {
-    font-size: 18px;
-    font-weight: 600;
+   font-size: 18px;
+   font-weight: 600;
 }
 
 .right {
-    padding-top: 2%;
-    padding-left: 5%;
+   padding-top: 2%;
+   padding-left: 5%;
 }
 
 video.loadingV {
-    background-image: url("/src/Images/loadVideo.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: center;
-    margin: 0 auto;
+   background-image: url("/src/Images/loadVideo.svg");
+   background-repeat: no-repeat;
+   background-position: center;
+   text-align: center;
+   margin: 0 auto;
 }
 
 @media screen and (max-width: 1757px) {
-    #container {
-        margin-inline: 10%;
-        margin-block: 10%;
-    }
+   #container {
+      margin-inline: 10%;
+      margin-block: 10%;
+   }
 }
 
 @media screen and (max-width: 1445px) {
-    #container {
-        grid-template-columns: 50% 50%;
-    }
+   #container {
+      grid-template-columns: 50% 50%;
+   }
 }
 
 @media screen and (max-width: 1221px) {
-    #container {
-        display: flex;
-        flex-flow: column;
-        margin-block: 0;
-        margin-top: 4%;
-    }
+   #container {
+      display: flex;
+      flex-flow: column;
+      margin-block: 0;
+      margin-top: 4%;
+   }
 
-    .right {
-        padding-left: 0;
-    }
+   .right {
+      padding-left: 0;
+   }
 
-    .left > img {
-        width: 70%;
-        margin: 0 auto;
-    }
+   .left > img {
+      width: 70%;
+      margin: 0 auto;
+   }
 
-    #detailsContainer > div {
-        margin-top: 1%;
-    }
+   #detailsContainer > div {
+      margin-top: 1%;
+   }
 
-    .right h5 {
-        font-size: 20px;
-        margin-block: 1em;
-    }
+   .right h5 {
+      font-size: 20px;
+      margin-block: 1em;
+   }
 
-    .right h6,
-    .right p {
-        font-size: 15px;
-    }
+   .right h6,
+   .right p {
+      font-size: 15px;
+   }
 }
 
 @media screen and (max-width: 1000px) {
-    #container {
-        margin-top: 7%;
-    }
+   #container {
+      margin-top: 7%;
+   }
 
-    .left > img {
-        width: 70%;
-        margin: 0 auto;
-    }
+   .left > img {
+      width: 70%;
+      margin: 0 auto;
+   }
 }
 
 @media screen and (max-width: 800px) {
-    #container {
-        margin-inline: 4%;
-    }
+   #container {
+      margin-inline: 4%;
+   }
 }
 
 @media screen and (max-width: 693px) {
-    .left > img {
-        width: 100%;
-    }
+   .left > img {
+      width: 100%;
+   }
 }
 
 @media screen and (max-width: 576px) {
-    #detailsContainer > div {
-        flex-flow: column;
-        align-items: start;
-        padding-block: 3px;
-    }
+   #detailsContainer > div {
+      flex-flow: column;
+      align-items: start;
+      padding-block: 3px;
+   }
 }
 @media screen and (max-width: 538px) {
-    .right h5 {
-        font-size: 17px;
-    }
+   .right h5 {
+      font-size: 17px;
+   }
 
-    #container {
-        margin-inline: 1%;
-    }
+   #container {
+      margin-inline: 1%;
+   }
 }
 
 @media screen and (max-width: 461px) {
-    #container {
-        inset-inline: 5px !important;
-        padding: 10px !important;
-    }
+   #container {
+      inset-inline: 5px !important;
+      padding: 10px !important;
+   }
 
-    .right h6,
-    .right p {
-        font-size: 13px;
-    }
+   .right h6,
+   .right p {
+      font-size: 13px;
+   }
 
-    .right h5 {
-        font-size: 15px;
-    }
+   .right h5 {
+      font-size: 15px;
+   }
 }

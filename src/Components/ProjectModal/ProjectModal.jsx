@@ -25,7 +25,7 @@ const ProjectModal = () => {
    return (
       <>
          {loc.state ? (
-            <ReactModal isOpen={isOpen} onRequestClose={fechar} id={styles.container}>
+            <ReactModal style={{ zIndex: 999 }} isOpen={isOpen} onRequestClose={fechar} id={styles.container}>
                <div className={styles.left}>
                   {loc.state.video && (
                      <video

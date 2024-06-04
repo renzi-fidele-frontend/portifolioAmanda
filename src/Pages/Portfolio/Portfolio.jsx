@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 import styles from "./Portfolio.module.css";
 import estiloMain from "../MainPage/MainPage.module.css";
 import { portfolio } from "../MainPage/data";
