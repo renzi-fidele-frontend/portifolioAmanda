@@ -413,9 +413,7 @@ const MainPage = () => {
             <h2 className={styles.titulo2}>
                <span>Meu Portifólio</span>
             </h2>
-
-            {/*   TODO: Tornar a seção do portfólio em swiper no mobile */}
-            <div>
+            <div id={styles.grelha}>
                {portfolio.map(
                   (v, k) =>
                      k < 6 && (
@@ -434,6 +432,40 @@ const MainPage = () => {
                         />
                      )
                )}
+            </div>
+
+            <div className={styles.swiperMobileCt}>
+               <Swiper
+                  modules={[Pagination]}
+                  className={styles.swipperContainer}
+                  speed={500}
+                  spaceBetween={20}
+                  pagination={{ type: "bullets", el: `.${styles.pag}`, clickable: true }}
+                  slidesPerView={"auto"}
+                  breakpoints={{ 950: { slidesPerView: 2 }, 1550: { slidesPerView: 3 } }}
+               >
+                  {portfolio.map(
+                     (v, k) =>
+                        k < 6 && (
+                           <SwiperSlide key={k}>
+                              <ProjectCard
+                                 titulo={v.titulo}
+                                 urlProjeto={v.url}
+                                 plataforma={v.plataforma}
+                                 linguagens={v.linguagens}
+                                 tipo={v.tipo}
+                                 pais={v.pais}
+                                 imagemDestaque={v.imagemDestaque}
+                                 videoDestaque={v.videoDestaque}
+                                 imagemThumbnail={v.imagemThumbnail}
+                                 thumbnailCentralizado={v.fotoCentralizada}
+                              />
+                           </SwiperSlide>
+                        )
+                  )}
+
+                  <div className={styles.pag}></div>
+               </Swiper>
             </div>
 
             <section id={styles.portfolioBtnCt}>
