@@ -1,50 +1,49 @@
 :root {
-    --var-cor-texto: #393a3a;
-    --var-cor-decoracao: #c2e7ff;
-    --var-cor-cinza: #f3f6fc;
-    --bs-heading-color: black;
-    --cor-fundo0: white;
-    --cor-fundo1: #f8fafd;
-    --font-normal: 17px;
-    --weight-normal: 300;
-    --fundo-box: white;
-    --cor-borda: #e1e3e1;
-    --padding-secao: 5% 15%;
-    --swiper-theme-color: var(--var-cor-decoracao);
-    --swiper-pagination-bullet-size: 13px;
-    --cor-hover: #001d35;
+   --var-cor-texto: #393a3a;
+   --var-cor-decoracao: #c2e7ff;
+   --var-cor-cinza: #f3f6fc;
+   --bs-heading-color: black;
+   --cor-fundo0: white;
+   --cor-fundo1: #f8fafd;
+   --font-normal: 17px;
+   --weight-normal: 300;
+   --fundo-box: white;
+   --cor-borda: #e1e3e1;
+   --padding-secao: 5% 15%;
+   --swiper-theme-color: var(--var-cor-decoracao);
+   --swiper-pagination-bullet-size: 13px;
+   --cor-hover: #001d35;
+   --swiper-pagination-color: var(--var-cor-decoracao);
 }
 
 @media screen and (max-width: 1634px) {
-    :root {
-        --padding-secao: 5% 8%;
-    }
+   :root {
+      --padding-secao: 5% 8%;
+   }
 }
 
 @media screen and (max-width: 1162px) {
-    :root {
-        --padding-secao: 8% 5%;
-    }
-
-    
+   :root {
+      --padding-secao: 8% 5%;
+   }
 }
 
 @media screen and (max-width: 1002px) {
-    :root {
-        --font-normal: 15px;
-    }
+   :root {
+      --font-normal: 15px;
+   }
 }
 
 @media screen and (max-width: 732px) {
-    :root {
-        --padding-secao: 2em 5%;
-    }
+   :root {
+      --padding-secao: 2em 5%;
+   }
 }
 
 a {
-    text-decoration: none;
+   text-decoration: none;
 }
 
 fieldset {
-    border: none;
+   border: none;
 }
