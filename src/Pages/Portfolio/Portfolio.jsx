@@ -50,6 +50,8 @@ const Portfolio = () => {
          <ProjectModal />
       </div>
    );
+
+   // TODO: Carregar os vídeos no cloudflare
 };
 
 export default Portfolio;

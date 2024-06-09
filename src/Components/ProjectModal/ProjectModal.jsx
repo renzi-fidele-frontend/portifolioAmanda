@@ -51,7 +51,7 @@ const ProjectModal = () => {
                      </div>
                      {/*Linguagens */}
                      <div>
-                        <h6>Linguagens:</h6>
+                        <h6>Ferramentas:</h6>
                         <p>{loc.state.linguagens}</p>
                      </div>
                      {/*Plataforma */}

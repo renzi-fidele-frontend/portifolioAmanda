@@ -1,19 +1,19 @@
 import { jsx as _jsx } from "react/jsx-runtime";
 
-//  Imagens dos prjetos
-import video1 from "../../Videos/demoNossoBlog.webm";
-import video2 from "../../Videos/demoCustos.webm";
-import video3 from "../../Videos/FilmeLib.webm";
-import demo4 from "../../Images/DemoDiabetes.jpg";
-import demo5 from "../../Images/demoCarlessi.gif";
+//  Videos dos projetos
+import video1 from "../../Videos/MusifyPro.mp4";
+import video2 from "../../Videos/NossoBlog.mp4";
+import video3 from "../../Videos/BelezaShop.mp4";
+import video4 from "../../Videos/Custos.mp4";
+
 import demo6 from "../../Images/demoPanetones.gif";
 
 //  Thumbnails dos projetos
-import thumb1 from "../../Images/Miniblog.gif";
-import thumb2 from "../../Images/custos.gif";
-import thumb3 from "../../Images/FilmeLib.gif";
-import thumb4 from "../../Images/diabetes.gif";
-import thumb5 from "../../Images/unity.gif";
+import thumb1 from "../../Images/musifyPro.jpg";
+import thumb2 from "../../Images/nossoBlog.jpg";
+import thumb3 from "../../Images/BelezeShop.jpg";
+import thumb4 from "../../Images/Custos.jpg";
+import thumb5 from "../../Images/Custos2.jpg";
 import thumb6 from "../../Images/projetopanetones.gif";
 
 // Fotos dos clientes que testemunharam
@@ -93,16 +93,47 @@ export const servicos = [
    },
 ];
 
+/**
+   1 - Musify Pro
+   2 - Beleza Shop
+   3 - Nosso Blog
+   4 - Custos
+   5 - FilmesLib
+   6 - Site Amc
+ */
 export const portfolio = [
    {
-      titulo: "Nosso Blog: Blog de curiosidades",
-      url: "https://nossoblog.vercel.app/",
+      titulo: "Musify Pro: Leitor de prévias do Spotify",
+      url: "https://musify-pro.vercel.app/",
       plataforma: "Vercel",
-      linguagens: ["ReactJs, Firebase, Css"],
+      linguagens: ["ReactJs, Css, Spotify api"],
       tipo: "Website",
       pais: "Moçambique",
       videoDestaque: video1,
       imagemThumbnail: thumb1,
+
+      fotoCentralizada: true,
+   },
+   {
+      titulo: "Site para a venda de óculos Beleza",
+      url: "https://www.belezanosolhos.com.br/",
+      plataforma: "Vercel",
+      linguagens: ["ReactJs, Css, Yampi"],
+      tipo: "Website",
+      pais: "Brasil",
+      videoDestaque: video3,
+      imagemThumbnail: thumb3,
+      fotoCentralizada: true,
+   },
+   {
+      titulo: "Blog de curiosidades fullstack com chat global",
+      url: "https://nossoblog.vercel.app/",
+      plataforma: "Vercel",
+      linguagens: ["ReactJs, Redux, Firebase, Css"],
+      tipo: "Website",
+      pais: "Moçambique",
+      videoDestaque: video2,
+      imagemThumbnail: thumb2,
       fotoCentralizada: true,
    },
    {
@@ -112,8 +143,8 @@ export const portfolio = [
       linguagens: ["ReactJs, Firebase, Css"],
       tipo: "Website",
       pais: "Moçambique",
-      videoDestaque: video2,
-      imagemThumbnail: thumb2,
+      videoDestaque: video4,
+      imagemThumbnail: thumb4,
 
       fotoCentralizada: true,
    },
@@ -125,33 +156,12 @@ export const portfolio = [
       tipo: "Website",
       pais: "Moçambique",
       videoDestaque: video3,
-      imagemThumbnail: thumb3,
-      fotoCentralizada: false,
-   },
-   {
-      titulo: "LP para Ebook digital - O método correto",
-      url: "https://ometodocorreto.com/diabetes",
-      plataforma: "Wordpress",
-      linguagens: ["WP, Elementor, JavaScript"],
-      tipo: "Landing Page",
-      pais: "Brasil",
-      imagemDestaque: demo4,
-      imagemThumbnail: thumb4,
-      fotoCentralizada: false,
-   },
-   {
-      titulo: "LP para construtora Unity Carlessi",
-      url: "https://unitycarlessi.com.br/",
-      plataforma: "Wordpress",
-      linguagens: ["WP, Elementor, JavaScript"],
-      tipo: "Landing Page",
-      pais: "Brasil",
-      imagemDestaque: demo5,
       imagemThumbnail: thumb5,
-      fotoCentralizada: false,
+      fotoCentralizada: true,
    },
+
    {
-      titulo: "Lp para Ebook digital - Panetones artesanais",
+      titulo: "Site institucional da AMC Contruções",
       url: "https://anovafase.com/panetones-artesanais/",
       plataforma: "Wordpress",
       linguagens: ["WP, Elementor, JavaScript"],

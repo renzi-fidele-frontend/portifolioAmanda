@@ -1,8 +1,6 @@
 #container {
    display: grid;
    grid-template-columns: 60% 40%;
-   z-index: 999;
-   background-color: red;
    animation: entrada 1s ease-in-out;
    transition: 0.8s opacity;
    margin-inline: 15%;
