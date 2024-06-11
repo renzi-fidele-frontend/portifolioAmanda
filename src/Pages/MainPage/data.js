@@ -151,10 +151,10 @@ export const portfolio = [
    },
    {
       titulo: "Site institucional da AMC Contruções",
-      url: "https://anovafase.com/panetones-artesanais/",
-      plataforma: "Hostgator",
+      url: "https://www.amc.eng.br/",
+      plataforma: "Locaweb",
       linguagens: ["Html, Css, JavaScript"],
-      tipo: "Landing Page",
+      tipo: "Site institucional",
       repositorio: "https://github.com/renzi-fidele-frontend/AMC-COnstucoes",
       imagemDestaque: demo6,
       imagemThumbnail: thumb6,
