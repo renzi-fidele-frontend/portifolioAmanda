@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./ProjectModal.module.css";
 import ReactModal from "react-modal";
 import { useLocation, useNavigate } from "react-router-dom";
-import { FaCross, FaWindowClose } from "react-icons/fa";
+import { FaWindowClose, FaGithub } from "react-icons/fa";
 
 ReactModal.setAppElement("#root");
 
@@ -59,10 +59,17 @@ const ProjectModal = () => {
                         <h6>Plataforma:</h6>
                         <p>{loc.state.plataforma}</p>
                      </div>
-                     {/*País */}
-                     <div>
-                        <h6>País:</h6>
-                        <p>{loc.state.pais}</p>
+                     {/*Repositório */}
+                     <div id={styles.gitCt}>
+                        <h6>Repositório:</h6>
+                        <button
+                           onClick={() => {
+                              window.open(loc.state.repositorio, "_blank", "rel=noopener noreferrer");
+                           }}
+                           className={styles.btnGit}
+                        >
+                           <FaGithub /> Acessar
+                        </button>
                      </div>
                      {/*País */}
                      <div>

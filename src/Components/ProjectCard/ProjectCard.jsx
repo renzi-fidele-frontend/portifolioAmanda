@@ -10,7 +10,7 @@ const ProjectCard = ({
    plataforma,
    linguagens,
    tipo,
-   pais,
+   repositorio,
    imagemDestaque,
    videoDestaque,
    imagemThumbnail,
@@ -36,7 +36,7 @@ const ProjectCard = ({
                   plataforma: plataforma,
                   linguagens: linguagens,
                   tipo: tipo,
-                  pais: pais,
+                  repositorio: repositorio,
                   imagem: imagemDestaque,
                   video: videoDestaque,
                }}

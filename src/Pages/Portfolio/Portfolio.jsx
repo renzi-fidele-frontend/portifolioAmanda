@@ -1,4 +1,4 @@
-import  { useEffect } from "react";
+import { useEffect } from "react";
 import styles from "./Portfolio.module.css";
 import estiloMain from "../MainPage/MainPage.module.css";
 import { portfolio } from "../MainPage/data";
@@ -36,7 +36,7 @@ const Portfolio = () => {
                   plataforma={v.plataforma}
                   linguagens={v.linguagens}
                   tipo={v.tipo}
-                  pais={v.pais}
+                  repositorio={v.repositorio}
                   imagemDestaque={v.imagemDestaque}
                   videoDestaque={v.videoDestaque}
                   imagemThumbnail={v.imagemThumbnail}

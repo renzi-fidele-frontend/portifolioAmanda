@@ -8,8 +8,6 @@
    height: fit-content;
 }
 
-
-
 @keyframes entrada {
    from {
       opacity: 0;
@@ -73,12 +71,28 @@
    padding-left: 5%;
 }
 
+.right p {
+   text-align: end;
+}
+
 video.loadingV {
    background-image: url("/src/Images/loadVideo.svg");
    background-repeat: no-repeat;
    background-position: center;
    text-align: center;
    margin: 0 auto;
+}
+
+.btnGit {
+   cursor: pointer;
+   background-color: #333;
+   color: white;
+   border-radius: 6px;
+   padding: 10px 20px;
+   display: flex;
+   gap: 1em;
+   font-size: 15px;
+   border: none;
 }
 
 @media screen and (max-width: 1757px) {
@@ -155,7 +169,17 @@ video.loadingV {
       align-items: start;
       padding-block: 3px;
    }
+
+   #gitCt {
+      flex-flow: row !important;
+      align-items: center !important;
+   }
+
+   .btnGit {
+      font-size: 13px;
+   }
 }
+
 @media screen and (max-width: 538px) {
    .right h5 {
       font-size: 17px;

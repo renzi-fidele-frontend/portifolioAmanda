@@ -423,7 +423,7 @@ const MainPage = () => {
                            plataforma={v.plataforma}
                            linguagens={v.linguagens}
                            tipo={v.tipo}
-                           pais={v.pais}
+                           repositorio={v.repositorio}
                            imagemDestaque={v.imagemDestaque}
                            videoDestaque={v.videoDestaque}
                            imagemThumbnail={v.imagemThumbnail}
@@ -454,7 +454,7 @@ const MainPage = () => {
                                  plataforma={v.plataforma}
                                  linguagens={v.linguagens}
                                  tipo={v.tipo}
-                                 pais={v.pais}
+                                 repositorio={v.repositorio}
                                  imagemDestaque={v.imagemDestaque}
                                  videoDestaque={v.videoDestaque}
                                  imagemThumbnail={v.imagemThumbnail}

@@ -1,20 +1,20 @@
 import { jsx as _jsx } from "react/jsx-runtime";
 
-//  Videos dos projetos
+//  Demo dos projetos
 import video1 from "../../Videos/MusifyPro.mp4";
 import video2 from "../../Videos/NossoBlog.mp4";
 import video3 from "../../Videos/BelezaShop.mp4";
 import video4 from "../../Videos/Custos.mp4";
-
-import demo6 from "../../Images/demoPanetones.gif";
+import video5 from "../../Videos/FilmeLib.webm";
+import demo6 from "../../Images/amcDestaque.jpg";
 
 //  Thumbnails dos projetos
 import thumb1 from "../../Images/musifyPro.jpg";
 import thumb2 from "../../Images/nossoBlog.jpg";
 import thumb3 from "../../Images/BelezeShop.jpg";
 import thumb4 from "../../Images/Custos.jpg";
-import thumb5 from "../../Images/Custos2.jpg";
-import thumb6 from "../../Images/projetopanetones.gif";
+import thumb5 from "../../Images/filmelib.jpg";
+import thumb6 from "../../Images/amc.jpg";
 
 // Fotos dos clientes que testemunharam
 import avatar1 from "../../Images/avatar1.gif";
@@ -93,14 +93,6 @@ export const servicos = [
    },
 ];
 
-/**
-   1 - Musify Pro
-   2 - Beleza Shop
-   3 - Nosso Blog
-   4 - Custos
-   5 - FilmesLib
-   6 - Site Amc
- */
 export const portfolio = [
    {
       titulo: "Musify Pro: Leitor de prévias do Spotify",
@@ -108,10 +100,9 @@ export const portfolio = [
       plataforma: "Vercel",
       linguagens: ["ReactJs, Css, Spotify api"],
       tipo: "Website",
-      pais: "Moçambique",
+      repositorio: "https://github.com/renzi-fidele-frontend/Music-player-app",
       videoDestaque: video1,
       imagemThumbnail: thumb1,
-
       fotoCentralizada: true,
    },
    {
@@ -119,8 +110,8 @@ export const portfolio = [
       url: "https://www.belezanosolhos.com.br/",
       plataforma: "Vercel",
       linguagens: ["ReactJs, Css, Yampi"],
-      tipo: "Website",
-      pais: "Brasil",
+      tipo: "https://github.com/renzi-fidele-frontend/BelezaShop",
+      repositorio: "Brasil",
       videoDestaque: video3,
       imagemThumbnail: thumb3,
       fotoCentralizada: true,
@@ -131,7 +122,7 @@ export const portfolio = [
       plataforma: "Vercel",
       linguagens: ["ReactJs, Redux, Firebase, Css"],
       tipo: "Website",
-      pais: "Moçambique",
+      repositorio: "https://github.com/renzi-fidele-frontend/Nossoblog",
       videoDestaque: video2,
       imagemThumbnail: thumb2,
       fotoCentralizada: true,
@@ -142,10 +133,9 @@ export const portfolio = [
       plataforma: "Vercel",
       linguagens: ["ReactJs, Firebase, Css"],
       tipo: "Website",
-      pais: "Moçambique",
+      repositorio: "https://github.com/renzi-fidele-frontend/custos",
       videoDestaque: video4,
       imagemThumbnail: thumb4,
-
       fotoCentralizada: true,
    },
    {
@@ -154,21 +144,20 @@ export const portfolio = [
       plataforma: "Vercel",
       linguagens: ["ReactJs, Css"],
       tipo: "Website",
-      pais: "Moçambique",
-      videoDestaque: video3,
+      repositorio: "https://github.com/renzi-fidele-frontend/Filmaki-react",
+      videoDestaque: video5,
       imagemThumbnail: thumb5,
       fotoCentralizada: true,
    },
-
    {
       titulo: "Site institucional da AMC Contruções",
       url: "https://anovafase.com/panetones-artesanais/",
-      plataforma: "Wordpress",
-      linguagens: ["WP, Elementor, JavaScript"],
+      plataforma: "Hostgator",
+      linguagens: ["Html, Css, JavaScript"],
       tipo: "Landing Page",
-      pais: "Brasil",
+      repositorio: "https://github.com/renzi-fidele-frontend/AMC-COnstucoes",
       imagemDestaque: demo6,
       imagemThumbnail: thumb6,
-      fotoCentralizada: false,
+      fotoCentralizada: true,
    },
 ];
