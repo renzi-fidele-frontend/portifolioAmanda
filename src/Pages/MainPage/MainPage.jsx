@@ -468,7 +468,7 @@ const MainPage = () => {
                </Swiper>
             </div>
 
-            <section id={styles.portfolioBtnCt}>
+            <section style={{ display: "none" }} id={styles.portfolioBtnCt}>
                <Link to={"/portfolio"} className={styles.botao}>
                   <FaPlus /> <span>Ver mais</span>
                </Link>

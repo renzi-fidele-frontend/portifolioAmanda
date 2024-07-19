@@ -5,16 +5,19 @@ import video1 from "../../Videos/MusifyPro.mp4";
 import video2 from "../../Videos/NossoBlog.mp4";
 import video3 from "../../Videos/BelezaShop.mp4";
 import video4 from "../../Videos/Custos.mp4";
-import video5 from "../../Videos/FilmeLib.webm";
+import video5 from "../../Videos/Criptoverso.mp4";
 import demo6 from "../../Images/amcDestaque.jpg";
+import demo4 from "../../Images/LugaresAppDestaque.jpg";
 
 //  Thumbnails dos projetos
 import thumb1 from "../../Images/musifyPro.jpg";
 import thumb2 from "../../Images/nossoBlog.jpg";
 import thumb3 from "../../Images/BelezeShop.jpg";
-import thumb4 from "../../Images/Custos.jpg";
-import thumb5 from "../../Images/filmelib.jpg";
+import thumb4 from "../../Images/Criptoverso.jpg";
+import thumb5 from "../../Images/LugaresApp.jpg";
 import thumb6 from "../../Images/amc.jpg";
+import thumb7 from "../../Images/Custos.jpg";
+import thumb8 from "../../Images/amc.jpg";
 
 // Fotos dos clientes que testemunharam
 import avatar1 from "../../Images/avatar1.gif";
@@ -98,7 +101,7 @@ export const portfolio = [
       titulo: "Musify Pro: Leitor de prévias do Spotify",
       url: "https://musify-pro.vercel.app/",
       plataforma: "Vercel",
-      linguagens: ["ReactJs, Css, Spotify api"],
+      linguagens: ["ReactJs, Css, ContextApi, Spotify Api"],
       tipo: "Website",
       repositorio: "https://github.com/renzi-fidele-frontend/Music-player-app",
       videoDestaque: video1,
@@ -127,26 +130,38 @@ export const portfolio = [
       imagemThumbnail: thumb2,
       fotoCentralizada: true,
    },
+
    {
-      titulo: "Custos: Gerenciador de projetos",
-      url: "https://custos-five.vercel.app/",
+      titulo: "Site de compatilhamento de lugares do mundo",
+      url: "https://lugares-app.vercel.app/",
       plataforma: "Vercel",
-      linguagens: ["ReactJs, Firebase, Css"],
+      linguagens: ["MERN, Bootstrap, Redux, Maps Api"],
       tipo: "Website",
-      repositorio: "https://github.com/renzi-fidele-frontend/custos",
-      videoDestaque: video4,
+      repositorio: "https://github.com/renzi-fidele-frontend/AMC-COnstucoes",
+      imagemDestaque: demo4,
+      imagemThumbnail: thumb5,
+      fotoCentralizada: true,
+   },
+   {
+      titulo: "Criptoverso: Site informativo sobre criptomedas",
+      url: "https://cripto-verso.vercel.app/",
+      plataforma: "Vercel",
+      linguagens: ["ReactJs, Bootstrap, Redux, Rapid Api"],
+      tipo: "Website",
+      repositorio: "https://github.com/renzi-fidele-frontend/criptoverso",
+      videoDestaque: video5,
       imagemThumbnail: thumb4,
       fotoCentralizada: true,
    },
    {
-      titulo: "FilmesLib: Biblioteca de filmes",
-      url: "https://films-lib.vercel.app/",
-      plataforma: "Vercel",
-      linguagens: ["ReactJs, Css"],
-      tipo: "Website",
-      repositorio: "https://github.com/renzi-fidele-frontend/Filmaki-react",
-      videoDestaque: video5,
-      imagemThumbnail: thumb5,
+      titulo: "Site institucional da AMC Contruções",
+      url: "https://www.amc.eng.br/",
+      plataforma: "Locaweb",
+      linguagens: ["Html, Css, JavaScript, JQuery"],
+      tipo: "Site institucional",
+      repositorio: "https://github.com/renzi-fidele-frontend/AMC-COnstucoes",
+      imagemDestaque: demo6,
+      imagemThumbnail: thumb6,
       fotoCentralizada: true,
    },
    {
@@ -158,6 +173,17 @@ export const portfolio = [
       repositorio: "https://github.com/renzi-fidele-frontend/AMC-COnstucoes",
       imagemDestaque: demo6,
       imagemThumbnail: thumb6,
+      fotoCentralizada: true,
+   },
+   {
+      titulo: "Custos: Gerenciador de projetos",
+      url: "https://custos-five.vercel.app/",
+      plataforma: "Vercel",
+      linguagens: ["ReactJs, Firebase, Css"],
+      tipo: "Website",
+      repositorio: "https://github.com/renzi-fidele-frontend/custos",
+      videoDestaque: video4,
+      imagemThumbnail: thumb4,
       fotoCentralizada: true,
    },
 ];
