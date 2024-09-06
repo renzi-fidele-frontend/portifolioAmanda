@@ -7,8 +7,10 @@ import logo from "../../Images/lg.png";
 import { NavValue } from "../../Context/NavContext";
 import { LangValue } from "../../Context/LangContext";
 import i18n from "../../i18n/i18n";
+import { useTranslation } from "react-i18next";
 
 const LeftNav = () => {
+   const { t } = useTranslation();
    //  Estilo de NavLink ativo
    let activeStyle = {
       backgroundColor: "var(--var-cor-decoracao)",
@@ -45,23 +47,23 @@ const LeftNav = () => {
             <ul>
                <NavLink style={() => (location.hash === "#inicio" ? activeStyle : undefined)} to="/#inicio">
                   <IoHome />
-                  <p>Início</p>
+                  <p>{t("navbar.0")}</p>
                </NavLink>
                <NavLink style={() => (location.hash === "#sobre" ? activeStyle : undefined)} to="/#sobre">
                   <BsPersonFill />
-                  <p>Sobre</p>
+                  <p>{t("navbar.1")}</p>
                </NavLink>
                <NavLink style={() => (location.hash === "#servicos" ? activeStyle : undefined)} to="/#servicos">
                   <BsBriefcaseFill />
-                  <p>Serviços</p>
+                  <p>{t("navbar.2")}</p>
                </NavLink>
                <NavLink style={() => (location.hash === "#portifolio" ? activeStyle : undefined)} to="/#portifolio">
                   <BsGrid1X2Fill />
-                  <p>Portifólio</p>
+                  <p>{t("navbar.3")}</p>
                </NavLink>
                <NavLink style={() => (location.hash === "#contacto" ? activeStyle : undefined)} to="/#contacto">
                   <BsTelephoneFill />
-                  <p>Contacto</p>
+                  <p>{t("navbar.4")}</p>
                </NavLink>
                <div className={styles.langCt}>
                   <BsGlobe />
