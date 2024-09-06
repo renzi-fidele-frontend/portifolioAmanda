@@ -1,1 +1,13 @@
-{ "navbar": ["Início", "Sobre", "Serviços", "Portifólio", "Contacto"] }
+{
+   "navbar": ["Início", "Sobre", "Serviços", "Portifólio", "Contacto"],
+   "sections": {
+      "inicio": {
+         "greet": "Olá, me chamo",
+         "im": "Sou",
+         "altImg": "Illustração de Renzi Fidele",
+         "typewriter": ["um desenvolvedor de front-end", "um programador", "a melhor escolha pra você"],
+         "bio": "Posso criar um site do nada, totalmente formado. Eu não uso truques, nem isso é mágica. Eu me especializei em manipular a própria estrutura da web, suas matérias-primas de HTML, CSS, JavaScript e ReactJs.",
+         "cta": "Baixar CV"
+      }
+   }
+}

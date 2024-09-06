@@ -33,8 +33,11 @@ import ProjectCard from "../../Components/ProjectCard/ProjectCard";
 import TestemunhoCard from "../../Components/TestemunhoCard/TestemunhoCard";
 import ServicoCard from "../../Components/ServicoCard/ServicoCard";
 import HeaderMobile from "../../Components/HeaderMobile/HeaderMobile";
+import { useTranslation } from "react-i18next";
 
 const MainPage = () => {
+   const { t } = useTranslation();
+
    const skillsRef = useRef();
 
    const loc = useLocation();
@@ -128,7 +131,7 @@ const MainPage = () => {
             <div>
                {" "}
                <div id={styles.left}>
-                  <img id={styles.me} src={me} alt="" />
+                  <img id={styles.me} src={me} alt={t("sections.inicio.altImg")} />
                   <i id={styles.iconTop}>
                      <svg viewBox="0 0 123 123" fill="var(--var-cor-decoracao)" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -147,13 +150,13 @@ const MainPage = () => {
                   </i>
                </div>
                <div id={styles.right}>
-                  <h6>👋 Olá, me chamo</h6>
-                  <h3>Renzi Fidele</h3>
+                  <h6>👋 {t("sections.inicio.greet")}</h6>
+                  <h1>Renzi Fidele</h1>
                   <h4>
-                     Sou<span></span>
+                     {t("sections.inicio.im")}
                      <Typewriter
                         options={{
-                           strings: ["um desenvolvedor de front-end", "um programador", "a melhor escolha pra você"],
+                           strings: [t("sections.inicio.typewriter.0"), t("sections.inicio.typewriter.1"), t("sections.inicio.typewriter.2")],
                            autoStart: true,
                            loop: true,
                            delay: 75,
@@ -161,13 +164,10 @@ const MainPage = () => {
                         }}
                      />
                   </h4>
-                  <p>
-                     Posso criar um site do nada, totalmente formado. Eu não uso truques, nem isso é mágica. Eu me especializei em manipular a
-                     própria estrutura da web, suas matérias-primas de HTML, CSS, JavaScript e ReactJs.{" "}
-                  </p>
+                  <p>{t("sections.inicio.bio")}</p>
 
                   <a className={styles.botao} href={curiculo} download={"Renzi Fidele.pdf"} target="_blank" rel="noreferrer">
-                     <BsDownload /> Baixar CV
+                     <BsDownload /> {t("sections.inicio.cta")}
                   </a>
                </div>
             </div>
