@@ -33,13 +33,12 @@ import "swiper/css/pagination";
 
 import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
-
-import data from "./useData";
+import useData from "./useData";
 
 const MainPage = () => {
    const { t } = useTranslation();
 
-   const { portfolio, servicos, testemunhos } = data();
+   const { portfolio, servicos, testemunhos } = useData();
 
    const skillsRef = useRef();
 

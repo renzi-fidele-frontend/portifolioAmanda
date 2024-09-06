@@ -5,11 +5,11 @@ import ProjectModal from "../../Components/ProjectModal/ProjectModal";
 import HeaderMobile from "../../Components/HeaderMobile/HeaderMobile";
 import { useNavigate } from "react-router-dom";
 
-import data from "../MainPage/useData";
+import useData from "../MainPage/useData";
 
 const Portfolio = () => {
    const navegar = useNavigate();
-   const { portfolio } = data();
+   const { portfolio } = useData();
 
    // TODO: Atualizar os meus projetos mais recentes, neste portfólio
    useEffect(() => {
