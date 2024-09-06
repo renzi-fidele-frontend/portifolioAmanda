@@ -38,9 +38,15 @@
    font-weight: 400;
 }
 
-.langCt span:hover {
+.langCt p {
+   color: #868686;
+}
+
+.langCt span:hover,
+.langAtivo {
    font-weight: 800;
    cursor: pointer;
+   color: var(--var-cor-texto);
 }
 
 #logo {

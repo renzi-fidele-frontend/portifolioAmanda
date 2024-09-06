@@ -5,6 +5,8 @@ import { IoHome } from "react-icons/io5";
 import { BsPersonFill, BsBriefcaseFill, BsGrid1X2Fill, BsTelephoneFill, BsGlobe } from "react-icons/bs";
 import logo from "../../Images/lg.png";
 import { NavValue } from "../../Context/NavContext";
+import { LangValue } from "../../Context/LangContext";
+import i18n from "../../i18n/i18n";
 
 const LeftNav = () => {
    //  Estilo de NavLink ativo
@@ -16,12 +18,23 @@ const LeftNav = () => {
 
    const navRef = useRef();
 
+   const lang = LangValue();
+
+   useEffect(() => {
+      console.log(lang.idioma);
+   }, [lang]);
+
    //  Contexto da nav
    const navAtivo = NavValue();
 
    useEffect(() => {
       navAtivo.nav === true ? navRef.current.classList.toggle(styles.ativo) : navRef.current.classList.remove(styles.ativo);
    }, [navAtivo.nav]);
+
+   i18n.on("languageChanged", (lng) => lang.setIdioma(lng));
+   function mudarIdioma(idioma) {
+      i18n.changeLanguage(idioma);
+   }
 
    return (
       <div id={styles.container} ref={navRef}>
@@ -53,7 +66,13 @@ const LeftNav = () => {
                <div className={styles.langCt}>
                   <BsGlobe />
                   <p>
-                     <span>EN</span> / <span>PT</span>
+                     <span onClick={() => mudarIdioma("en")} className={lang.idioma === "en" && styles.langAtivo}>
+                        EN
+                     </span>{" "}
+                     /{" "}
+                     <span onClick={() => mudarIdioma("pt")} className={lang.idioma === "pt" && styles.langAtivo}>
+                        PT
+                     </span>
                   </p>
                </div>
             </ul>
