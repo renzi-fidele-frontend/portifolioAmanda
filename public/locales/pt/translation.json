@@ -24,6 +24,35 @@
          ],
          "skills": "Habilidades",
          "altPic": "Foto de Renzi Fidele no formato passaporte"
+      },
+      "services": {
+         "tit": "Meus serviços",
+         "array": [
+            {
+               "titulo": "Criação de Landing Page",
+               "descricao": "Páginas otimizadas que convertem. Design atraente e focado em resultados."
+            },
+            {
+               "titulo": "Desenvolvimento Web",
+               "descricao": "Soluções web personalizadas para impulsionar seu negócio utilizando as melhores tecnologias do mercado."
+            },
+            {
+               "titulo": "Web design",
+               "descricao": "Designs modernos e intuitivos que cativam e envolvem seu público para garantir conversão e confiança."
+            },
+            {
+               "titulo": "Gestão de tráfego",
+               "descricao": "Aumente sua visibilidade e resultados com estratégias eficazes de marketing digital."
+            },
+            {
+               "titulo": "Copywriting",
+               "descricao": "Mensagens persuasivas que impactam seu público-alvo e impulsionam as conversões."
+            },
+            {
+               "titulo": "Edição de vídeo",
+               "descricao": "Transforme suas ideias em vídeos cativantes e profissionais com efeitos impressionantes com o Filmora."
+            }
+         ]
       }
    }
 }

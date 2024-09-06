@@ -1,7 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import styles from "./MainPage.module.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import ProjectModal from "../../Components/ProjectModal/ProjectModal";
+import ProjectCard from "../../Components/ProjectCard/ProjectCard";
+import TestemunhoCard from "../../Components/TestemunhoCard/TestemunhoCard";
+import ServicoCard from "../../Components/ServicoCard/ServicoCard";
+import HeaderMobile from "../../Components/HeaderMobile/HeaderMobile";
 
 import me from "../../Images/me1.gif";
 import crazy from "../../Images/meReal.gif";
@@ -28,15 +32,14 @@ import "swiper/css/autoplay";
 import "swiper/css/pagination";
 
 import emailjs from "@emailjs/browser";
-import { portfolio, servicos, testemunhos } from "./data";
-import ProjectCard from "../../Components/ProjectCard/ProjectCard";
-import TestemunhoCard from "../../Components/TestemunhoCard/TestemunhoCard";
-import ServicoCard from "../../Components/ServicoCard/ServicoCard";
-import HeaderMobile from "../../Components/HeaderMobile/HeaderMobile";
 import { useTranslation } from "react-i18next";
+
+import data from "./useData";
 
 const MainPage = () => {
    const { t } = useTranslation();
+
+   const { portfolio, servicos, testemunhos } = data();
 
    const skillsRef = useRef();
 
@@ -356,7 +359,7 @@ const MainPage = () => {
             id={styles.servicos}
          >
             <h2 className={styles.titulo2}>
-               <span>Meus serviços</span>
+               <span>{t("sections.services.tit")}</span>
             </h2>
 
             <div id={styles.grelha}>
