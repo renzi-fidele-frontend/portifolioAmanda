@@ -17,11 +17,13 @@
 #nav ul {
    padding: 0.7em;
    border-top: 1px #e1e3e1 solid;
+   display: flex;
+   flex-direction: column;
+   gap: 1.4rem;
 }
 
 #nav ul a,
 .langCt {
-   margin-bottom: 1em;
    color: var(--var-cor-texto);
    display: flex;
    align-items: center;
