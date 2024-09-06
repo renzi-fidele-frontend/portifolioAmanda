@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import LeftNav from "./Components/LeftNav/LeftNav";
 import "./App.css";
 import { NavProvider } from "./Context/NavContext";
@@ -9,13 +9,14 @@ function App() {
 
    // TODO: Adicionar modo de idiomas em PT / EN
 
-
    return (
       <NavProvider value={{ nav, setNav }}>
-         <div id="App">
-            <LeftNav />
-            <Outlet />
-         </div>
+         <Suspense fallback={<p>Loading...</p>}>
+            <div id="App">
+               <LeftNav />
+               <Outlet />
+            </div>
+         </Suspense>
       </NavProvider>
    );
 }
