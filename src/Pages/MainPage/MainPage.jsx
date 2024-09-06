@@ -184,31 +184,28 @@ const MainPage = () => {
             <div id={styles.left}>
                <div id={styles.secaoSobre}>
                   <h2 className={styles.titulo1}>
-                     <span>Sobre Mim</span>
+                     <span>{t("sections.sobre.h2")}</span>
                   </h2>
-                  <h6>Meu nome é Renzi Fidele</h6>
-                  <h5>Eu estou disponível para colaborar em projetos Web</h5>
-                  <p>
-                     Nascido em 2001, sou um desenvolvedor de front-end apaixonado por transformar ideias em realidade digital. Com uma
-                     mentalidade orientada para a excelência, estou comprometido em aprimorar minhas habilidades constantemente.
-                  </p>
+                  <h6>{t("sections.sobre.h6")}</h6>
+                  <h5>{t("sections.sobre.h5")}</h5>
+                  <p>{t("sections.sobre.p")}</p>
                   <div id={styles.linha}>
                      <div>
                         <span>20+</span>
                         <p>
-                           Projetos <br /> Completados.
+                           {t("sections.sobre.projects.0")} <br /> {t("sections.sobre.projects.1")}.
                         </p>
                      </div>
                      <div>
                         <span>13</span>
                         <p>
-                           Clientes <br /> Satisfeitos.
+                           {t("sections.sobre.clients.0")} <br /> {t("sections.sobre.clients.1")}.
                         </p>
                      </div>
                   </div>
                </div>
                <div id={styles.secaoXP}>
-                  <h2 className={styles.titulo1}>Experiência</h2>
+                  <h2 className={styles.titulo1}>{t("sections.sobre.xp")}</h2>
                   <div>
                      <div className={styles.cardXP}>
                         <div id={styles.leftCard}>
@@ -219,11 +216,7 @@ const MainPage = () => {
                         <div id={styles.rightCard}>
                            <span>2022 - Present</span>
                            <h5>Web Freelancer - Workana</h5>
-                           <p>
-                              Como freelancer na Workana, ofereço serviços profissionais na área de desenvolvimento web com 1 ano de experiência
-                              principalmente em Wordpress(elementor). Trabalho com dedicação e comprometimento para atender a necessidade de cada
-                              cliente, buscando sempre a excelência no resultado final.
-                           </p>
+                           <p>{t("sections.sobre.xpInfo.0")}.</p>
                         </div>
                      </div>
                      <div className={styles.cardXP}>
@@ -234,12 +227,8 @@ const MainPage = () => {
                         </div>
                         <div id={styles.rightCard}>
                            <span>2022 - Present</span>
-                           <h5>Desenvolvedor FrontEnd - ANOVAFASE</h5>
-                           <p>
-                              Atual desenvolvedor front-end para uma equipe de marketing digital chamada "ANF", "A nova Fase". Eu construí muitas
-                              páginas diferentes, usei diferentes estratégias de interface do usuário/ux, para tornar as páginas de destino
-                              altamente conversíveis.
-                           </p>
+                           <h5>Frontend Developer - ANOVAFASE</h5>
+                           <p>{t("sections.sobre.xpInfo.1")}.</p>
                         </div>
                      </div>
                      <div className={styles.cardXP}>
@@ -250,13 +239,8 @@ const MainPage = () => {
                         </div>
                         <div id={styles.rightCard}>
                            <span>2022 - 2023</span>
-                           <h5>Desenvolvedor FrontEnd - Nosso ads</h5>
-                           <p>
-                              Fui responsável por construir um serviço de cartão de visitas personalizado utilizando o poderoso plugin Elementor
-                              do WordPress. Com habilidades de design e conhecimentos avançados do Elementor, criei layouts atrativos e
-                              funcionais que ajudaram nossos clientes a se destacarem no mundo digital. Tive a oportunidade de expandir minha
-                              expertise em marketing digital e gestão de tráfego por meio do Facebook Ads.
-                           </p>
+                           <h5>Frontend Developer - Nosso ads</h5>
+                           <p>{t("sections.sobre.xpInfo.2")}.</p>
                         </div>
                      </div>
                   </div>
@@ -265,7 +249,7 @@ const MainPage = () => {
             <div id={styles.right}>
                <div ref={skillsRef}>
                   <div className={styles.duasCol}>
-                     <img src={crazy} alt="" />
+                     <img src={crazy} alt={t("sections.sobre.altPic")} />
                      <div>
                         <a href="https://www.linkedin.com/in/renzi-fidele-4886151bb/" target="_blank" rel="noreferrer">
                            <AiFillLinkedin />
@@ -285,12 +269,12 @@ const MainPage = () => {
                         </a>
                         <a href={curiculo} target="_blank" rel="noreferrer" download={"Renzi Fidele.pdf"}>
                            <FaFilePdf />
-                           <span>Currículo</span>
+                           <span>Curriculum</span>
                         </a>
                      </div>
                   </div>
                   <div id={styles.skills}>
-                     <h2 className={styles.titulo1}>Habilidades</h2>
+                     <h2 className={styles.titulo1}>{t("sections.sobre.skills")}.</h2>
                      <div>
                         <div id={styles.skillLine}>
                            <span>HTML5</span>
