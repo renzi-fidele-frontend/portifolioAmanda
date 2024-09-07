@@ -107,7 +107,7 @@ const MainPage = () => {
          .sendForm("service_ru19i6o", "template_x79mlbg", formRef.current, "psXngkmWfHJgvC3ju")
          .then(() => {
             alert("Email enviado com sucesso");
-            
+
          })
          .catch((err) => {
             console.log(`Ops, houve erro: ${err}, ao enviar a msg do form`);
@@ -611,7 +611,7 @@ const MainPage = () => {
                      <AiOutlineWhatsApp />
                   </a>
                </div>
-               <span>© 2023 copyright - Todos os direitos reservados</span>
+               <span>© 2024 copyright - {t("sections.footer.span")}</span>
             </div>
          </footer>
       </div>

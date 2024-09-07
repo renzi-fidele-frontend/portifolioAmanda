@@ -107,6 +107,9 @@
             "msg": ["Mensagem", "Detalhe o teu desejo aqui"],
             "btn": "Enviar mensagem"
          }
+      },
+      "footer": {
+         "span": "Todos os direitos reservados"
       }
    }
 }
