@@ -6,14 +6,14 @@
          "im": "Sou",
          "altImg": "Illustração de Renzi Fidele",
          "typewriter": ["um desenvolvedor de front-end", "um programador", "a melhor escolha pra você"],
-         "bio": "Posso criar um site do nada, totalmente formado. Eu não uso truques, nem isso é mágica. Eu me especializei em manipular a própria estrutura da web, suas matérias-primas de HTML, CSS, JavaScript e ReactJs.",
+         "bio": "Sou um desenvolvedor fullstack especializado no stack MERN, com foco no frontend utilizando React.js. Além disso, ofereço serviços de freelancing com WordPress e Elementor, seja para um projeto complexo em React.js ou um site rápido e otimizado em WordPress, eu estou aqui para entregar soluções que realmente funcionam.",
          "cta": "Baixar CV"
       },
       "sobre": {
          "h2": "Sobre Mim",
          "h6": "Meu nome é Renzi Fidele",
          "h5": "Eu estou disponível para colaborar em projetos Web",
-         "p": "Nascido em 2001, sou um desenvolvedor de front-end apaixonado por transformar ideias em realidade digital. Com uma mentalidade orientada para a excelência, estou comprometido em aprimorar minhas habilidades constantemente.",
+         "p": "Nascido em 2001, sou um desenvolvedor de front-end apaixonado por transformar ideias em realidade digital. Com uma mentalidade positiva, estou comprometido em aprimorar minhas habilidades constantemente.",
          "projects": ["Projetos", "Completados"],
          "clients": ["Clientes", "Satisfeitos"],
          "xp": "Experiência",
@@ -89,6 +89,24 @@
                "profissao": "Ceo no Nosso ads"
             }
          ]
+      },
+      "contato": {
+         "tit": "Vamos discutir acerca do seu projecto",
+         "infoCards": [
+            { "h5": "Converse comigo", "p": "Estou aqui para te ajudar" },
+            { "h5": "Encontre-me", "p": "Venha dizer Hello em meu escritório" },
+            { "h5": "Ligue pra mim", "p": "Disponível a qualquer momento" }
+         ],
+         "tit2": "Alguma idéia? Eu tenho a skill.",
+         "tit3": "Vamos nos unir.",
+         "p": "Me conte um pouco sobre você e o que tens em mente.",
+         "form": {
+            "nome": ["Primeiro nome", "Nome"],
+            "email": ["Seu Email", "Email"],
+            "assunto": ["Assunto", "Assunto"],
+            "msg": ["Sua mensagem", "Mensagem"],
+            "btn": "Enviar mensagem"
+         }
       }
    }
 }

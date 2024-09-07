@@ -512,7 +512,7 @@ const MainPage = () => {
             id={styles.contacto}
          >
             <div id={styles.left}>
-               <h3>Vamos discutir acerca do seu projecto</h3>
+               <h3>{t("sections.contato.tit")}</h3>
                <div id={styles.iconsCont}>
                   <div>
                      <div id={styles.left}>
@@ -521,8 +521,8 @@ const MainPage = () => {
                         </i>
                      </div>
                      <div id={styles.right}>
-                        <h5>Converse comigo</h5>
-                        <p>Estou aqui para te ajudar.</p>
+                        <h5>{t("sections.contato.infoCards.0.h5")}</h5>
+                        <p>{t("sections.contato.infoCards.0.p")}</p>
                         <span>renzifidele2001@gmail.com</span>
                      </div>
                   </div>
@@ -533,8 +533,8 @@ const MainPage = () => {
                         </i>
                      </div>
                      <div id={styles.right}>
-                        <h5>Encontre-me</h5>
-                        <p>Venha dizer Hello em meu escritório.</p>
+                        <h5>{t("sections.contato.infoCards.1.h5")}</h5>
+                        <p>{t("sections.contato.infoCards.1.p")}</p>
                         <span>Maputo, Moçambique</span>
                      </div>
                   </div>
@@ -545,13 +545,14 @@ const MainPage = () => {
                         </i>
                      </div>
                      <div id={styles.right}>
-                        <h5>Ligue pra mim</h5>
-                        <p>Disponível a qualquer momento.</p>
+                        <h5>{t("sections.contato.infoCards.2.h5")}</h5>
+                        <p>{t("sections.contato.infoCards.2.p")}</p>
                         <span>+258 85 6261 526</span>
                      </div>
                   </div>
                </div>
                <div id={styles.locationCont}>
+                  {/*  TODO: Mapa por idioma */}
                   <iframe
                      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d557.9820380597123!2d32.54581336066112!3d-25.876657213551134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-PT!2smz!4v1688428470244!5m2!1spt-PT!2smz"
                      width="100%"
@@ -565,29 +566,29 @@ const MainPage = () => {
             </div>
             <div id={styles.right}>
                <h6>
-                  Alguma idéia? Eu tenho a skill.
+                  {t("sections.contato.tit2")}
                   <br />
-                  Vamos nos unir.
+                  {t("sections.contato.tit3")}
                </h6>
-               <p>Me conte um pouco sobre você e o que tens em mente.</p>
+               <p>{t("sections.contato.p")}</p>
                <form ref={formRef}>
                   <fieldset id={styles.fieldNome}>
-                     <label>Primeiro nome</label>
-                     <input type="text" name="nome" placeholder="Nome * " />
+                     <label>{t("sections.contato.form.nome.0")}</label>
+                     <input type="text" name="nome" placeholder={`${t("sections.contato.form.nome.1")} *`} />
                   </fieldset>
                   <fieldset id={styles.fieldEmail}>
-                     <label>Seu Email</label>
-                     <input type="text" name="email" placeholder="Email *" />
+                     <label>{t("sections.contato.form.email.0")}</label>
+                     <input type="text" name="email" placeholder={`${t("sections.contato.form.email.1")} *`} />
                   </fieldset>
                   <fieldset id={styles.fieldAssunto}>
-                     <label>Assunto</label>
-                     <input type="text" name="assunto" placeholder="Assunto *" />
+                     <label>{t("sections.contato.form.assunto.0")}</label>
+                     <input type="text" name="assunto" placeholder={`${t("sections.contato.form.assunto.1")} *`} />
                   </fieldset>
                   <fieldset id={styles.fieldMensagem}>
-                     <label>Sua mensagem</label>
-                     <textarea name="mensagem" placeholder="Mensagem *" />
+                     <label>{t("sections.contato.form.msg.0")}</label>
+                     <textarea name="mensagem" placeholder={`${t("sections.contato.form.msg.1")} *`} />
                   </fieldset>
-                  <button onClick={sendMessage}>Enviar mensagem</button>
+                  <button onClick={sendMessage}>{t("sections.contato.form.btn")}</button>
                </form>
             </div>
          </section>

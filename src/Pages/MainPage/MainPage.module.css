@@ -688,7 +688,7 @@
       padding-inline: 6%;
    }
 
-   #inicio #right > h3 {
+   #inicio #right > h1 {
       font-size: 50px;
    }
 
@@ -732,7 +732,7 @@
       margin-bottom: 16px;
    }
 
-   #inicio #right > h3 {
+   #inicio #right > h1 {
       font-size: 60;
       text-shadow: initial;
       letter-spacing: 2px;
@@ -796,7 +796,7 @@
 }
 
 @media screen and (max-width: 750px) {
-   #inicio #right > h3 {
+   #inicio #right > h1 {
       font-size: 42px;
    }
 
@@ -845,7 +845,7 @@
       width: 100%;
    }
 
-   #inicio #right > h3 {
+   #inicio #right > h1 {
       font-size: 35px;
    }
 
@@ -993,7 +993,7 @@
       font-size: 16px;
    }
 
-   #inicio #right > h3 {
+   #inicio #right > h1 {
       font-size: 30px;
    }
 
