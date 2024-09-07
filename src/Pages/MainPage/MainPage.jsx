@@ -107,6 +107,7 @@ const MainPage = () => {
          .sendForm("service_ru19i6o", "template_x79mlbg", formRef.current, "psXngkmWfHJgvC3ju")
          .then(() => {
             alert("Email enviado com sucesso");
+            
          })
          .catch((err) => {
             console.log(`Ops, houve erro: ${err}, ao enviar a msg do form`);
@@ -571,24 +572,24 @@ const MainPage = () => {
                   {t("sections.contato.tit3")}
                </h6>
                <p>{t("sections.contato.p")}</p>
-               <form ref={formRef}>
+               <form onSubmit={sendMessage} ref={formRef}>
                   <fieldset id={styles.fieldNome}>
                      <label>{t("sections.contato.form.nome.0")}</label>
-                     <input type="text" name="nome" placeholder={`${t("sections.contato.form.nome.1")} *`} />
+                     <input required type="text" name="nome" placeholder={`${t("sections.contato.form.nome.1")} *`} />
                   </fieldset>
                   <fieldset id={styles.fieldEmail}>
                      <label>{t("sections.contato.form.email.0")}</label>
-                     <input type="text" name="email" placeholder={`${t("sections.contato.form.email.1")} *`} />
+                     <input required type="text" name="email" placeholder={`${t("sections.contato.form.email.1")} *`} />
                   </fieldset>
                   <fieldset id={styles.fieldAssunto}>
                      <label>{t("sections.contato.form.assunto.0")}</label>
-                     <input type="text" name="assunto" placeholder={`${t("sections.contato.form.assunto.1")} *`} />
+                     <input required type="text" name="assunto" placeholder={`${t("sections.contato.form.assunto.1")} *`} />
                   </fieldset>
                   <fieldset id={styles.fieldMensagem}>
                      <label>{t("sections.contato.form.msg.0")}</label>
-                     <textarea name="mensagem" placeholder={`${t("sections.contato.form.msg.1")} *`} />
+                     <textarea required name="mensagem" placeholder={`${t("sections.contato.form.msg.1")} *`} />
                   </fieldset>
-                  <button onClick={sendMessage}>{t("sections.contato.form.btn")}</button>
+                  <button type="submit">{t("sections.contato.form.btn")}</button>
                </form>
             </div>
          </section>
