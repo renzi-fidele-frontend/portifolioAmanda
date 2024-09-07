@@ -37,31 +37,31 @@ const useData = () => {
    const testemunhos = [
       {
          fotoCliente: avatar1,
-         topico: "Professional de excelente qualidade",
-         testemunho: "Eu considero o Renzi muito proativo e super talentoso, cuidou do meu problema num instante",
+         topico: t("sections.testemunhos.array.0.topico"),
+         testemunho: t("sections.testemunhos.array.0.testemunho"),
          nomeCliente: "Amanda Caleiras",
-         profissaoCliente: "Ceo na ANOVAFASE",
+         profissaoCliente: t("sections.testemunhos.array.0.profissao"),
       },
       {
          fotoCliente: avatar2,
-         topico: "Professional de excelente qualidade",
-         testemunho: "Renzi foi super prático, fez um ótimo trabalho em pouquíssimo tempo cobrou um ótimo valor",
+         topico: t("sections.testemunhos.array.1.topico"),
+         testemunho: t("sections.testemunhos.array.1.testemunho"),
          nomeCliente: "Devid Ronald",
-         profissaoCliente: "Cliente no Workana",
+         profissaoCliente: t("sections.testemunhos.array.1.profissao"),
       },
       {
          fotoCliente: avatar3,
-         topico: "Professional de excelente qualidade",
-         testemunho: "Seus serviços foram essenciais para o sucesso do meu projeto online! 💯",
+         topico: t("sections.testemunhos.array.2.topico"),
+         testemunho: t("sections.testemunhos.array.2.testemunho"),
          nomeCliente: "Ermelinda Manuel",
-         profissaoCliente: "Assistente financeira",
+         profissaoCliente: t("sections.testemunhos.array.2.profissao"),
       },
       {
          fotoCliente: avatar4,
-         topico: "Professional de excelente qualidade",
-         testemunho: "Incrível! Contratei o Renzi como freelancer web e fiquei impressionado com seu trabalho! 🚀",
+         topico: t("sections.testemunhos.array.3.topico"),
+         testemunho: t("sections.testemunhos.array.3.testemunho"),
          nomeCliente: "Daniel França",
-         profissaoCliente: "Ceo no Nosso ads",
+         profissaoCliente: t("sections.testemunhos.array.3.profissao"),
       },
    ];
 

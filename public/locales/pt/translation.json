@@ -64,6 +64,31 @@
             { "titulo": "Criptoverso: Site informativo sobre criptomedas", "tipo": "Website" },
             { "titulo": "Site institucional da AMC Contruções", "tipo": "Site institucional" }
          ]
+      },
+      "testemunhos": {
+         "tit": "Testemunhos",
+         "array": [
+            {
+               "topico": "Professional de excelente qualidade",
+               "testemunho": "Eu considero o Renzi muito proativo e super talentoso, cuidou do meu problema num instante",
+               "profissao": "Ceo na ANOVAFASE"
+            },
+            {
+               "topico": "Professional de excelente qualidade",
+               "testemunho": "Renzi foi super prático, fez um ótimo trabalho em pouquíssimo tempo cobrou um ótimo valor",
+               "profissao": "Cliente no Workana"
+            },
+            {
+               "topico": "Professional de excelente qualidade",
+               "testemunho": "Seus serviços foram essenciais para o sucesso do meu projeto online! 💯",
+               "profissao": "Assistente financeira"
+            },
+            {
+               "topico": "Professional de excelente qualidade",
+               "testemunho": "Incrível! Contratei o Renzi como freelancer web e fiquei impressionado com seu trabalho! 🚀",
+               "profissao": "Ceo no Nosso ads"
+            }
+         ]
       }
    }
 }
