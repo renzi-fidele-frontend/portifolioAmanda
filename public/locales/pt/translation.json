@@ -101,10 +101,10 @@
          "tit3": "Vamos nos unir.",
          "p": "Me conte um pouco sobre você e o que tens em mente.",
          "form": {
-            "nome": ["Primeiro nome", "Nome"],
-            "email": ["Seu Email", "Email"],
+            "nome": ["Nome", "Insira o teu nome"],
+            "email": ["Email", "Insira o teu email"],
             "assunto": ["Assunto", "Assunto"],
-            "msg": ["Sua mensagem", "Mensagem"],
+            "msg": ["Mensagem", "Detalhe o teu desejo aqui"],
             "btn": "Enviar mensagem"
          }
       }
