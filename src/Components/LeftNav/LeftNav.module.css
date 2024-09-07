@@ -109,6 +109,16 @@
    }
 }
 
+@media screen and (max-width: 450px) {
+   #nav ul {
+      padding-top: 1rem;
+   }
+
+   #logo > img {
+      margin-bottom: 0;
+   }
+}
+
 @media screen and (max-width: 380px) {
    #nav ul {
       gap: 0.7rem;
