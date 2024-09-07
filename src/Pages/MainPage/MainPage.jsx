@@ -107,7 +107,6 @@ const MainPage = () => {
          .sendForm("service_ru19i6o", "template_x79mlbg", formRef.current, "psXngkmWfHJgvC3ju")
          .then(() => {
             alert("Email enviado com sucesso");
-
          })
          .catch((err) => {
             console.log(`Ops, houve erro: ${err}, ao enviar a msg do form`);
@@ -398,7 +397,7 @@ const MainPage = () => {
             id={styles.portifolio}
          >
             <h2 className={styles.titulo2}>
-               <span>Meu Portifólio</span>
+               <span>{t("sections.portfolio.tit")}</span>
             </h2>
             <div id={styles.grelha}>
                {portfolio.map(
@@ -474,7 +473,7 @@ const MainPage = () => {
             id={styles.testemunhos}
          >
             <h2 className={styles.titulo2}>
-               <span>Testemunhos</span>
+               <span>{t("sections.testemunhos.tit")}</span>
             </h2>
 
             <Swiper
