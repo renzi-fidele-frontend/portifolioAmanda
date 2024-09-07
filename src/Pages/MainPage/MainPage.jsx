@@ -218,7 +218,7 @@ const MainPage = () => {
                         <div id={styles.rightCard}>
                            <span>2022 - Present</span>
                            <h5>Web Freelancer - Workana</h5>
-                           <p>{t("sections.sobre.xpInfo.0")}.</p>
+                           <p>{t("sections.sobre.xpInfo.0")}</p>
                         </div>
                      </div>
                      <div className={styles.cardXP}>
@@ -230,7 +230,7 @@ const MainPage = () => {
                         <div id={styles.rightCard}>
                            <span>2022 - Present</span>
                            <h5>Frontend Developer - ANOVAFASE</h5>
-                           <p>{t("sections.sobre.xpInfo.1")}.</p>
+                           <p>{t("sections.sobre.xpInfo.1")}</p>
                         </div>
                      </div>
                      <div className={styles.cardXP}>
@@ -242,7 +242,7 @@ const MainPage = () => {
                         <div id={styles.rightCard}>
                            <span>2022 - 2023</span>
                            <h5>Frontend Developer - Nosso ads</h5>
-                           <p>{t("sections.sobre.xpInfo.2")}.</p>
+                           <p>{t("sections.sobre.xpInfo.2")}</p>
                         </div>
                      </div>
                   </div>
@@ -276,7 +276,7 @@ const MainPage = () => {
                      </div>
                   </div>
                   <div id={styles.skills}>
-                     <h2 className={styles.titulo1}>{t("sections.sobre.skills")}.</h2>
+                     <h2 className={styles.titulo1}>{t("sections.sobre.skills")}</h2>
                      <div>
                         <div id={styles.skillLine}>
                            <span>HTML5</span>

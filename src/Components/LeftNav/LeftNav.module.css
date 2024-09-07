@@ -83,14 +83,12 @@
 
 @media screen and (max-width: 1033px) {
    #nav > ul > a {
-      margin-bottom: 0.5em;
       font-size: 20px;
    }
 }
 
 @media screen and (max-width: 1033px) {
    #nav > ul > a {
-      margin-bottom: 0.9em;
       font-size: 20px;
    }
 }
@@ -99,9 +97,20 @@
    #container {
       height: fit-content;
       border-radius: 0 0 7px 7px;
+      padding-bottom: 0.5rem;
    }
 
    #nav > ul > a > p {
       font-size: 14px;
+   }
+
+   #nav ul {
+      gap: 0.9rem;
+   }
+}
+
+@media screen and (max-width: 380px) {
+   #nav ul {
+      gap: 0.7rem;
    }
 }

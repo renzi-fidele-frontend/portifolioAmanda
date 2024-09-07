@@ -299,6 +299,7 @@
 /*-----------------Àrea das minhas habilidades----------------  */
 #skills {
    padding-bottom: 2%;
+   padding-top: 2.2rem;
 }
 
 #skillLine {
@@ -638,6 +639,10 @@
       bottom: -33px;
       left: -33px;
    }
+
+   #skills {
+      padding-top: 0;
+   }
 }
 
 @media screen and (max-width: 1300px) {
@@ -935,6 +940,10 @@
 
    .swiperMobileCt {
       display: initial !important;
+   }
+
+   #skills {
+      padding-top: 1.5rem;
    }
 }
 
