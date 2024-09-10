@@ -111,5 +111,6 @@
       "footer": {
          "span": "All rights reserved"
       }
-   }
+   },
+   "modal": { "tipo": "Type", "tools": "Tools", "plat": "Host service", "repo": "Repository", "btn": "Access", "link": "Live preview" }
 }
