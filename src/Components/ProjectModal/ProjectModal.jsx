@@ -3,10 +3,12 @@ import styles from "./ProjectModal.module.css";
 import ReactModal from "react-modal";
 import { useLocation, useNavigate } from "react-router-dom";
 import { FaWindowClose, FaGithub } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 ReactModal.setAppElement("#root");
 
 const ProjectModal = () => {
+   const { t } = useTranslation();
    const [isOpen, setIsOpen] = useState(false);
 
    const loc = useLocation();
@@ -44,41 +46,40 @@ const ProjectModal = () => {
                <div className={styles.right}>
                   <h5>{loc.state.titulo}</h5>
                   <div id={styles.detailsContainer}>
-                     {/*Tipo */}
                      <div>
-                        <h6>Tipo:</h6>
+                        <h6>{t("modal.tipo")}:</h6>
                         <p>{loc.state.tipo}</p>
                      </div>
-                     {/*Linguagens */}
+
                      <div>
-                        <h6>Ferramentas:</h6>
+                        <h6>{t("modal.tools")}:</h6>
                         <p>{loc.state.linguagens}</p>
                      </div>
-                     {/*Plataforma */}
+
                      <div>
-                        <h6>Plataforma:</h6>
+                        <h6>{t("modal.plat")}:</h6>
                         <p>{loc.state.plataforma}</p>
                      </div>
-                     {/*Repositório */}
+
                      <div id={styles.gitCt}>
-                        <h6>Repositório:</h6>
+                        <h6>{t("modal.repo")}:</h6>
                         <button
                            onClick={() => {
                               window.open(loc.state.repositorio, "_blank", "rel=noopener noreferrer");
                            }}
                            className={styles.btnGit}
                         >
-                           <FaGithub /> Acessar
+                           <FaGithub /> {t("modal.btn")}
                         </button>
                      </div>
-                     {/*País */}
+
                      <div>
-                        <h6>Url do projeto:</h6>
+                        <h6>{t("modal.link")}:</h6>
                         <p>{loc.state.link}</p>
                      </div>
                   </div>
                </div>
-               <FaWindowClose onClick={fechar}>Fechar</FaWindowClose>
+               <FaWindowClose onClick={fechar} />
             </ReactModal>
          ) : undefined}
       </>

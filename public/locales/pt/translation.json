@@ -111,5 +111,6 @@
       "footer": {
          "span": "Todos os direitos reservados"
       }
-   }
+   },
+   "modal": {"tipo": "Tipo", "tools": "Ferramentas", "plat": "Plataforma", "repo": "Repositório", "btn": "Acessar", "link": "Url do projeto"}
 }
