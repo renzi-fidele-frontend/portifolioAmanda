@@ -11,7 +11,6 @@ const Portfolio = () => {
    const navegar = useNavigate();
    const { portfolio } = useData();
 
-   // TODO: Atualizar os meus projetos mais recentes, neste portfólio
    useEffect(() => {
       window.scrollTo({
          top: 0,

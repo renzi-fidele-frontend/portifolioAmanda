@@ -8,7 +8,6 @@ import { LangProvider } from "./Context/LangContext";
 function App() {
    const [nav, setNav] = useState(false);
    const [idioma, setIdioma] = useState("pt");
-   // TODO: Adicionar modo de idiomas em PT / EN
 
    return (
       <LangProvider value={{ idioma, setIdioma }}>
