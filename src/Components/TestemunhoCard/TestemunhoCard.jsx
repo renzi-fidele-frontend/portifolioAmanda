@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./TestemunhoCard.module.css";
 
 const TestemunhoCard = ({ fotoCliente, topico, testemunho, nomeCliente, profissaoCliente }) => {

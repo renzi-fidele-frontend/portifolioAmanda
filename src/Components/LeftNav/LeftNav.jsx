@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import styles from "./LeftNav.module.css";
 import { Link, NavLink } from "react-router-dom";
 import { IoHome } from "react-icons/io5";
-import { BsPersonFill, BsBriefcaseFill, BsGrid1X2Fill, BsTelephoneFill, BsGlobe } from "react-icons/bs";
+import { BsPersonFill, BsBriefcaseFill, BsGrid1X2Fill, BsGlobe } from "react-icons/bs";
 import logo from "../../Images/lg.png";
 import { NavValue } from "../../Context/NavContext";
 import { LangValue } from "../../Context/LangContext";
@@ -60,10 +60,6 @@ const LeftNav = () => {
                <NavLink style={() => (location.hash === "#portifolio" ? activeStyle : undefined)} to="/#portifolio">
                   <BsGrid1X2Fill />
                   <p>{t("navbar.3")}</p>
-               </NavLink>
-               <NavLink style={() => (location.hash === "#contacto" ? activeStyle : undefined)} to="/#contacto">
-                  <BsTelephoneFill />
-                  <p>{t("navbar.4")}</p>
                </NavLink>
                <div className={styles.langCt}>
                   <BsGlobe />

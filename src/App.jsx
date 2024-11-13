@@ -4,6 +4,7 @@ import "./App.css";
 import { NavProvider } from "./Context/NavContext";
 import { Outlet } from "react-router-dom";
 import { LangProvider } from "./Context/LangContext";
+import "react-tabs/style/react-tabs.css";
 
 function App() {
    const [nav, setNav] = useState(false);

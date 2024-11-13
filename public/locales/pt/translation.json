@@ -4,26 +4,25 @@
       "inicio": {
          "greet": "Olá, me chamo",
          "im": "Sou",
-         "altImg": "Illustração de Renzi Fidele",
-         "typewriter": ["um desenvolvedor de front-end", "um programador", "a melhor escolha pra você"],
-         "bio": "Sou um desenvolvedor fullstack especializado no stack MERN, com foco no frontend utilizando React.js. Além disso, ofereço serviços de freelancing com WordPress e Elementor, seja para um projeto complexo em React.js ou um site rápido e otimizado em WordPress, eu estou aqui para entregar soluções que realmente funcionam.",
-         "cta": "Baixar CV"
+         "altImg": "Illustração de Amanda Caleiras",
+         "typewriter": ["uma desenvolvedora de front-end", "uma freelancer de qualidade", "a melhor escolha pra você"],
+         "bio": "E aí! Sou a Amanda, uma freelancer que adora encarar desafios e busca sempre coisas novas. Com habilidades afiadas e uma mente criativa, tô aqui pra te ajudar com soluções personalizadas e resultados incríveis pro teu projeto.",
+         "cta": "Me Contrate"
       },
       "sobre": {
          "h2": "Sobre Mim",
-         "h6": "Meu nome é Renzi Fidele",
-         "h5": "Eu estou disponível para colaborar em projetos Web",
-         "p": "Nascido em 2001, sou um desenvolvedor de front-end apaixonado por transformar ideias em realidade digital. Com uma mentalidade positiva, estou comprometido em aprimorar minhas habilidades constantemente.",
+         "h6": "Meu nome é Amanda Caleiras",
+         "h5": "Eu forneço serviços de freelancing de qualidade",
+         "p": "Eu e minha equipe nos dedicamos a fornecer serviços de alta qualidade que atendem às necessidades específicas de cada cliente. Com uma equipe talentosa e diversificada, oferecemos expertise em desenvolvimento frontend, design gráfico, edição de vídeo e marketing digital.",
          "projects": ["Projetos", "Completados"],
          "clients": ["Clientes", "Satisfeitos"],
          "xp": "Experiência",
          "xpInfo": [
-            "Como freelancer na Workana, ofereço serviços profissionais na área de desenvolvimento web com 1 ano de experiência principalmente em Wordpress(elementor). Trabalho com dedicação e comprometimento para atender a necessidade de cada cliente, buscando sempre a excelência no resultado final.",
-            "Atual desenvolvedor front-end para uma equipe de marketing digital chamada 'ANF', 'A nova Fase'. Eu construí muitas páginas diferentes, usei diferentes estratégias de interface do usuário/ux, para tornar as páginas de destino altamente conversíveis.",
-            "Fui responsável por construir um serviço de cartão de visitas personalizado utilizando o poderoso plugin Elementor do WordPress. Com habilidades de design e conhecimentos avançados do Elementor, criei layouts atrativos e funcionais que ajudaram nossos clientes a se destacarem no mundo digital. Tive a oportunidade de expandir minha expertise em marketing digital e gestão de tráfego por meio do Facebook Ads."
+            "Ao longo da minha jornada na Workana, tive a oportunidade de colaborar com diversos clientes e projetos, desenvolvendo soluções inovadoras e personalizadas. A plataforma me permitiu ampliar meu portfólio, trabalhando em áreas como frontend, design gráfico, edição de vídeo e marketing digital. Cada experiência me ajudou a aprimorar minhas habilidades e a entregar resultados excepcionais que superaram as expectativas dos clientes.",
+            "Minha experiência no Upwork foi marcada por colaborações internacionais que enriqueceram minha perspectiva profissional. Trabalhei com clientes de diferentes partes do mundo, oferecendo soluções criativas e técnicas em frontend, design gráfico, edição de vídeo e marketing digital. A diversidade de projetos e a demanda por alta qualidade me impulsionaram a melhorar continuamente e a entregar trabalhos que fazem a diferença."
          ],
          "skills": "Habilidades",
-         "altPic": "Foto de Renzi Fidele no formato passaporte"
+         "altPic": "Foto de Amanda Caleiras no formato passaporte"
       },
       "services": {
          "tit": "Meus serviços",
@@ -89,24 +88,6 @@
                "profissao": "Ceo no Nosso ads"
             }
          ]
-      },
-      "contato": {
-         "tit": "Vamos discutir acerca do seu projecto",
-         "infoCards": [
-            { "h5": "Converse comigo", "p": "Estou aqui para te ajudar" },
-            { "h5": "Encontre-me", "p": "Venha dizer Hello em meu escritório" },
-            { "h5": "Ligue pra mim", "p": "Disponível a qualquer momento" }
-         ],
-         "tit2": "Alguma idéia? Eu tenho a skill.",
-         "tit3": "Vamos nos unir.",
-         "p": "Me conte um pouco sobre você e o que tens em mente.",
-         "form": {
-            "nome": ["Nome", "Insira o teu nome"],
-            "email": ["Email", "Insira o teu email"],
-            "assunto": ["Assunto", "Assunto"],
-            "msg": ["Mensagem", "Detalhe o teu desejo aqui"],
-            "btn": "Enviar mensagem"
-         }
       },
       "footer": {
          "span": "Todos os direitos reservados"

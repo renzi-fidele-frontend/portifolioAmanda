@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./ProjectCard.module.css";
 import { ImNewTab } from "react-icons/im";
 import { Link } from "react-router-dom";

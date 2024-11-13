@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./ServicoCard.module.css";
 
 const ServicoCard = ({ icone, titulo, descricao }) => {

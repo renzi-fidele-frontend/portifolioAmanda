@@ -7,17 +7,13 @@ import TestemunhoCard from "../../Components/TestemunhoCard/TestemunhoCard";
 import ServicoCard from "../../Components/ServicoCard/ServicoCard";
 import HeaderMobile from "../../Components/HeaderMobile/HeaderMobile";
 
-import me from "../../Images/me1.gif";
-import crazy from "../../Images/meReal.gif";
-import curiculo from "../../../src/Images/Renzi_Fidele.pdf";
+import me from "../../Images/AmandaCaleiras.jpg";
+import crazy from "../../Images/AmandaCaleiras3.jpg";
+import logo from "../../Images/lg.png";
 
 //  Icons
-import { BiSolidMessageAltDetail, BiSolidPhoneCall } from "react-icons/bi";
-import { FaFilePdf, FaPlus } from "react-icons/fa";
-import { ImLocation2 } from "react-icons/im";
-import { BsDownload } from "react-icons/bs";
-import { AiOutlineWhatsApp, AiFillLinkedin, AiFillGithub, AiOutlineMail, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
-import { MdOutlineWorkHistory } from "react-icons/md";
+import { FaPlus } from "react-icons/fa";
+import { MdOutlineWorkHistory, MdWorkOutline } from "react-icons/md";
 
 //  Typewriter
 import Typewriter from "typewriter-effect";
@@ -31,14 +27,14 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 
-import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
 import useData from "./useData";
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 
 const MainPage = () => {
    const { t } = useTranslation();
 
-   const { portfolio, servicos, testemunhos } = useData();
+   const { portfolioInstitucional, portfolioLandingPage, portfolioReact, servicos, testemunhos } = useData();
 
    const skillsRef = useRef();
 
@@ -98,21 +94,6 @@ const MainPage = () => {
       }
    }, [loc.hash]);
 
-   const formRef = useRef();
-
-   //  Enviar mensagem para email
-   async function sendMessage(e) {
-      e.preventDefault();
-      emailjs
-         .sendForm("service_ru19i6o", "template_x79mlbg", formRef.current, "psXngkmWfHJgvC3ju")
-         .then(() => {
-            alert("Email enviado com sucesso");
-         })
-         .catch((err) => {
-            console.log(`Ops, houve erro: ${err}, ao enviar a msg do form`);
-         });
-   }
-
    return (
       <div id={styles.container}>
          {/*Header invisivel */}
@@ -153,7 +134,7 @@ const MainPage = () => {
                </div>
                <div id={styles.right}>
                   <h6>👋 {t("sections.inicio.greet")}</h6>
-                  <h1>Renzi Fidele</h1>
+                  <h1>Amanda Caleiras</h1>
                   <h4>
                      {t("sections.inicio.im")}
                      <Typewriter
@@ -168,8 +149,13 @@ const MainPage = () => {
                   </h4>
                   <p>{t("sections.inicio.bio")}</p>
 
-                  <a className={styles.botao} href={curiculo} download={"Renzi Fidele.pdf"} target="_blank" rel="noreferrer">
-                     <BsDownload /> {t("sections.inicio.cta")}
+                  <a
+                     className={styles.botao}
+                     href="https://www.workana.com/freelancer/4b3e7a32256b93024c653db2d86a8dfe"
+                     target="_blank"
+                     rel="noreferrer"
+                  >
+                     <MdWorkOutline /> {t("sections.inicio.cta")}
                   </a>
                </div>
             </div>
@@ -233,18 +219,6 @@ const MainPage = () => {
                            <p>{t("sections.sobre.xpInfo.1")}</p>
                         </div>
                      </div>
-                     <div className={styles.cardXP}>
-                        <div id={styles.leftCard}>
-                           <i>
-                              <MdOutlineWorkHistory />
-                           </i>
-                        </div>
-                        <div id={styles.rightCard}>
-                           <span>2022 - 2023</span>
-                           <h5>Frontend Developer - Nosso ads</h5>
-                           <p>{t("sections.sobre.xpInfo.2")}</p>
-                        </div>
-                     </div>
                   </div>
                </div>
             </div>
@@ -252,28 +226,6 @@ const MainPage = () => {
                <div ref={skillsRef}>
                   <div className={styles.duasCol}>
                      <img src={crazy} alt={t("sections.sobre.altPic")} />
-                     <div>
-                        <a href="https://www.linkedin.com/in/renzi-fidele-4886151bb/" target="_blank" rel="noreferrer">
-                           <AiFillLinkedin />
-                           <span>LinkedIn</span>
-                        </a>
-                        <a href="https://github.com/renzi-fidele-frontend" target="_blank" rel="noreferrer">
-                           <AiFillGithub />
-                           <span>Github</span>
-                        </a>
-                        <a href="mailto:renzifidele2001@gmail.com" target="_blank" rel="noreferrer">
-                           <AiOutlineMail />
-                           <span>Mail</span>
-                        </a>
-                        <a href="https://wa.link/azvl93" target="_blank" rel="noreferrer">
-                           <AiOutlineWhatsApp />
-                           <span>WhatsApp</span>
-                        </a>
-                        <a href={curiculo} target="_blank" rel="noreferrer" download={"Renzi Fidele.pdf"}>
-                           <FaFilePdf />
-                           <span>Curriculum</span>
-                        </a>
-                     </div>
                   </div>
                   <div id={styles.skills}>
                      <h2 className={styles.titulo1}>{t("sections.sobre.skills")}</h2>
@@ -399,41 +351,18 @@ const MainPage = () => {
             <h2 className={styles.titulo2}>
                <span>{t("sections.portfolio.tit")}</span>
             </h2>
-            <div id={styles.grelha}>
-               {portfolio.map(
-                  (v, k) =>
-                     k < 6 && (
-                        <ProjectCard
-                           titulo={v.titulo}
-                           urlProjeto={v.url}
-                           plataforma={v.plataforma}
-                           linguagens={v.linguagens}
-                           tipo={v.tipo}
-                           repositorio={v.repositorio}
-                           imagemDestaque={v.imagemDestaque}
-                           videoDestaque={v.videoDestaque}
-                           imagemThumbnail={v.imagemThumbnail}
-                           key={k}
-                           thumbnailCentralizado={v.fotoCentralizada}
-                        />
-                     )
-               )}
-            </div>
-
-            <div className={styles.swiperMobileCt}>
-               <Swiper
-                  modules={[Pagination]}
-                  className={styles.swipperContainer}
-                  speed={500}
-                  spaceBetween={20}
-                  pagination={{ type: "bullets", el: `.${styles.pag}`, clickable: true }}
-                  slidesPerView={"auto"}
-                  breakpoints={{ 950: { slidesPerView: 2 }, 1550: { slidesPerView: 3 } }}
-               >
-                  {portfolio.map(
-                     (v, k) =>
-                        k < 6 && (
-                           <SwiperSlide key={k}>
+            <Tabs>
+               <TabList>
+                  <Tab>Landing Page</Tab>
+                  <Tab>Institucional</Tab>
+                  <Tab>ReactJs</Tab>
+               </TabList>
+               <TabPanel>
+                  {/*  Desktop  */}
+                  <div id={styles.grelha}>
+                     {portfolioLandingPage.map(
+                        (v, k) =>
+                           k < 6 && (
                               <ProjectCard
                                  titulo={v.titulo}
                                  urlProjeto={v.url}
@@ -444,21 +373,162 @@ const MainPage = () => {
                                  imagemDestaque={v.imagemDestaque}
                                  videoDestaque={v.videoDestaque}
                                  imagemThumbnail={v.imagemThumbnail}
+                                 key={k}
                                  thumbnailCentralizado={v.fotoCentralizada}
                               />
-                           </SwiperSlide>
-                        )
-                  )}
+                           )
+                     )}
+                  </div>
+                  {/*  Mobile  */}
+                  <div className={styles.swiperMobileCt}>
+                     <Swiper
+                        modules={[Pagination]}
+                        className={styles.swipperContainer}
+                        speed={500}
+                        spaceBetween={20}
+                        pagination={{ type: "bullets", el: `.${styles.pag}`, clickable: true }}
+                        slidesPerView={"auto"}
+                        breakpoints={{ 950: { slidesPerView: 2 }, 1550: { slidesPerView: 3 } }}
+                     >
+                        {portfolioLandingPage.map(
+                           (v, k) =>
+                              k < 6 && (
+                                 <SwiperSlide key={k}>
+                                    <ProjectCard
+                                       titulo={v.titulo}
+                                       urlProjeto={v.url}
+                                       plataforma={v.plataforma}
+                                       linguagens={v.linguagens}
+                                       tipo={v.tipo}
+                                       repositorio={v.repositorio}
+                                       imagemDestaque={v.imagemDestaque}
+                                       videoDestaque={v.videoDestaque}
+                                       imagemThumbnail={v.imagemThumbnail}
+                                       thumbnailCentralizado={v.fotoCentralizada}
+                                    />
+                                 </SwiperSlide>
+                              )
+                        )}
 
-                  <div className={styles.pag}></div>
-               </Swiper>
-            </div>
+                        <div className={styles.pag}></div>
+                     </Swiper>
+                  </div>
+               </TabPanel>
+               <TabPanel>
+                  {/*  Desktop  */}
+                  <div id={styles.grelha}>
+                     {portfolioInstitucional.map(
+                        (v, k) =>
+                           k < 6 && (
+                              <ProjectCard
+                                 titulo={v.titulo}
+                                 urlProjeto={v.url}
+                                 plataforma={v.plataforma}
+                                 linguagens={v.linguagens}
+                                 tipo={v.tipo}
+                                 repositorio={v.repositorio}
+                                 imagemDestaque={v.imagemDestaque}
+                                 videoDestaque={v.videoDestaque}
+                                 imagemThumbnail={v.imagemThumbnail}
+                                 key={k}
+                                 thumbnailCentralizado={v.fotoCentralizada}
+                              />
+                           )
+                     )}
+                  </div>
+                  {/*  Mobile  */}
+                  <div className={styles.swiperMobileCt}>
+                     <Swiper
+                        modules={[Pagination]}
+                        className={styles.swipperContainer}
+                        speed={500}
+                        spaceBetween={20}
+                        pagination={{ type: "bullets", el: `.${styles.pag}`, clickable: true }}
+                        slidesPerView={"auto"}
+                        breakpoints={{ 950: { slidesPerView: 2 }, 1550: { slidesPerView: 3 } }}
+                     >
+                        {portfolioInstitucional.map(
+                           (v, k) =>
+                              k < 6 && (
+                                 <SwiperSlide key={k}>
+                                    <ProjectCard
+                                       titulo={v.titulo}
+                                       urlProjeto={v.url}
+                                       plataforma={v.plataforma}
+                                       linguagens={v.linguagens}
+                                       tipo={v.tipo}
+                                       repositorio={v.repositorio}
+                                       imagemDestaque={v.imagemDestaque}
+                                       videoDestaque={v.videoDestaque}
+                                       imagemThumbnail={v.imagemThumbnail}
+                                       thumbnailCentralizado={v.fotoCentralizada}
+                                    />
+                                 </SwiperSlide>
+                              )
+                        )}
 
-            <section style={{ display: "none" }} id={styles.portfolioBtnCt}>
-               <Link to={"/portfolio"} className={styles.botao}>
-                  <FaPlus /> <span>Ver mais</span>
-               </Link>
-            </section>
+                        <div className={styles.pag}></div>
+                     </Swiper>
+                  </div>
+               </TabPanel>
+               <TabPanel>
+                  {/*  Desktop  */}
+                  <div id={styles.grelha}>
+                     {portfolioReact.map(
+                        (v, k) =>
+                           k < 6 && (
+                              <ProjectCard
+                                 titulo={v.titulo}
+                                 urlProjeto={v.url}
+                                 plataforma={v.plataforma}
+                                 linguagens={v.linguagens}
+                                 tipo={v.tipo}
+                                 repositorio={v.repositorio}
+                                 imagemDestaque={v.imagemDestaque}
+                                 videoDestaque={v.videoDestaque}
+                                 imagemThumbnail={v.imagemThumbnail}
+                                 key={k}
+                                 thumbnailCentralizado={v.fotoCentralizada}
+                              />
+                           )
+                     )}
+                  </div>
+                  {/*  Mobile  */}
+                  <div className={styles.swiperMobileCt}>
+                     <Swiper
+                        modules={[Pagination]}
+                        className={styles.swipperContainer}
+                        speed={500}
+                        spaceBetween={20}
+                        pagination={{ type: "bullets", el: `.${styles.pag}`, clickable: true }}
+                        slidesPerView={"auto"}
+                        breakpoints={{ 950: { slidesPerView: 2 }, 1550: { slidesPerView: 3 } }}
+                     >
+                        {portfolioReact.map(
+                           (v, k) =>
+                              k < 6 && (
+                                 <SwiperSlide key={k}>
+                                    <ProjectCard
+                                       titulo={v.titulo}
+                                       urlProjeto={v.url}
+                                       plataforma={v.plataforma}
+                                       linguagens={v.linguagens}
+                                       tipo={v.tipo}
+                                       repositorio={v.repositorio}
+                                       imagemDestaque={v.imagemDestaque}
+                                       videoDestaque={v.videoDestaque}
+                                       imagemThumbnail={v.imagemThumbnail}
+                                       thumbnailCentralizado={v.fotoCentralizada}
+                                    />
+                                 </SwiperSlide>
+                              )
+                        )}
+
+                        <div className={styles.pag}></div>
+                     </Swiper>
+                  </div>
+               </TabPanel>
+            </Tabs>
 
             {/* Modal do projeto individual */}
             <ProjectModal />
@@ -503,114 +573,13 @@ const MainPage = () => {
             </Swiper>
          </div>
 
-         {/*Seção dos Contactos */}
-         <section
-            ref={secContacto}
-            onMouseEnter={() => {
-               navegar("/#contacto");
-            }}
-            id={styles.contacto}
-         >
-            <div id={styles.left}>
-               <h3>{t("sections.contato.tit")}</h3>
-               <div id={styles.iconsCont}>
-                  <div>
-                     <div id={styles.left}>
-                        <i>
-                           <BiSolidMessageAltDetail />
-                        </i>
-                     </div>
-                     <div id={styles.right}>
-                        <h5>{t("sections.contato.infoCards.0.h5")}</h5>
-                        <p>{t("sections.contato.infoCards.0.p")}</p>
-                        <span>renzifidele2001@gmail.com</span>
-                     </div>
-                  </div>
-                  <div>
-                     <div id={styles.left}>
-                        <i>
-                           <ImLocation2 />
-                        </i>
-                     </div>
-                     <div id={styles.right}>
-                        <h5>{t("sections.contato.infoCards.1.h5")}</h5>
-                        <p>{t("sections.contato.infoCards.1.p")}</p>
-                        <span>Maputo, Moçambique</span>
-                     </div>
-                  </div>
-                  <div>
-                     <div id={styles.left}>
-                        <i>
-                           <BiSolidPhoneCall />
-                        </i>
-                     </div>
-                     <div id={styles.right}>
-                        <h5>{t("sections.contato.infoCards.2.h5")}</h5>
-                        <p>{t("sections.contato.infoCards.2.p")}</p>
-                        <span>+258 85 6261 526</span>
-                     </div>
-                  </div>
-               </div>
-               <div id={styles.locationCont}>
-                  {/*  TODO: Mapa por idioma */}
-                  <iframe
-                     src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d557.9820380597123!2d32.54581336066112!3d-25.876657213551134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-PT!2smz!4v1688428470244!5m2!1spt-PT!2smz"
-                     width="100%"
-                     height="215"
-                     style={{ border: 0, borderRadius: "8px" }}
-                     allowfullscreen=""
-                     loading="lazy"
-                     referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe>
-               </div>
-            </div>
-            <div id={styles.right}>
-               <h6>
-                  {t("sections.contato.tit2")}
-                  <br />
-                  {t("sections.contato.tit3")}
-               </h6>
-               <p>{t("sections.contato.p")}</p>
-               <form onSubmit={sendMessage} ref={formRef}>
-                  <fieldset id={styles.fieldNome}>
-                     <label>{t("sections.contato.form.nome.0")}</label>
-                     <input required type="text" name="nome" placeholder={`${t("sections.contato.form.nome.1")} *`} />
-                  </fieldset>
-                  <fieldset id={styles.fieldEmail}>
-                     <label>{t("sections.contato.form.email.0")}</label>
-                     <input required type="text" name="email" placeholder={`${t("sections.contato.form.email.1")} *`} />
-                  </fieldset>
-                  <fieldset id={styles.fieldAssunto}>
-                     <label>{t("sections.contato.form.assunto.0")}</label>
-                     <input required type="text" name="assunto" placeholder={`${t("sections.contato.form.assunto.1")} *`} />
-                  </fieldset>
-                  <fieldset id={styles.fieldMensagem}>
-                     <label>{t("sections.contato.form.msg.0")}</label>
-                     <textarea required name="mensagem" placeholder={`${t("sections.contato.form.msg.1")} *`} />
-                  </fieldset>
-                  <button type="submit">{t("sections.contato.form.btn")}</button>
-               </form>
-            </div>
-         </section>
-
          {/*Secao do Footer */}
          <footer id={styles.footer}>
             <div>
                <div>
-                  <a rel="noreferrer" href="https://www.linkedin.com/in/renzi-fidele-4886151bb/" target="_blank">
-                     <AiFillLinkedin />
-                  </a>
-                  <a rel="noreferrer" href="https://www.instagram.com/thats.renzy/" target="_blank">
-                     <AiFillInstagram />
-                  </a>
-                  <a rel="noreferrer" href="https://web.facebook.com/renzy00/" target="_blank">
-                     <AiFillFacebook />
-                  </a>
-                  <a rel="noreferrer" href="https://wa.link/azvl93" target="_blank">
-                     <AiOutlineWhatsApp />
-                  </a>
+                  <img src={logo} alt="" />
                </div>
-               <span>© 2024 copyright - {t("sections.footer.span")}</span>
+               <span>© 2023 copyright - {t("sections.footer.span")}</span>
             </div>
          </footer>
       </div>
