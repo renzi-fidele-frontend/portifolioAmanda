@@ -4,26 +4,25 @@
       "inicio": {
          "greet": "Hello, my name is",
          "im": "I'm",
-         "altImg": "Illustration of Renzi Fidele",
-         "typewriter": ["a front-end developer", "a programmer", "the best choice for you"],
-         "bio": "I'm a fullstack developer specializing in the MERN stack, focusing on the frontend using React.js. Additionally, I offer freelancing services with WordPress and Elementor, whether it's a complex React.js project or a fast, optimized WordPress website, I'm here to deliver solutions that really work.",
-         "cta": "Download CV"
+         "altImg": "Illustration of Amanda Caleiras",
+         "typewriter": ["a front-end developer", "a quality freelancer", "the best choice for you"],
+         "bio": "I'm Amanda, a freelancer who loves taking on challenges and is always looking for new things. With sharp skills and a creative mind, I'm here to help you with customized solutions and incredible results for your project.",
+         "cta": "Hire Me"
       },
       "sobre": {
          "h2": "About me",
-         "h6": "My name is Renzi Fidele",
-         "h5": "I am available to collaborate on web projects",
-         "p": "Born in 2001, I am a front-end developer passionate about transforming ideas into digital reality. With a positive mindset, I am committed to constantly improving my skills.",
+         "h6": "My name is Amanda Caleiras",
+         "h5": "I provide quality freelancing services",
+         "p": "My team and I are dedicated to providing high-quality services that meet the specific needs of each client. With a talented and diverse team, we offer expertise in front-end development, graphic design, video editing and digital marketing.",
          "projects": ["Projects", "Completed"],
          "clients": ["Satisfied", "Customers"],
-         "xp": "Experiência",
+         "xp": "Experience",
          "xpInfo": [
-            "As a freelancer at Workana, I offer professional services in the area of ​​web development with 1 year of experience mainly in Wordpress (Elementor). I work with dedication and commitment to meet the needs of each client, always seeking excellence in the final result.",
-            "Current front-end developer for a digital marketing team called 'ANF', 'The new Phase'. I built many different pages, used different UI/UX strategies, to make the landing pages highly convertible.",
-            "I was responsible for building a personalized business card service using the powerful WordPress Elementor plugin. With advanced design skills and knowledge of Elementor, I created attractive and functional layouts that helped our clients stand out in the digital world. I had the opportunity to expand my expertise in digital marketing and traffic management through Facebook Ads."
+            "Throughout my journey at Workana, I've had the opportunity to collaborate with different clients and projects, developing innovative and personalized solutions. The platform has allowed me to expand my portfolio, working in areas such as frontend, graphic design, video editing and digital marketing. Each experience has helped me hone my skills and deliver exceptional results that have exceeded client expectations.",
+            "My experience at Upwork has been marked by international collaborations that have enriched my professional perspective. I've worked with clients from different parts of the world, offering creative and technical solutions in frontend, graphic design, video editing and digital marketing. The diversity of projects and the demand for high quality have pushed me to continuously improve and deliver work that makes a difference."
          ],
          "skills": "Skills",
-         "altPic": "Photo of Renzi Fidele in passport format"
+         "altPic": "Photo of Amanda Caleiras in passport format"
       },
       "services": {
          "tit": "My services",
@@ -56,8 +55,24 @@
       },
       "portfolio": {
          "tit": "My Portfolio",
-         "array": [
+         "arrayReact": [
             { "titulo": "Musify Pro: Spotify Preview Songs Player", "tipo": "Web App" },
+            { "titulo": "Website for selling Beleza glasses", "tipo": "Ecommerce" },
+            { "titulo": "Fullstack curiosities blog with global chat", "tipo": "Blog and Chat App" },
+            { "titulo": "Fullstack places sharing website", "tipo": "Web App" },
+            { "titulo": "Cryptoverso: Informative website about cryptocurrencies", "tipo": "Web App" },
+            { "titulo": "Institutional website for the AMC Builder", "tipo": "Institutional website" }
+         ],
+         "arrayLP": [
+            { "titulo": "Led Truck: Empresa de propaganda e publicidade", "tipo": "Landing Page" },
+            { "titulo": "Comunidade de Saúde Integrativa para Cães", "tipo": "Landing Page" },
+            { "titulo": "Unity Carlessi: Construtora de imóveis", "tipo": "Landing Page" },
+            { "titulo": "A&B: Advocacia Empresarial", "tipo": "Landing Page" },
+            { "titulo": "Cryptoverso: Informative website about cryptocurrencies", "tipo": "Web App" },
+            { "titulo": "Institutional website for the AMC Builder", "tipo": "Institutional website" }
+         ],
+         "arrayInstitucional": [
+            { "titulo": "Antoniolli", "tipo": "Web App" },
             { "titulo": "Website for selling Beleza glasses", "tipo": "Ecommerce" },
             { "titulo": "Fullstack curiosities blog with global chat", "tipo": "Blog and Chat App" },
             { "titulo": "Fullstack places sharing website", "tipo": "Web App" },
@@ -89,24 +104,6 @@
                "profissao": "Ceo at Nosso ads"
             }
          ]
-      },
-      "contato": {
-         "tit": "Let's discuss about your project",
-         "infoCards": [
-            { "h5": "Talk to me", "p": "I'm here to help you" },
-            { "h5": "Find me", "p": "Come say hello in my office" },
-            { "h5": "Call me", "p": "Available at any time" }
-         ],
-         "tit2": "Any ideas? I have the skill.",
-         "tit3": "Let's unite.",
-         "p": "Tell me a little about yourself and what you have in mind.",
-         "form": {
-            "nome": ["Name", "Insert your name"],
-            "email": ["Email", "Insert your email"],
-            "assunto": ["Subject", "Subject"],
-            "msg": ["Message", "Detail your wish here"],
-            "btn": "Send message"
-         }
       },
       "footer": {
          "span": "All rights reserved"

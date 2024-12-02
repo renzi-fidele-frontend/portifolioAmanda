@@ -1,3 +1,4 @@
+// Demo full-size dos projetos
 // React -----------------------
 import video1 from "../../Videos/MusifyPro.mp4";
 import video2 from "../../Videos/NossoBlog.mp4";
@@ -30,6 +31,9 @@ import ist3 from "../../Images/Institucional/unik.jpg";
 import ist4 from "../../Images/Institucional/corretora.jpg";
 import ist5 from "../../Images/Institucional/dmTurismo.jpg";
 import ist6 from "../../Images/Institucional/kgn.jpg";
+
+// Landing pages --------------------------
+
 
 // Fotos dos clientes que testemunharam
 import avatar1 from "../../Images/Testemunhos/avatar1.gif";
@@ -182,7 +186,74 @@ const useData = () => {
       },
    ];
 
-   const portfolioLandingPage = [];
+   const portfolioLandingPage = [
+      {
+         titulo: t("sections.portfolio.arrayInstitucional.0.titulo"),
+         url: "https://ledstruck.com.br/",
+         plataforma: "Hostgator",
+         linguagens: ["Wordpress, Elementor"],
+         tipo: "Landing Page",
+         repositorio: "https://ledstruck.com.br/",
+         imagemDestaque: destaqueInst1,
+         imagemThumbnail: ist2,
+         fotoCentralizada: true,
+      },
+      {
+         titulo: t("sections.portfolio.arrayInstitucional.1.titulo"),
+         url: "https://www.aebadvocacia.com/",
+         plataforma: "Hostgator",
+         linguagens: ["Wordpress, Elementor"],
+         tipo: "Landing Page",
+         repositorio: "https://www.aebadvocacia.com/",
+         imagemDestaque: destaqueInst1,
+         imagemThumbnail: ist2,
+         fotoCentralizada: true,
+      },
+      {
+         titulo: t("sections.portfolio.arrayInstitucional.2.titulo"),
+         url: "https://longevidadeanimal.pt/csi-para-caes/",
+         plataforma: "Hostinger",
+         linguagens: ["Wordpress, Elementor"],
+         tipo: "Landing Page",
+         repositorio: "https://longevidadeanimal.pt/csi-para-caes/",
+         imagemDestaque: destaqueInst1,
+         imagemThumbnail: ist2,
+         fotoCentralizada: true,
+      },
+      {
+         titulo: t("sections.portfolio.arrayInstitucional.3.titulo"),
+         url: "https://unitycarlessi.com.br/",
+         plataforma: "Hostgator",
+         linguagens: ["Wordpress, Elementor"],
+         tipo: "Landing Page",
+         repositorio: "https://unitycarlessi.com.br/",
+         imagemDestaque: destaqueInst1,
+         imagemThumbnail: ist2,
+         fotoCentralizada: true,
+      },
+      {
+         titulo: t("sections.portfolio.arrayInstitucional.4.titulo"),
+         url: "https://bebidasolidaria.com.br/",
+         plataforma: "Hostgator",
+         linguagens: ["Wordpress, Elementor"],
+         tipo: "Landing Page",
+         repositorio: "https://bebidasolidaria.com.br/",
+         imagemDestaque: destaqueInst1,
+         imagemThumbnail: ist2,
+         fotoCentralizada: true,
+      },
+      {
+         titulo: t("sections.portfolio.arrayInstitucional.5.titulo"),
+         url: "https://gamefinanceiro.com.br/",
+         plataforma: "Hostgator",
+         linguagens: ["Wordpress, Elementor"],
+         tipo: "Landing Page",
+         repositorio: "https://gamefinanceiro.com.br/",
+         imagemDestaque: destaqueInst1,
+         imagemThumbnail: ist2,
+         fotoCentralizada: true,
+      },
+   ];
 
    const portfolioInstitucional = [
       {
