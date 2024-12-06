@@ -36,13 +36,19 @@
    background: var(--cor-fundo0);
    color: var(--var-cor-texto);
    border-radius: 50%;
+   padding: 5px;
+   background-color: transparent;
+   transition: all 0.3s;
+}
+.portifolioText > a:hover {
+   background-color: var(--var-cor-decoracao);
 }
 
 .portifolioText > h6 {
    color: var(--bs-heading-color);
    font-size: 16px;
    font-weight: 500;
-   margin-right: 11px;
+   margin-right: 1.25rem;
 }
 
 .portifolioText > p {
