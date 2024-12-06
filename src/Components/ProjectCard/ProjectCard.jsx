@@ -3,6 +3,7 @@ import { ImNewTab } from "react-icons/im";
 import { Link } from "react-router-dom";
 import { BsPlusCircle } from "react-icons/bs";
 
+// TODO: Adicionar destaque ao se fazer hover no botão de prévia
 const ProjectCard = ({
    urlProjeto,
    titulo,

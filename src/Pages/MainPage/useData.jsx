@@ -8,8 +8,10 @@ import video5 from "../../Videos/Criptoverso.mp4";
 import video6 from "../../Videos/Custos.mp4";
 
 // Landing Page----------------------
-import destaqueInst1 from "../../Images/Institucional/DestaqueBebida.jpg";
-import destaqueInst2 from "../../Images/Institucional/amcDestaque.jpg";
+
+// Institucional----------------------
+import destaqueInst1 from "../../Images/Institucional/DestaqueAntoniolli.jpg";
+import destaqueInst2 from "../../Images/Institucional/DestaqueBebida.jpg";
 import destaqueInst3 from "../../Images/Institucional/DestaqueUnik.jpg";
 import destaqueInst4 from "../../Images/Institucional/DestaqueCorretora.jpg";
 import destaqueInst5 from "../../Images/Institucional/DestaqueTransfer.jpg";
@@ -25,20 +27,20 @@ import thumb5 from "../../Images/React/LugaresApp.jpg";
 import thumb6 from "../../Images/React/Custos.jpg";
 
 // Institucional----------------------
-import ist1 from "../../Images/Institucional/amc.jpg";
-
+import ist1 from "../../Images/Institucional/antoniolli.jpg";
+import ist2 from "../../Images/Institucional/amc.jpg";
 import ist3 from "../../Images/Institucional/unik.jpg";
 import ist4 from "../../Images/Institucional/corretora.jpg";
 import ist5 from "../../Images/Institucional/dmTurismo.jpg";
 import ist6 from "../../Images/Institucional/kgn.jpg";
 
 // Landing pages --------------------------
-import lp1 from "../../Images/Institucional/kgn.jpg"; // led truck
-import lp2 from "../../Images/Institucional/kgn.jpg"; // Bebida solidaria
-import lp3 from "../../Images/Institucional/kgn.jpg"; // CSI
-import lp4 from "../../Images/Institucional/kgn.jpg"; // A&B
-import lp5 from "../../Images/Institucional/kgn.jpg"; // Unity
-import lp6 from "../../Images/Institucional/kgn.jpg"; // Unik
+import lp1 from "../../Images/Institucional/kgn.jpg";
+import lp2 from "../../Images/Institucional/kgn.jpg";
+import lp3 from "../../Images/Institucional/kgn.jpg";
+import lp4 from "../../Images/Institucional/kgn.jpg";
+import lp5 from "../../Images/Institucional/kgn.jpg";
+import lp6 from "../../Images/Institucional/kgn.jpg";
 
 // Fotos dos clientes que testemunharam
 import avatar1 from "../../Images/Testemunhos/avatar1.gif";
@@ -262,29 +264,29 @@ const useData = () => {
 
    const portfolioInstitucional = [
       {
-         titulo: "Site da Bebida Solidária",
+         titulo: t("sections.portfolio.arrayInstitucional.0.titulo"),
          url: "https://bebidasolidaria.com.br/",
          plataforma: "Hostgator",
          linguagens: ["Wordpress, Elementor"],
          tipo: "Website",
          repositorio: "https://bebidasolidaria.com.br/",
          imagemDestaque: destaqueInst1,
-         imagemThumbnail: "",
+         imagemThumbnail: ist1,
          fotoCentralizada: true,
       },
       {
-         titulo: "Site da AMC Contruções",
+         titulo: t("sections.portfolio.arrayInstitucional.1.titulo"),
          url: "https://www.amc.eng.br/",
          plataforma: "Locaweb",
          linguagens: ["Html, Css, JavaScript, JQuery"],
          tipo: "Site institucional",
          repositorio: "https://www.amc.eng.br/",
          imagemDestaque: destaqueInst2,
-         imagemThumbnail: ist1,
+         imagemThumbnail: ist2,
          fotoCentralizada: true,
       },
       {
-         titulo: "Site da Unik Benefícios",
+         titulo: t("sections.portfolio.arrayInstitucional.2.titulo"),
          url: "https://unikbeneficios.org/",
          plataforma: "Hostgator",
          linguagens: ["Wordpress, Elementor"],
@@ -295,7 +297,7 @@ const useData = () => {
          fotoCentralizada: true,
       },
       {
-         titulo: "Site da Online Corretora de Seguros",
+         titulo: t("sections.portfolio.arrayInstitucional.3.titulo"),
          url: "https://onlinecorretoradeseguros.com.br/",
          plataforma: "Hostgator",
          linguagens: ["Wordpress, Elementor"],
@@ -306,7 +308,7 @@ const useData = () => {
          fotoCentralizada: true,
       },
       {
-         titulo: "Site da Transfer: DM Turismo",
+         titulo: t("sections.portfolio.arrayInstitucional.4.titulo"),
          url: "https://dmturismoba.com/translado/",
          plataforma: "Hostgator",
          linguagens: ["Wordpress, Elementor"],
@@ -317,7 +319,7 @@ const useData = () => {
          fotoCentralizada: true,
       },
       {
-         titulo: "Site da Kgn Contruções",
+         titulo: t("sections.portfolio.arrayInstitucional.5.titulo"),
          url: "https://kgn.com.br/",
          plataforma: "Hostgator",
          linguagens: ["Wordpress, Elementor"],
