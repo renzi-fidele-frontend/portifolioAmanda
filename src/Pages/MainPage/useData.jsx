@@ -26,14 +26,19 @@ import thumb6 from "../../Images/React/Custos.jpg";
 
 // Institucional----------------------
 import ist1 from "../../Images/Institucional/amc.jpg";
-import ist2 from "../../Images/Institucional/bebida.jpg";
+
 import ist3 from "../../Images/Institucional/unik.jpg";
 import ist4 from "../../Images/Institucional/corretora.jpg";
 import ist5 from "../../Images/Institucional/dmTurismo.jpg";
 import ist6 from "../../Images/Institucional/kgn.jpg";
 
 // Landing pages --------------------------
-
+import lp1 from "../../Images/Institucional/kgn.jpg"; // led truck
+import lp2 from "../../Images/Institucional/kgn.jpg"; // Bebida solidaria
+import lp3 from "../../Images/Institucional/kgn.jpg"; // CSI
+import lp4 from "../../Images/Institucional/kgn.jpg"; // A&B
+import lp5 from "../../Images/Institucional/kgn.jpg"; // Unity
+import lp6 from "../../Images/Institucional/kgn.jpg"; // Unik
 
 // Fotos dos clientes que testemunharam
 import avatar1 from "../../Images/Testemunhos/avatar1.gif";
@@ -188,69 +193,69 @@ const useData = () => {
 
    const portfolioLandingPage = [
       {
-         titulo: t("sections.portfolio.arrayInstitucional.0.titulo"),
+         titulo: t("sections.portfolio.arrayLP.0.titulo"),
          url: "https://ledstruck.com.br/",
          plataforma: "Hostgator",
          linguagens: ["Wordpress, Elementor"],
          tipo: "Landing Page",
          repositorio: "https://ledstruck.com.br/",
          imagemDestaque: destaqueInst1,
-         imagemThumbnail: ist2,
+         imagemThumbnail: lp1,
          fotoCentralizada: true,
       },
       {
-         titulo: t("sections.portfolio.arrayInstitucional.1.titulo"),
+         titulo: t("sections.portfolio.arrayLP.1.titulo"),
          url: "https://www.aebadvocacia.com/",
          plataforma: "Hostgator",
          linguagens: ["Wordpress, Elementor"],
          tipo: "Landing Page",
          repositorio: "https://www.aebadvocacia.com/",
          imagemDestaque: destaqueInst1,
-         imagemThumbnail: ist2,
+         imagemThumbnail: lp2,
          fotoCentralizada: true,
       },
       {
-         titulo: t("sections.portfolio.arrayInstitucional.2.titulo"),
+         titulo: t("sections.portfolio.arrayLP.2.titulo"),
          url: "https://longevidadeanimal.pt/csi-para-caes/",
          plataforma: "Hostinger",
          linguagens: ["Wordpress, Elementor"],
          tipo: "Landing Page",
          repositorio: "https://longevidadeanimal.pt/csi-para-caes/",
          imagemDestaque: destaqueInst1,
-         imagemThumbnail: ist2,
+         imagemThumbnail: lp3,
          fotoCentralizada: true,
       },
       {
-         titulo: t("sections.portfolio.arrayInstitucional.3.titulo"),
+         titulo: t("sections.portfolio.arrayLP.3.titulo"),
          url: "https://unitycarlessi.com.br/",
          plataforma: "Hostgator",
          linguagens: ["Wordpress, Elementor"],
          tipo: "Landing Page",
          repositorio: "https://unitycarlessi.com.br/",
          imagemDestaque: destaqueInst1,
-         imagemThumbnail: ist2,
+         imagemThumbnail: lp4,
          fotoCentralizada: true,
       },
       {
-         titulo: t("sections.portfolio.arrayInstitucional.4.titulo"),
+         titulo: t("sections.portfolio.arrayLP.4.titulo"),
          url: "https://bebidasolidaria.com.br/",
          plataforma: "Hostgator",
          linguagens: ["Wordpress, Elementor"],
          tipo: "Landing Page",
          repositorio: "https://bebidasolidaria.com.br/",
          imagemDestaque: destaqueInst1,
-         imagemThumbnail: ist2,
+         imagemThumbnail: lp5,
          fotoCentralizada: true,
       },
       {
-         titulo: t("sections.portfolio.arrayInstitucional.5.titulo"),
-         url: "https://gamefinanceiro.com.br/",
+         titulo: t("sections.portfolio.arrayLP.5.titulo"),
+         url: "https://unikbeneficios.org/",
          plataforma: "Hostgator",
          linguagens: ["Wordpress, Elementor"],
          tipo: "Landing Page",
-         repositorio: "https://gamefinanceiro.com.br/",
+         repositorio: "https://unikbeneficios.org/",
          imagemDestaque: destaqueInst1,
-         imagemThumbnail: ist2,
+         imagemThumbnail: lp6,
          fotoCentralizada: true,
       },
    ];
@@ -264,7 +269,7 @@ const useData = () => {
          tipo: "Website",
          repositorio: "https://bebidasolidaria.com.br/",
          imagemDestaque: destaqueInst1,
-         imagemThumbnail: ist2,
+         imagemThumbnail: "",
          fotoCentralizada: true,
       },
       {
