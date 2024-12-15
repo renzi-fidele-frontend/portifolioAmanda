@@ -35,12 +35,12 @@ import ist5 from "../../Images/Institucional/dmTurismo.jpg";
 import ist6 from "../../Images/Institucional/kgn.jpg";
 
 // Landing pages --------------------------
-import lp1 from "../../Images/Institucional/kgn.jpg";
-import lp2 from "../../Images/Institucional/kgn.jpg";
-import lp3 from "../../Images/Institucional/kgn.jpg";
-import lp4 from "../../Images/Institucional/kgn.jpg";
-import lp5 from "../../Images/Institucional/kgn.jpg";
-import lp6 from "../../Images/Institucional/kgn.jpg";
+import lp1 from "../../Images/LP/ledstruck.jpg";
+import lp2 from "../../Images/LP/bebida.jpg";
+import lp3 from "../../Images/LP/csi-caes.jpg";
+import lp4 from "../../Images/LP/csi-gatos.jpg";
+import lp5 from "../../Images/LP/advocacia.jpg";
+import lp6 from "../../Images/LP/unity_carlessi.jpg";
 
 // Fotos dos clientes que testemunharam
 import avatar1 from "../../Images/Testemunhos/avatar1.gif";

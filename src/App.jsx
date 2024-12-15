@@ -6,6 +6,8 @@ import { Outlet } from "react-router-dom";
 import { LangProvider } from "./Context/LangContext";
 import "react-tabs/style/react-tabs.css";
 
+// TODO: Adicionar feat de toggle do light/dark mode
+
 function App() {
    const [nav, setNav] = useState(false);
    const [idioma, setIdioma] = useState("pt");
