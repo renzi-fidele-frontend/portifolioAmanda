@@ -38,8 +38,8 @@ import ist6 from "../../Images/Institucional/kgn.jpg";
 import lp1 from "../../Images/LP/ledstruck.jpg";
 import lp2 from "../../Images/LP/bebida.jpg";
 import lp3 from "../../Images/LP/csi-caes.jpg";
-import lp4 from "../../Images/LP/csi-gatos.jpg";
-import lp5 from "../../Images/LP/advocacia.jpg";
+import lp4 from "../../Images/LP/advocacia.jpg";
+import lp5 from "../../Images/LP/csi-gatos.jpg";
 import lp6 from "../../Images/LP/unity_carlessi.jpg";
 
 // Fotos dos clientes que testemunharam
@@ -229,22 +229,22 @@ const useData = () => {
       },
       {
          titulo: t("sections.portfolio.arrayLP.3.titulo"),
-         url: "https://longevidadeanimal.pt/csi-para-gatos/",
+         url: "https://www.aebadvocacia.com/",
          plataforma: "Hostgator",
          linguagens: ["Wordpress, Elementor"],
          tipo: "Landing Page",
-         repositorio: "https://longevidadeanimal.pt/csi-para-gatos/",
+         repositorio: "https://www.aebadvocacia.com/",
          imagemDestaque: destaqueInst1,
          imagemThumbnail: lp4,
          fotoCentralizada: true,
       },
       {
          titulo: t("sections.portfolio.arrayLP.4.titulo"),
-         url: "https://www.aebadvocacia.com/",
+         url: "https://longevidadeanimal.pt/csi-para-gatos/",
          plataforma: "Hostgator",
          linguagens: ["Wordpress, Elementor"],
          tipo: "Landing Page",
-         repositorio: "https://www.aebadvocacia.com/",
+         repositorio: "https://longevidadeanimal.pt/csi-para-gatos/",
          imagemDestaque: destaqueInst1,
          imagemThumbnail: lp5,
          fotoCentralizada: true,
