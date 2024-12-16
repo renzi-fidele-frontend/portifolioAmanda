@@ -8,6 +8,12 @@ import video5 from "../../Videos/Criptoverso.mp4";
 import video6 from "../../Videos/Custos.mp4";
 
 // Landing Page----------------------
+import destaqueLP1 from "../../Images/LP/demo/ledstruck2.jpg";
+import destaqueLP2 from "../../Images/LP/demo/bebida.jpg";
+import destaqueLP3 from "../../Images/LP/demo/csi-caes2.jpg";
+import destaqueLP4 from "../../Images/LP/demo/advocacia.jpg";
+import destaqueLP5 from "../../Images/LP/demo/csi_gatos.jpg";
+import destaqueLP6 from "../../Images/LP/demo/unity_carlessi.jpg";
 
 // Institucional----------------------
 import destaqueInst1 from "../../Images/Institucional/DestaqueAntoniolli.jpg";
@@ -201,7 +207,7 @@ const useData = () => {
          linguagens: ["Wordpress, Elementor"],
          tipo: "Landing Page",
          repositorio: "https://ledstruck.com.br/",
-         imagemDestaque: destaqueInst1,
+         imagemDestaque: destaqueLP1,
          imagemThumbnail: lp1,
          fotoCentralizada: true,
       },
@@ -212,7 +218,7 @@ const useData = () => {
          linguagens: ["Wordpress, Elementor"],
          tipo: "Landing Page",
          repositorio: "https://bebidasolidaria.com.br/",
-         imagemDestaque: destaqueInst1,
+         imagemDestaque: destaqueLP2,
          imagemThumbnail: lp2,
          fotoCentralizada: true,
       },
@@ -223,7 +229,7 @@ const useData = () => {
          linguagens: ["Wordpress, Elementor"],
          tipo: "Landing Page",
          repositorio: "https://longevidadeanimal.pt/csi-para-caes/",
-         imagemDestaque: destaqueInst1,
+         imagemDestaque: destaqueLP3,
          imagemThumbnail: lp3,
          fotoCentralizada: true,
       },
@@ -234,7 +240,7 @@ const useData = () => {
          linguagens: ["Wordpress, Elementor"],
          tipo: "Landing Page",
          repositorio: "https://www.aebadvocacia.com/",
-         imagemDestaque: destaqueInst1,
+         imagemDestaque: destaqueLP4,
          imagemThumbnail: lp4,
          fotoCentralizada: true,
       },
@@ -245,7 +251,7 @@ const useData = () => {
          linguagens: ["Wordpress, Elementor"],
          tipo: "Landing Page",
          repositorio: "https://longevidadeanimal.pt/csi-para-gatos/",
-         imagemDestaque: destaqueInst1,
+         imagemDestaque: destaqueLP5,
          imagemThumbnail: lp5,
          fotoCentralizada: true,
       },
@@ -256,7 +262,7 @@ const useData = () => {
          linguagens: ["Wordpress, Elementor"],
          tipo: "Landing Page",
          repositorio: "https://unitycarlessi.com.br/",
-         imagemDestaque: destaqueInst1,
+         imagemDestaque: destaqueLP6,
          imagemThumbnail: lp6,
          fotoCentralizada: true,
       },
