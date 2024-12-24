@@ -7,6 +7,9 @@ import { useTranslation } from "react-i18next";
 
 ReactModal.setAppElement("#root");
 
+// TODO: Adicionar loading de esquelo das imagens
+// TODO: Não renderizar o grupo repositírio caso não haja um
+
 const ProjectModal = () => {
    const { t } = useTranslation();
    const [isOpen, setIsOpen] = useState(false);

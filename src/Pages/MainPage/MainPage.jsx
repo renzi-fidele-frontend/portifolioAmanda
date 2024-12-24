@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import styles from "./MainPage.module.css";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import ProjectModal from "../../Components/ProjectModal/ProjectModal";
 import ProjectCard from "../../Components/ProjectCard/ProjectCard";
 import TestemunhoCard from "../../Components/TestemunhoCard/TestemunhoCard";
@@ -11,8 +11,7 @@ import me from "../../Images/AmandaCaleiras.jpg";
 import crazy from "../../Images/AmandaCaleiras3.jpg";
 import logo from "../../Images/lg.png";
 
-//  Icons
-import { FaPlus } from "react-icons/fa";
+//  Icon
 import { MdOutlineWorkHistory, MdWorkOutline } from "react-icons/md";
 
 //  Typewriter
@@ -471,6 +470,7 @@ const MainPage = () => {
                      </Swiper>
                   </div>
                </TabPanel>
+               
                <TabPanel>
                   {/*  Desktop  */}
                   <div id={styles.grelha}>
